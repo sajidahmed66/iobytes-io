@@ -1,0 +1,47 @@
+import { Post } from "@/types";
+
+export const posts: Post[] = [
+  {
+    slug: "engineering-outcomes-not-output",
+    title: "Engineering Outcomes, Not Just Output",
+    excerpt: "Why the billable hour is the enemy of enterprise ROI and how we're changing the model.",
+    content: `
+      ## The Output Trap
+      Most consultancies sell you "output"—lines of code, story points, or hours worked. But for an enterprise, output is a cost, not a benefit.
+
+      ## The Outcome Philosophy
+      We've aligned our engineering culture around business outcomes. This means we don't just ask "how do we build this?" but "why should this exist, and what metric will it move?"
+
+      ### Key Principles:
+      - **Metric Accountability**: Every project begins with a baseline and a target outcome.
+      - **Pragmatic Architecture**: We choose tech that scales with your revenue, not just the trend of the week.
+      - **Continuous Feedback**: We ship fast to validate assumptions early.
+    `,
+    category: "Philosophy",
+    date: "2026-04-15",
+    readTime: "6 min read",
+    image: "/images/blog/outcomes.jpg",
+    author: {
+      name: "Alex Rivera",
+      role: "Founding Engineer",
+      bio: "Alex has led engineering for three Fortune 500 digital transformations.",
+      photo: "/images/team/alex.jpg"
+    }
+  },
+  {
+    slug: "scaling-b2b-infrastructure",
+    title: "Scaling B2B Infrastructure Without Breaking the Bank",
+    excerpt: "How to architect for 10x growth while maintaining a 60% reduction in cloud spend.",
+    content: "Full content coming soon...",
+    category: "Technical",
+    date: "2026-04-02",
+    readTime: "8 min read",
+    image: "/images/blog/scaling.jpg",
+    author: {
+      name: "Sarah Chen",
+      role: "Solutions Architect",
+      bio: "Sarah is a distributed systems expert and ex-FAANG engineer.",
+      photo: "/images/team/sarah.jpg"
+    }
+  }
+];
