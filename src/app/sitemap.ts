@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/data/case-studies";
 import { posts } from "@/lib/data/insights";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://iobytes.io";
 
