@@ -1,10 +1,11 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Container } from "@/components/ui";
+import { Container, SectionHeader } from "@/components/ui";
 import { Workflow, Link as LinkIcon, Cloud, Code, Database, RefreshCw, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
 import { staggerContainer, itemVariants } from "@/lib/animations";
+import { cn } from "@/lib/utils";
 
 const solutions = [
   {
@@ -59,8 +60,15 @@ const solutions = [
 
 export function SolutionsPreview() {
   return (
-    <section className="bg-cream border-t border-warm-gray">
-      <Container className="px-0 sm:px-0 lg:px-0 max-w-full">
+    <section className="bg-cream pt-24 pb-0">
+      <Container className="mb-16">
+        <SectionHeader
+          eyebrow="CAPABILITIES"
+          headline="Built to Move Your Numbers"
+        />
+      </Container>
+      
+      <Container className="px-0 sm:px-0 lg:px-0 max-w-full border-t border-warm-gray">
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
@@ -68,7 +76,7 @@ export function SolutionsPreview() {
           viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
         >
-          {solutions.map((solution) => (
+          {solutions.map((solution, index) => (
             <Link 
               key={solution.title} 
               href={solution.href}
@@ -76,7 +84,16 @@ export function SolutionsPreview() {
             >
               <motion.div
                 variants={itemVariants}
-                className="p-8 border-b md:border-r border-warm-gray last:border-b-0 md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(4n)]:border-r-0 transition-colors duration-300 hover:bg-electric/[0.03]"
+                className={cn(
+                  "p-8 border-b border-warm-gray transition-colors duration-300 hover:bg-electric/[0.03] h-full",
+                  // Right border logic
+                  "border-r-0 md:border-r lg:border-r",
+                  "md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(4n)]:border-r-0",
+                  // Bottom border logic for last row
+                  index >= solutions.length - 1 && "border-b-0",
+                  index >= solutions.length - 2 && "md:border-b-0",
+                  index >= solutions.length - 4 && "lg:border-b-0"
+                )}
               >
                 <div className="mb-6">
                   <solution.icon className="text-electric" size={24} strokeWidth={1.5} aria-hidden="true" />
