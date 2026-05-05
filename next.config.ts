@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
     formats: ['image/webp', 'image/avif'],
     remotePatterns: [
@@ -9,6 +10,7 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
+    unoptimized: true
   },
   compress: true,
   // Optimization: Remove console logs in production
