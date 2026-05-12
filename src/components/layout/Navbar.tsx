@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -37,8 +38,11 @@ export function Navbar() {
       )}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold tracking-tight text-ink">
-          iobytes<span className="text-electric">.</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/iobytes-logo.png" alt="iobytes logo" width={32} height={32} className="object-contain h-8 w-auto" priority />
+          <span className="text-2xl font-bold tracking-tight text-ink">
+            iobytes<span className="text-electric">.</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

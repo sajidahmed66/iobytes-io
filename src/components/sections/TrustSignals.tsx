@@ -1,17 +1,24 @@
 "use client";
 
+import Image from "next/image";
 import { Container, SectionHeader, GlassCard } from "@/components/ui";
 import { motion } from "framer-motion";
 
 export function TrustSignals() {
-  const logos = [1, 2, 3, 4, 5];
+  const logos = [
+    { name: "BAT Bangladesh", src: "/bat-bangladesh-logo.png" },
+    { name: "CUET", src: "/cuet_logo.png" },
+    { name: "FactoryNext", src: "/factorynext.png" },
+    { name: "RR Lifestyle", src: "/RR-LIFESTYLE-PNG.webp" },
+    { name: "Agroshift", src: "/agroshift.avif" }
+  ];
 
   return (
     <section className="py-24 bg-cream overflow-hidden">
       <Container>
         <SectionHeader
           eyebrow="TRUSTED BY"
-          headline="Engineering Partners to Industry Leaders"
+          headline="Industry Partners"
           subheadline="We embed with teams that don't have room for error."
           align="center"
           className="mb-16"
@@ -19,16 +26,21 @@ export function TrustSignals() {
 
         {/* Logo Grid */}
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20 mb-24">
-          {logos.map((i) => (
+          {logos.map((logo, index) => (
             <motion.div
-              key={i}
+              key={index}
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 0.4 }}
+              whileInView={{ opacity: 1 }}
               whileHover={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="w-32 h-12 bg-ink/10 rounded flex items-center justify-center grayscale transition-all cursor-not-allowed"
+              className="relative w-32 h-16 flex items-center justify-center transition-all"
             >
-              <span className="text-[10px] font-bold tracking-widest text-ink/30">LOGO {i}</span>
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                fill
+                className="object-contain"
+              />
             </motion.div>
           ))}
         </div>
@@ -48,8 +60,8 @@ export function TrustSignals() {
               "iobytes didn't just build our platform—they engineered the outcome we promised our board. That accountability is rare."
             </blockquote>
             <cite className="not-italic">
-              <span className="block font-bold text-ink">CTO</span>
-              <span className="text-soft-ink text-sm">Fortune 500 Industrial Company</span>
+              <span className="block font-bold text-ink">Chairman</span>
+              <span className="text-soft-ink text-sm">FactoryNext</span>
             </cite>
           </GlassCard>
         </motion.div>

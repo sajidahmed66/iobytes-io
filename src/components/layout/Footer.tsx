@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
@@ -29,8 +30,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link href="/" className="text-2xl font-bold tracking-tight">
-              iobytes<span className="text-electric">.</span>
+            <Link href="/" className="flex items-center gap-2">
+              <Image src="/iobytes-logo.png" alt="iobytes logo" width={32} height={32} className="object-contain h-8 w-auto invert brightness-0" />
+              <span className="text-2xl font-bold tracking-tight">
+                iobytes<span className="text-electric">.</span>
+              </span>
             </Link>
             <p className="text-cream/60 max-w-xs leading-relaxed">
               The Outcome Engineering Firm. We design, build, and ship custom software for B2B enterprises.
