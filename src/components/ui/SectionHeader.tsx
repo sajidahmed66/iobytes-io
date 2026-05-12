@@ -10,6 +10,7 @@ interface SectionHeaderProps {
   subheadline?: string;
   align?: "left" | "center";
   eyebrowColor?: "electric" | "soft-ink";
+  theme?: "light" | "dark";
   className?: string;
 }
 
@@ -19,6 +20,7 @@ export const SectionHeader = ({
   subheadline,
   align = "left",
   eyebrowColor = "electric",
+  theme = "light",
   className,
 }: SectionHeaderProps) => {
   return (
@@ -36,18 +38,24 @@ export const SectionHeader = ({
       {eyebrow && (
         <span
           className={cn(
-            "text-xs font-bold uppercase tracking-wider block mb-4",
+            "text-[12px] font-bold uppercase tracking-[0.1em] block mb-4",
             eyebrowColor === "electric" ? "text-electric" : "text-soft-ink"
           )}
         >
           {eyebrow}
         </span>
       )}
-      <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-ink mb-6">
+      <h2 className={cn(
+        "text-3xl md:text-[48px] font-bold tracking-tight mb-6 leading-tight",
+        theme === "dark" ? "text-cream" : "text-ink"
+      )}>
         {headline}
       </h2>
       {subheadline && (
-        <p className="text-lg md:text-xl text-soft-ink leading-relaxed max-w-2xl mx-auto">
+        <p className={cn(
+          "text-lg md:text-[18px] leading-relaxed max-w-2xl mx-auto",
+          theme === "dark" ? "text-soft-ink" : "text-soft-ink"
+        )}>
           {subheadline}
         </p>
       )}
