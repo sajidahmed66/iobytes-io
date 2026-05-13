@@ -12,7 +12,7 @@ const footerLinks = {
   company: [
     { name: "Team", href: "/team" },
     { name: "Insights", href: "/insights" },
-    { name: "Case Studies", href: "/case-studies" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "Careers", href: "/careers" },
   ],
   connect: [

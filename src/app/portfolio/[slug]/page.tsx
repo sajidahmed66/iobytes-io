@@ -12,10 +12,10 @@ import { Metadata } from "next";
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = await params;
   const study = caseStudies.find((s) => s.slug === slug);
-  if (!study) return { title: "Case Study Not Found" };
+  if (!study) return { title: "Project Not Found" };
   
   return {
-    title: `${study.metric} ${study.outcome} | ${study.client}`,
+    title: `${study.metric} ${study.outcome} | ${study.client} | iobytes`,
     description: study.summary,
   };
 }
@@ -26,7 +26,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function CaseStudyPage({ params }: { params: { slug: string } }) {
+export default async function PortfolioItemPage({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const study = caseStudies.find((s) => s.slug === slug);
 

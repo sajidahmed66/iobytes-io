@@ -10,7 +10,8 @@ export function TrustSignals() {
     { name: "CUET", src: "/cuet_logo.png" },
     { name: "FactoryNext", src: "/factorynext.png" },
     { name: "RR Lifestyle", src: "/RR-LIFESTYLE-PNG.webp" },
-    { name: "Agroshift", src: "/agroshift.avif" }
+    { name: "Agroshift", src: "/agroshift.avif" },
+    { name: "ASI Hub", src: "/ais-hub.png" }
   ];
 
   return (

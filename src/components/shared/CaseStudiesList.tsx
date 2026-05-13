@@ -34,7 +34,7 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {filteredStudies.map((study) => (
-          <Link key={study.slug} href={`/case-studies/${study.slug}`} className="block group">
+          <Link key={study.slug} href={`/portfolio/${study.slug}`} className="block group">
             <GlassCard glow padding="comfortable" className="h-full flex flex-col hover:shadow-lg">
               <div className="flex justify-between items-start mb-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-soft-ink">
@@ -57,7 +57,7 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
               </p>
 
               <div className="flex items-center text-sm font-bold text-ink group-hover:text-electric transition-colors">
-                Read case study 
+                Read story 
                 <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>
             </GlassCard>

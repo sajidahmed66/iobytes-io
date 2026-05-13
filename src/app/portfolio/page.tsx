@@ -6,11 +6,11 @@ import { CaseStudiesList } from "@/components/shared/CaseStudiesList";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Case Studies & ROI Proof",
+  title: "Portfolio & ROI Proof | iobytes",
   description: "Real outcomes for real enterprises. Verified metrics and attributable results.",
 };
 
-export default function CaseStudiesIndex() {
+export default function PortfolioIndex() {
   return (
     <>
       <Navbar />

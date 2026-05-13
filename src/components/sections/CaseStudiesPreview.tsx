@@ -12,21 +12,21 @@ const caseStudies = [
     metric: "40% efficiency increase",
     outcome: "in order processing",
     industry: "Manufacturing",
-    href: "/case-studies/bat",
+    href: "/portfolio/bat",
   },
   {
     client: "Agroshift",
     metric: "3x faster visibility",
     outcome: "in supply chain",
     industry: "Agriculture",
-    href: "/case-studies/agroshift",
+    href: "/portfolio/agroshift",
   },
   {
     client: "Factorynext",
     metric: "$2.3M cost avoidance",
     outcome: "per annum",
     industry: "Industrial IoT",
-    href: "/case-studies/factorynext",
+    href: "/portfolio/factorynext",
   },
 ];
 
@@ -87,7 +87,7 @@ export function CaseStudiesPreview() {
                 </h3>
 
                 <div className="mt-auto pt-8 flex items-center text-sm font-bold group-hover:text-electric transition-colors">
-                  Read case study
+                  Read story
                   <ArrowUpRight size={16} className="ml-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </GlassCard>
@@ -115,7 +115,7 @@ export function CaseStudiesPreview() {
 
         <div className="text-center">
           <AnimatedButton size="lg" asChild>
-            <Link href="/case-studies">View All Case Studies</Link>
+            <Link href="/portfolio">View All Case Studies</Link>
           </AnimatedButton>
         </div>
       </Container>
