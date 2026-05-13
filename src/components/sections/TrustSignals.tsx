@@ -11,7 +11,8 @@ export function TrustSignals() {
     { name: "FactoryNext", src: "/factorynext.png" },
     { name: "RR Lifestyle", src: "/RR-LIFESTYLE-PNG.webp" },
     { name: "Agroshift", src: "/agroshift.avif" },
-    { name: "ASI Hub", src: "/ais-hub.png" }
+    { name: "ASI Hub", src: "/ais-hub.png" },
+    { name: "Kiacom", src: "/kiacom.png" }
   ];
 
   return (

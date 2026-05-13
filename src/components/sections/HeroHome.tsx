@@ -83,7 +83,7 @@ export function HeroHome() {
                   <Link href="/contact">Start a Project</Link>
                 </AnimatedButton>
                 <Link
-                  href="/case-studies"
+                  href="/portfolio"
                   className="flex items-center text-sm font-bold text-ink hover:text-electric transition-colors group"
                 >
                   See our work

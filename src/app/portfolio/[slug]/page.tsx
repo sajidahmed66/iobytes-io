@@ -6,6 +6,7 @@ import { caseStudies } from "@/lib/data/case-studies";
 import { notFound } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Metadata } from "next";
 
@@ -112,9 +113,20 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
               <div className="sticky top-32 space-y-8">
                 <GlassCard padding="comfortable" glow>
                   <div className="mb-8 p-8 bg-ink/5 rounded-xl flex items-center justify-center">
-                    <span className="text-xs font-bold tracking-widest uppercase text-soft-ink/40">
-                      {study.client} Logo
-                    </span>
+                    {study.logo ? (
+                      <div className="h-12 relative w-full invert brightness-0">
+                        <Image
+                          src={study.logo}
+                          alt={`${study.client} logo`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <span className="text-xs font-bold tracking-widest uppercase text-soft-ink/40">
+                        {study.client} Logo
+                      </span>
+                    )}
                   </div>
                   
                   <div className="space-y-6 mb-8">

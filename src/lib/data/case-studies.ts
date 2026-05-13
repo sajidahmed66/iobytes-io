@@ -4,6 +4,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "bat",
     client: "BAT",
+    logo: "/bat-bangladesh-logo.png",
     metric: "40% efficiency increase",
     outcome: "in order processing",
     industry: "Manufacturing",
@@ -30,6 +31,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "agroshift",
     client: "Agroshift",
+    logo: "/agroshift.avif",
     metric: "3x faster visibility",
     outcome: "in supply chain",
     industry: "Agriculture",
@@ -55,6 +57,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "factorynext",
     client: "Factorynext",
+    logo: "/factorynext.png",
     metric: "$2.3M cost avoidance",
     outcome: "per annum",
     industry: "Industrial IoT",
@@ -80,6 +83,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "rr-erp-pos",
     client: "RR",
+    logo: "/RR-LIFESTYLE-PNG.webp",
     metric: "50% faster checkout",
     outcome: "for multi-store retail",
     industry: "Retail",
@@ -125,6 +129,33 @@ export const caseStudies: CaseStudy[] = [
     testimonial: {
       quote: "The doctors are happier, and the patients are getting better care. It's a win-win.",
       attribution: "Chief Medical Officer"
+    }
+  },
+  {
+    slug: "kaicom",
+    client: "Kaicom",
+    logo: "/kiacom.png",
+    metric: "99.9% uptime",
+    outcome: "user-friendly social platform engineered for scale",
+    industry: "IT COMPANY",
+    teaser: "User-friendly social platform engineered for scale.",
+    summary: "High-concurrency social ecosystem across web and mobile. Custom microservices architecture with intuitive UX and millisecond-level performance.",
+    challenge: "Developing a next-generation social network required handling massive concurrency, a strict delivery timeline, and a refusal to settle for off-the-shelf solutions that lacked flexibility.",
+    approach: "Serving as sole architect, we designed a robust hybrid data layer using PostgreSQL, MongoDB, and Redis. The solution featured a React/Next.js web portal and a high-performance Flutter mobile application, all deployed via a Docker/Kubernetes microservices architecture.",
+    results: [
+      "Achieved 99.9% uptime during peak concurrency events.",
+      "Engineered a smart feed algorithm with millisecond-level delivery.",
+      "Integrated real-time WebSocket messaging and AI-driven content moderation.",
+      "Delivered a unified cross-platform mobile experience with enterprise security."
+    ],
+    metrics: [
+      { target: 99.9, suffix: "%", label: "Uptime" },
+      { target: 100, suffix: "ms", label: "Feed Latency" }
+    ],
+    techStack: ["Node.js", "Go", "PostgreSQL", "MongoDB", "Redis", "React", "Next.js", "Flutter", "Docker", "Kubernetes"],
+    testimonial: {
+      quote: "The architecture is robust, and the delivery was flawlessly on time. iobytes built exactly what we needed to scale our community.",
+      attribution: "Executive Leadership, Kaicom"
     }
   }
 ];

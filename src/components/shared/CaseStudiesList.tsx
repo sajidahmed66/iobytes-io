@@ -5,8 +5,9 @@ import { GlassCard, Button } from "@/components/ui";
 import { CaseStudy } from "@/types";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
-const industries = ["All", "Manufacturing", "Agriculture", "Industrial", "Healthcare", "Retail"];
+const industries = ["All", "Manufacturing", "Agriculture", "Industrial", "Healthcare", "Retail", "IT COMPANY"];
 
 export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -37,12 +38,25 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
           <Link key={study.slug} href={`/portfolio/${study.slug}`} className="block group">
             <GlassCard glow padding="comfortable" className="h-full flex flex-col hover:shadow-lg">
               <div className="flex justify-between items-start mb-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-soft-ink">
-                  {study.client}
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest bg-ink/5 px-2 py-0.5 rounded-full text-soft-ink">
-                  {study.industry}
-                </span>
+                <div className="space-y-4">
+                  {study.logo ? (
+                    <div className="h-8 relative w-24 invert brightness-[200%] contrast-[150%] grayscale">
+                      <Image
+                        src={study.logo}
+                        alt={`${study.client} logo`}
+                        fill
+                        className="object-contain object-left"
+                      />
+                    </div>
+                  ) : (
+                    <span className="text-xs font-bold uppercase tracking-widest text-soft-ink">
+                      {study.client}
+                    </span>
+                  )}
+                  <span className="text-[10px] font-bold uppercase tracking-widest bg-ink/5 px-2 py-0.5 rounded-full text-soft-ink block w-fit">
+                    {study.industry}
+                  </span>
+                </div>
               </div>
 
               <h3 className="text-3xl font-bold text-electric font-mono mb-2">

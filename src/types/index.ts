@@ -3,6 +3,7 @@ import { LucideIcon } from "lucide-react";
 export interface CaseStudy {
   slug: string;
   client: string;
+  logo?: string;
   metric: string;
   outcome: string;
   industry: string;
