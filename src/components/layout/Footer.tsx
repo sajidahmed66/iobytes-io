@@ -10,7 +10,7 @@ const footerLinks = {
     { name: "Scalable Architecture", href: "/solutions#architecture" },
   ],
   company: [
-    { name: "Brain Trust", href: "/brain-trust" },
+    { name: "Team", href: "/team" },
     { name: "Insights", href: "/insights" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Careers", href: "/careers" },
