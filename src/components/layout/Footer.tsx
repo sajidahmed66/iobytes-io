@@ -17,9 +17,9 @@ const footerLinks = {
   ],
   connect: [
     { name: "Contact", href: "/contact" },
-    { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-    { name: "GitHub", href: "https://github.com", icon: Github },
-    { name: "Twitter", href: "https://twitter.com", icon: Twitter },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/io-bytes", icon: Linkedin },
+    // { name: "GitHub", href: "https://github.com", icon: Github },
+    // { name: "Twitter", href: "https://twitter.com", icon: Twitter },
   ],
 };
 
@@ -75,8 +75,9 @@ export function Footer() {
             <ul className="space-y-4">
               {footerLinks.connect.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
+                    target="_blank"
                     className="flex items-center space-x-2 text-cream/60 hover:text-cream transition-colors focus-visible:outline-2 focus-visible:outline-electric rounded-sm"
                     aria-label={link.icon ? `Follow us on ${link.name}` : link.name}
                   >
