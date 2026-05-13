@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 interface TeamCardProps {
   name: string;
   role: string;
-  metric: string;
+  bio: string;
   photo: string;
   linkedin?: string;
   stackoverflow?: string;
@@ -40,7 +40,7 @@ const StackOverflowIcon = ({ size = 20 }: { size?: number }) => (
 export function TeamCard({
   name,
   role,
-  metric,
+  bio,
   photo,
   linkedin,
   stackoverflow,
@@ -78,9 +78,9 @@ export function TeamCard({
           {role}
         </p>
 
-        {/* Metric */}
-        <p className="text-soft-ink italic text-[15px] leading-relaxed mb-6 flex-grow">
-          &ldquo;{metric}&rdquo;
+        {/* Bio */}
+        <p className="text-soft-ink text-[15px] leading-relaxed mb-6 flex-grow">
+          {bio}
         </p>
 
         {/* Social Icons */}
