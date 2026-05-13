@@ -157,5 +157,59 @@ export const caseStudies: CaseStudy[] = [
       quote: "The architecture is robust, and the delivery was flawlessly on time. iobytes built exactly what we needed to scale our community.",
       attribution: "Executive Leadership, Kaicom"
     }
+  },
+  {
+    slug: "botx",
+    client: "BotX",
+    logo: "/botx-logo.png",
+    metric: "Zero manual grind",
+    outcome: "24/7 automated sales engine turning DMs into revenue",
+    industry: "SOCIAL COMMERCE",
+    teaser: "24/7 automated sales engine turning DMs into revenue.",
+    summary: "Social commerce automation ecosystem. Eliminates manual social selling by converting direct messages into frictionless, structured sales pipelines.",
+    challenge: "Traditional social commerce relied on manual responses, leading to slow turnaround times and significant lost revenue from high-intent shoppers who dropped off before checkout.",
+    approach: "We engineered an n8n-powered workflow automation system with a dual-interface approach (Meta DMs + custom admin panel). The solution ensures full Meta API compliance while providing elastic scalability for viral sales events.",
+    results: [
+      "Achieved 24/7 fully automated social selling with zero manual grind.",
+      "Successfully handled thousands of concurrent customer conversations.",
+      "Implemented direct-from-DM checkout with live inventory synchronization.",
+      "Provided granular funnel analytics and hands-off revenue generation."
+    ],
+    metrics: [
+      { target: 100, suffix: "%", label: "Automated Responses" },
+      { target: 24, suffix: "/7", label: "Operational Coverage" }
+    ],
+    techStack: ["n8n", "Node.js", "Meta APIs", "CRM APIs", "Fulfillment APIs", "Accounting APIs", "Real-time DBs", "Encryption"],
+    testimonial: {
+      quote: "BotX has completely transformed our social sales. We've gone from chasing DMs to watching automated revenue grow while we sleep.",
+      attribution: "Executive Leadership, BotX"
+    }
+  },
+  {
+    slug: "aivax",
+    client: "Aivax",
+    logo: "/aivax-logo.png",
+    metric: "Millions of data points processed",
+    outcome: "real-time political intelligence and automated digital defense",
+    industry: "POLITICAL TECH",
+    teaser: "Real-time political intelligence and automated digital defense.",
+    summary: "Cloud-native big-data sentiment analysis and automated moderation ecosystem. Processes millions of concurrent data points to protect public digital personas.",
+    challenge: "The 2026 Bangladesh National Election presented a massive data challenge: millions of social conversations in mixed-script Bangla/Banglish and frequent misinformation attacks required immediate, accurate response.",
+    approach: "We built a custom NLP engine optimized for hyper-local dialects and high-velocity data ingestion via Facebook Graph API. The 'Digital Shield' moderation layer was deployed on a microservices cloud infrastructure for peak surge resilience.",
+    results: [
+      "Processed millions of data points with high custom NLP accuracy.",
+      "Achieved zero data lag during peak election-cycle social surges.",
+      "Implemented automated digital shield moderation and crisis alert systems.",
+      "Transformed raw sentiment data into structured political strategy insights."
+    ],
+    metrics: [
+      { target: 10, suffix: "M+", label: "Data Points Processed" },
+      { target: 95, suffix: "%", label: "NLP Accuracy" }
+    ],
+    techStack: ["Node.js", "Python", "TensorFlow", "Facebook Graph API", "MongoDB", "Redis", "Docker", "Kubernetes", "AWS", "Stream Processing"],
+    testimonial: {
+      quote: "Aivax provided the intelligence and defense we needed at a critical scale. The local language NLP accuracy was the differentiator.",
+      attribution: "LogicBoom Leadership, Aivax Partner"
+    }
   }
 ];
