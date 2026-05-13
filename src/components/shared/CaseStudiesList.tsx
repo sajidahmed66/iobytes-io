@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const industries = ["All", "Manufacturing", "Agriculture", "Industrial", "Healthcare", "Retail", "IT COMPANY", "SOCIAL COMMERCE", "POLITICAL TECH"];
+const industries = ["All", "Manufacturing", "Agriculture", "Industrial", "Healthcare", "Retail", "IT COMPANY", "SOCIAL COMMERCE", "POLITICAL TECH", "MARITIME INTELLIGENCE"];
 
 export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
   const [activeFilter, setActiveFilter] = useState("All");

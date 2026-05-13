@@ -13,7 +13,7 @@ export const teamData: TeamData = {
       role: "Chairman",
       metric: "Reduced system integration time by 70% for 4 enterprise clients",
       bio: "Distributed systems specialist with a background in high-frequency trading infrastructure. Designs architectures that fail gracefully and scale predictably.",
-      photo: "/team/naib-hossain-khan.jpg",
+      photo: "/team/naib-hossain-khan.jpeg",
       linkedin: "https://linkedin.com/in/david-okonkwo-architect"
     },
     {
@@ -21,7 +21,7 @@ export const teamData: TeamData = {
       role: "Director",
       metric: "Scaled platform to handle 10M+ daily transactions",
       bio: "PhD student in Computer Science specializing in high-performance systems, networking, and distributed infrastructure, with 9+ years of industry experience.",
-      photo: "/team/plabon-dutta.jpg",
+      photo: "/team/plabon-dutta.jpeg",
       linkedin: "https://www.linkedin.com/in/plabon-dutta-780895365/"
     },
     {
@@ -29,7 +29,7 @@ export const teamData: TeamData = {
       role: "Managing Director",
       metric: "Grew client portfolio from $2M to $12M ARR in 18 months",
       bio: "15 years in B2B enterprise consulting. Former engagement partner at Deloitte Digital. Specializes in translating board-level strategy into roadmaps.",
-      photo: "/team/anik-islam.jpg",
+      photo: "/team/anik-islam.jpeg",
       linkedin: "https://linkedin.com/in/priya-sharma-md"
     },
     {
@@ -80,7 +80,7 @@ export const teamData: TeamData = {
       role: "Director & Chief Technical Officer",
       metric: "Scaled platform to handle 10M+ daily transactions",
       bio: "PhD student in Computer Science specializing in high-performance systems, networking, and distributed infrastructure.",
-      photo: "/team/plabon-dutta.jpg",
+      photo: "/team/plabon-dutta.jpeg",
       linkedin: "https://www.linkedin.com/in/plabon-dutta-780895365/",
       stackoverflow: "https://stackoverflow.com/users/4180545/plabon-dutta"
     },
@@ -89,7 +89,7 @@ export const teamData: TeamData = {
       role: "Managing Director & Lead Solutions Architect",
       metric: "Grew client portfolio from $2M to $12M ARR in 18 months",
       bio: "15 years in B2B enterprise consulting. Former engagement partner at Deloitte Digital.",
-      photo: "/team/anik-islam.jpg",
+      photo: "/team/anik-islam.jpeg",
       linkedin: "https://linkedin.com/in/priya-sharma-md"
     },
     {
@@ -97,50 +97,50 @@ export const teamData: TeamData = {
       role: "Chairman",
       metric: "Reduced system integration time by 70% for 4 enterprise clients",
       bio: "Distributed systems specialist with a background in high-frequency trading infrastructure.",
-      photo: "/team/naib-hossain-khan.jpg",
+      photo: "/team/naib-hossain-khan.jpeg",
       linkedin: "https://linkedin.com/in/david-okonkwo-architect",
-      stackoverflow: "https://stackoverflow.com/users/4419023/davidokonkwo"
+      stackoverflow: ""
     },
-    {
-      name: "Dr. Fahmida Chowdhury",
-      role: "Director",
-      metric: "Recruited 100+ engineers in 6 months while maintaining <1% defect rate",
-      bio: "",
-      photo: "/team/elena-vasquez.jpg",
-      linkedin: "https://linkedin.com/in/elena-vasquez-backend"
-    },
-    {
-      name: "Mossammat Mahmuda Khatun",
-      role: "Director & Head Of Product Strategist",
-      metric: "Achieved 99.99% uptime while cutting infrastructure costs by 40%",
-      bio: "",
-      photo: "/team/mossammat-mahmuda-khatun.jpg",
-    },
+    // {
+    //   name: "Dr. Fahmida Chowdhury",
+    //   role: "Director",
+    //   metric: "Recruited 100+ engineers in 6 months while maintaining <1% defect rate",
+    //   bio: "",
+    //   photo: "/team/elena-vasquez.jpg",
+    //   linkedin: "https://linkedin.com/in/elena-vasquez-backend"
+    // },
+    // {
+    //   name: "Mossammat Mahmuda Khatun",
+    //   role: "Director & Head Of Product Strategist",
+    //   metric: "Achieved 99.99% uptime while cutting infrastructure costs by 40%",
+    //   bio: "",
+    //   photo: "/team/mossammat-mahmuda-khatun.jpg",
+    // },
     {
       name: "Sajid Ahmed Siddiqui",
-      role: "Technical Lead",
+      role: "Senior Software Engineer",
       metric: "Reduced time-to-value from 6 months to 8 weeks for new clients",
       bio: "",
-      photo: "/team/sajid-ahmed-siddiqui.jpg",
+      photo: "/team/sajid-ahmed.jpeg",
       linkedin: "https://www.linkedin.com/in/sajidahmed66/"
     },
-    {
-      name: "Thomas Berg",
-      role: "Data Engineering Lead",
-      metric: "Built real-time analytics pipeline processing 2TB+ daily",
-      bio: "Ex-quantitative researcher turned data engineer. Designs pipelines that turn messy enterprise data into board-ready insights.",
-      photo: "/team/thomas-berg.jpg",
-      linkedin: "https://linkedin.com/in/thomas-berg-data",
-      stackoverflow: "https://stackoverflow.com/users/3342101/thomasberg"
-    },
-    {
-      name: "Linh Nguyen",
-      role: "Frontend Engineering Lead",
-      metric: "Improved core web vitals score from 42 to 96 across client dashboards",
-      bio: "Accessibility-first engineer. Believes enterprise software doesn't have to feel like enterprise software.",
-      photo: "/team/linh-nguyen.jpg",
-      linkedin: "https://linkedin.com/in/linh-nguyen-frontend",
-      stackoverflow: "https://stackoverflow.com/users/4521098/linhnguyen"
-    }
+    // {
+    //   name: "Thomas Berg",
+    //   role: "Data Engineering Lead",
+    //   metric: "Built real-time analytics pipeline processing 2TB+ daily",
+    //   bio: "Ex-quantitative researcher turned data engineer. Designs pipelines that turn messy enterprise data into board-ready insights.",
+    //   photo: "/team/thomas-berg.jpg",
+    //   linkedin: "https://linkedin.com/in/thomas-berg-data",
+    //   stackoverflow: "https://stackoverflow.com/users/3342101/thomasberg"
+    // },
+    // {
+    //   name: "Linh Nguyen",
+    //   role: "Frontend Engineering Lead",
+    //   metric: "Improved core web vitals score from 42 to 96 across client dashboards",
+    //   bio: "Accessibility-first engineer. Believes enterprise software doesn't have to feel like enterprise software.",
+    //   photo: "/team/linh-nguyen.jpg",
+    //   linkedin: "https://linkedin.com/in/linh-nguyen-frontend",
+    //   stackoverflow: "https://stackoverflow.com/users/4521098/linhnguyen"
+    // }
   ]
 };

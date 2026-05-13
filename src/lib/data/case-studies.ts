@@ -81,56 +81,84 @@ export const caseStudies: CaseStudy[] = [
     }
   },
   {
-    slug: "rr-erp-pos",
-    client: "RR",
-    logo: "/RR-LIFESTYLE-PNG.webp",
-    metric: "50% faster checkout",
-    outcome: "for multi-store retail",
-    industry: "Retail",
-    teaser: "Modernizing legacy POS systems for high-volume retail environments.",
-    summary: "Cloud-native ERP and POS integration for real-time inventory and sales.",
-    challenge: "Legacy POS systems were slow, causing long queues and lost sales. Inventory data was only updated overnight, leading to stockouts and customer frustration.",
-    approach: "We built a lightweight, cloud-synchronized POS application that works offline and syncs instantly when online. The system integrates directly with a central ERP for real-time inventory management.",
+    slug: "project-mr-radio",
+    client: "Project Mr. Radio",
+    logo: "/ais.png",
+    metric: "Sub-second data ingestion",
+    outcome: "Advancing maritime surveillance via open-source AIS network engineering",
+    industry: "MARITIME INTELLIGENCE",
+    teaser: "Terrestrial AIS base station network capturing real-time vessel data from the Bay of Bengal. Engineering RF telemetry pipelines for global maritime transparency.",
+    summary: "Engineering terrestrial AIS stations to capture and broadcast real-time vessel data from the high-density shipping lanes of the Bay of Bengal.",
+    challenge: "Global maritime transparency depends on accurate, real-time vessel tracking — yet vast coastal regions remain data black zones. The Bay of Bengal, one of the world's busiest shipping corridors, lacked sufficient terrestrial AIS coverage to support international search-and-rescue operations, logistics optimization, and maritime compliance.",
+    approach: "iobytes partnered with AISHub under the strategic initiative Project Mr. Radio to engineer, deploy, and maintain open-source terrestrial AIS stations across the Bangladesh coastline.",
     results: [
-      "Reduced average checkout time from 45 seconds to 22 seconds.",
-      "Eliminated inventory drift across 150+ stores.",
-      "Increased basket size by 12% through real-time cross-sell recommendations."
+      "Sub-second data ingestion with zero packet loss from coastal AIS stations",
+      "Continuous VHF signal decoding from high-density commercial shipping lanes",
+      "Global data contribution to AISHub international vessel tracking",
+      "Edge resilience maintaining data integrity through power fluctuations",
+      "Scalable open-source architecture ready for 5-10 station national expansion"
     ],
     metrics: [
-      { target: 50, suffix: "%", label: "Faster Checkout" },
-      { target: 150, suffix: "+", label: "Stores Synced" }
+      { target: 1, prefix: "<", suffix: "s", label: "Data Ingestion" },
+      { target: 100, suffix: "%", label: "Packet Integrity" }
     ],
-    techStack: ["React Native", "Go", "Redis", "Elasticsearch"],
+    techStack: ["AIS Receivers", "VHF Radio", "NMEA Protocol", "RF Telemetry", "Edge Computing", "Python"],
     testimonial: {
-      quote: "Our stores are finally operating in the 21st century. The checkout experience is flawless.",
-      attribution: "Director of Retail Tech, RR"
+      quote: "Through Project Mr. Radio, iobytes bridges local RF engineering with global maritime intelligence. Their Chittagong station feeds real-time data into our global repository, directly improving search-and-rescue visibility.",
+      attribution: "AISHub Partnership Team"
     }
   },
-  {
-    slug: "healthcare",
-    client: "Healthcare",
-    metric: "60% reduction",
-    outcome: "in admin time",
-    industry: "Healthcare",
-    teaser: "Automating patient intake and clinical documentation.",
-    summary: "HIPAA-compliant automation platform for clinical workflows.",
-    challenge: "Doctors were spending more time on paperwork than with patients. Manual data entry into legacy EHR systems was slow and error-prone.",
-    approach: "We developed a voice-to-structured-data pipeline that automatically populates EHR fields. We also automated the patient intake process through a secure, glassmorphism-inspired patient portal.",
-    results: [
-      "Reclaimed 15 hours per week for every physician in the group.",
-      "Improved data accuracy in clinical records by 40%.",
-      "Reduced patient wait times by an average of 20 minutes."
-    ],
-    metrics: [
-      { target: 60, suffix: "%", label: "Admin Reduction" },
-      { target: 15, suffix: "h", label: "Reclaimed/Physician/Week" }
-    ],
-    techStack: ["Next.js", "Python", "OpenAI API", "PostgreSQL"],
-    testimonial: {
-      quote: "The doctors are happier, and the patients are getting better care. It's a win-win.",
-      attribution: "Chief Medical Officer"
-    }
-  },
+  // {
+  //   slug: "rr-erp-pos",
+  //   client: "RR",
+  //   logo: "/RR-LIFESTYLE-PNG.webp",
+  //   metric: "50% faster checkout",
+  //   outcome: "for multi-store retail",
+  //   industry: "Retail",
+  //   teaser: "Modernizing legacy POS systems for high-volume retail environments.",
+  //   summary: "Cloud-native ERP and POS integration for real-time inventory and sales.",
+  //   challenge: "Legacy POS systems were slow, causing long queues and lost sales. Inventory data was only updated overnight, leading to stockouts and customer frustration.",
+  //   approach: "We built a lightweight, cloud-synchronized POS application that works offline and syncs instantly when online. The system integrates directly with a central ERP for real-time inventory management.",
+  //   results: [
+  //     "Reduced average checkout time from 45 seconds to 22 seconds.",
+  //     "Eliminated inventory drift across 150+ stores.",
+  //     "Increased basket size by 12% through real-time cross-sell recommendations."
+  //   ],
+  //   metrics: [
+  //     { target: 50, suffix: "%", label: "Faster Checkout" },
+  //     { target: 150, suffix: "+", label: "Stores Synced" }
+  //   ],
+  //   techStack: ["React Native", "Go", "Redis", "Elasticsearch"],
+  //   testimonial: {
+  //     quote: "Our stores are finally operating in the 21st century. The checkout experience is flawless.",
+  //     attribution: "Director of Retail Tech, RR"
+  //   }
+  // },
+  // {
+  //   slug: "healthcare",
+  //   client: "Healthcare",
+  //   metric: "60% reduction",
+  //   outcome: "in admin time",
+  //   industry: "Healthcare",
+  //   teaser: "Automating patient intake and clinical documentation.",
+  //   summary: "HIPAA-compliant automation platform for clinical workflows.",
+  //   challenge: "Doctors were spending more time on paperwork than with patients. Manual data entry into legacy EHR systems was slow and error-prone.",
+  //   approach: "We developed a voice-to-structured-data pipeline that automatically populates EHR fields. We also automated the patient intake process through a secure, glassmorphism-inspired patient portal.",
+  //   results: [
+  //     "Reclaimed 15 hours per week for every physician in the group.",
+  //     "Improved data accuracy in clinical records by 40%.",
+  //     "Reduced patient wait times by an average of 20 minutes."
+  //   ],
+  //   metrics: [
+  //     { target: 60, suffix: "%", label: "Admin Reduction" },
+  //     { target: 15, suffix: "h", label: "Reclaimed/Physician/Week" }
+  //   ],
+  //   techStack: ["Next.js", "Python", "OpenAI API", "PostgreSQL"],
+  //   testimonial: {
+  //     quote: "The doctors are happier, and the patients are getting better care. It's a win-win.",
+  //     attribution: "Chief Medical Officer"
+  //   }
+  // },
   {
     slug: "kaicom",
     client: "Kaicom",
