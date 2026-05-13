@@ -23,7 +23,6 @@ export interface CaseStudy {
 export interface TeamMember {
   name: string;
   role: string;
-  metric: string;
   bio: string;
   photo: string;
   stackoverflow?: string;
