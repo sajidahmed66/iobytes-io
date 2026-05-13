@@ -14,15 +14,7 @@ export const teamData: TeamData = {
       metric: "Reduced system integration time by 70% for 4 enterprise clients",
       bio: "Distributed systems specialist with a background in high-frequency trading infrastructure. Designs architectures that fail gracefully and scale predictably.",
       photo: "/team/naib-hossain-khan.jpeg",
-      linkedin: "https://linkedin.com/in/david-okonkwo-architect"
-    },
-    {
-      name: "Plabon Dutta",
-      role: "Director",
-      metric: "Scaled platform to handle 10M+ daily transactions",
-      bio: "PhD student in Computer Science specializing in high-performance systems, networking, and distributed infrastructure, with 9+ years of industry experience.",
-      photo: "/team/plabon-dutta.jpeg",
-      linkedin: "https://www.linkedin.com/in/plabon-dutta-780895365/"
+      // linkedin: "https://www.linkedin.com/in/naibkhan/"
     },
     {
       name: "Mohammad Anik Islam Sojib",
@@ -30,7 +22,15 @@ export const teamData: TeamData = {
       metric: "Grew client portfolio from $2M to $12M ARR in 18 months",
       bio: "15 years in B2B enterprise consulting. Former engagement partner at Deloitte Digital. Specializes in translating board-level strategy into roadmaps.",
       photo: "/team/anik-islam.jpeg",
-      linkedin: "https://linkedin.com/in/priya-sharma-md"
+      // linkedin: "https://www.linkedin.com/in/anik587/"
+    },
+    {
+      name: "Plabon Dutta",
+      role: "Acting CEO & Director",
+      metric: "Scaled platform to handle 10M+ daily transactions",
+      bio: "PhD student in Computer Science specializing in high-performance systems, networking, and distributed infrastructure, with 9+ years of industry experience.",
+      photo: "/team/plabon-dutta.jpeg",
+      // linkedin: "https://www.linkedin.com/in/plabon-dutta-780895365/"
     },
     {
       name: "Dr. Fahmida Chowdhury",
@@ -38,7 +38,7 @@ export const teamData: TeamData = {
       metric: "Recruited 100+ engineers in 6 months while maintaining <1% defect rate",
       bio: "",
       photo: "/team/elena-vasquez.jpg",
-      linkedin: "https://linkedin.com/in/elena-vasquez-backend"
+      linkedin: ""
     },
     {
       name: "Mossammat Mahmuda Khatun",
@@ -55,7 +55,7 @@ export const teamData: TeamData = {
       metric: "Migrated 12 enterprise workloads to cloud with zero downtime",
       bio: "",
       photo: "/team/syed-tanvir-faisal.jpg",
-      linkedin: "https://www.linkedin.com/in/syedtanvirfaisal/"
+      // linkedin: "https://www.linkedin.com/in/syedtanvirfaisal/"
     },
     {
       name: "Abdulla Al Mamun",
@@ -63,7 +63,7 @@ export const teamData: TeamData = {
       metric: "Unified 8 legacy systems into a single API gateway",
       bio: "",
       photo: "/team/abdulla-al-mamun.jpg",
-      linkedin: "https://www.linkedin.com/in/abdullah-al-mamun-47924aa6/"
+      // linkedin: "https://www.linkedin.com/in/abdullah-al-mamun-47924aa6/"
     },
     {
       name: "Insan Arafat Jamil",
@@ -98,7 +98,7 @@ export const teamData: TeamData = {
       metric: "Reduced system integration time by 70% for 4 enterprise clients",
       bio: "Distributed systems specialist with a background in high-frequency trading infrastructure.",
       photo: "/team/naib-hossain-khan.jpeg",
-      linkedin: "https://linkedin.com/in/david-okonkwo-architect",
+      // linkedin: "https://linkedin.com/in/david-okonkwo-architect",
       stackoverflow: ""
     },
     // {
@@ -122,7 +122,7 @@ export const teamData: TeamData = {
       metric: "Reduced time-to-value from 6 months to 8 weeks for new clients",
       bio: "",
       photo: "/team/sajid-ahmed.jpeg",
-      linkedin: "https://www.linkedin.com/in/sajidahmed66/"
+      // linkedin: "https://www.linkedin.com/in/sajidahmed66/"
     },
     // {
     //   name: "Thomas Berg",
