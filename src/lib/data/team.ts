@@ -63,7 +63,8 @@ export const teamData: TeamData = {
       role: "Embedded System and IoT Consultant",
       bio: "Deployed predictive models that reduced client churn by 25%.",
       photo: "/team/insan-arafat-jamil.jpg",
-      linkedin: "https://www.linkedin.com/in/insan-arafat-jamil/"
+      linkedin: "https://www.linkedin.com/in/insan-arafat-jamil/",
+      imagePosition: "50% 10%"
     }
   ],
   leadership: [

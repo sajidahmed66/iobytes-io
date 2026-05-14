@@ -65,7 +65,7 @@ export function SolutionsPreview() {
             href="/solutions" 
             className="flex items-center text-sm font-bold text-electric hover:text-ink transition-colors group mt-8 md:mt-0"
           >
-            EXPLORE ALL CAPABILITIES <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+            Explore all capabilities <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 

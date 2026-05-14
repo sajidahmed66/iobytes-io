@@ -14,6 +14,7 @@ interface TeamCardProps {
   linkedin?: string;
   stackoverflow?: string;
   showStackOverflow?: boolean;
+  imagePosition?: string;
   delay?: number;
 }
 
@@ -45,8 +46,18 @@ export function TeamCard({
   linkedin,
   stackoverflow,
   showStackOverflow = false,
+  imagePosition = "top",
   delay = 0,
 }: TeamCardProps) {
+  // Map common positions to Tailwind classes, or use custom value
+  const getPositionStyle = () => {
+    const positionMap: Record<string, string> = {
+      top: "top",
+      center: "center",
+      bottom: "bottom",
+    };
+    return positionMap[imagePosition] || imagePosition;
+  };
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -65,7 +76,8 @@ export function TeamCard({
             alt={name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-0"
-            onLoadingComplete={(img) => img.classList.remove("opacity-0")}
+            style={{ objectPosition: getPositionStyle() }}
+            onLoad={(e) => (e.target as HTMLImageElement).classList.remove("opacity-0")}
             onError={() => {
               // Keep showing initials on error
             }}

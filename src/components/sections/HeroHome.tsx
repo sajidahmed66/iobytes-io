@@ -79,18 +79,26 @@ export function HeroHome() {
             </motion.div>
 
             {/* Headline */}
-            <motion.h1 
+            <motion.h1
               variants={lineVariants}
-              className="text-xl md:text-4xl font-black leading-[1.05] tracking-tighter text-ink uppercase"
+              className="text-2xl md:text-4xl lg:text-5xl font-black leading-[1.1] tracking-tight text-ink flex flex-col"
             >
-              We Engineer the Outcomes <br className="hidden md:block"/>
-              that Transform Enterprises
+              <span className="flex justify-between">
+                {"We engineer the outcomes".split(" ").map((word, i) => (
+                  <span key={i}>{word}</span>
+                ))}
+              </span>
+              <span className="flex justify-between">
+                {"that transform enterprises".split(" ").map((word, i) => (
+                  <span key={i}>{word}</span>
+                ))}
+              </span>
             </motion.h1>
 
             {/* Subheadline */}
             <motion.p
               variants={lineVariants}
-              className="text-lg md:text-[20px] text-soft-ink max-w-xl leading-relaxed"
+              className="text-lg md:text-[20px] text-soft-ink max-w-xl leading-relaxed text-justify"
             >
               We deliver B2B software solutions that solve critical business problems and prove it with the metrics that matter most.
             </motion.p>
@@ -102,13 +110,13 @@ export function HeroHome() {
             >
               <AnimatedButton size="lg" asChild className="rounded-sm px-8 bg-electric text-white hover:bg-electric/90 shadow-none">
                 <Link href="/contact" className="flex items-center gap-2">
-                  SCHEDULE A STRATEGY CALL <ArrowRight size={18} />
+                  Schedule a strategy call <ArrowRight size={18} />
                 </Link>
               </AnimatedButton>
-              
+
               <Link
                 href="/portfolio"
-                className="flex items-center text-sm font-bold text-ink hover:text-electric transition-colors group uppercase tracking-widest"
+                className="flex items-center text-sm font-bold text-ink hover:text-electric transition-colors group tracking-wide"
               >
                 Explore our work
                 <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
@@ -130,7 +138,7 @@ export function HeroHome() {
                 className="relative w-full h-full"
               >
                 <Image
-                  src="/illustration5.png"
+                  src="/illustration1.png"
                   alt="iobytes Outcome Engineering Illustration"
                   fill
                   className="object-contain"

@@ -27,6 +27,7 @@ export interface TeamMember {
   photo: string;
   stackoverflow?: string;
   linkedin?: string;
+  imagePosition?: string; // e.g., "top", "center", "bottom", or custom like "50% 30%"
 }
 
 export interface Post {

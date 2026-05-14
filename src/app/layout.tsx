@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} scroll-smooth`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${jetbrainsMono.variable} scroll-smooth`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link
           href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"

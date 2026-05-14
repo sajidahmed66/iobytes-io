@@ -54,40 +54,44 @@ export function FeaturedCaseStudy() {
               href="/portfolio/bat" 
               className="inline-flex items-center text-sm font-bold text-electric hover:text-ink transition-colors group"
             >
-              VIEW FULL CASE STUDY <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+              View full case study <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
           {/* Column 2: Chart/Visual */}
           <div className="lg:col-span-5 flex flex-col justify-center bg-white border border-warm-gray p-8 rounded-sm">
-            <div className="flex justify-between items-center mb-12">
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-12">
               <h4 className="text-xs font-bold uppercase tracking-widest text-ink">Efficiency Gains</h4>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-warm-gray" />
-                  <span className="text-[10px] font-bold text-soft-ink">Before iobytes</span>
+                  <span className="text-[10px] font-bold text-soft-ink">Before</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-electric" />
-                  <span className="text-[10px] font-bold text-soft-ink">After iobytes</span>
+                  <span className="text-[10px] font-bold text-soft-ink">Reduced</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-amber" />
+                  <span className="text-[10px] font-bold text-soft-ink">Increased</span>
                 </div>
               </div>
             </div>
 
             <div className="space-y-8">
               {[
-                { label: "Processing Latency", before: 100, after: 2, diff: "↓ 98%" },
-                { label: "Manual Error Rate", before: 80, after: 5, diff: "↓ 94%" },
-                { label: "Throughput Capacity", before: 25, after: 100, diff: "↑ 4x" }
+                { label: "Processing Latency", before: 100, after: 2, diff: "↓ 98%", isPositive: false },
+                { label: "Manual Error Rate", before: 80, after: 5, diff: "↓ 94%", isPositive: false },
+                { label: "Throughput Capacity", before: 25, after: 100, diff: "↑ 4x", isPositive: true }
               ].map((item) => (
                 <div key={item.label} className="space-y-3">
                   <div className="flex justify-between items-end">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-ink">{item.label}</span>
-                    <span className="text-xs font-bold text-electric">{item.diff}</span>
+                    <span className={`text-xs font-bold ${item.isPositive ? "text-amber" : "text-electric"}`}>{item.diff}</span>
                   </div>
                   <div className="flex items-end gap-1 h-8">
                     <div className="bg-warm-gray w-full" style={{ height: `${item.before}%` }} />
-                    <div className="bg-electric w-full" style={{ height: `${item.after}%` }} />
+                    <div className={`w-full ${item.isPositive ? "bg-amber" : "bg-electric"}`} style={{ height: `${item.after}%` }} />
                   </div>
                 </div>
               ))}

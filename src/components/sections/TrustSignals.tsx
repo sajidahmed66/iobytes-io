@@ -57,7 +57,7 @@ export function TrustSignals() {
                 {marqueeLogos.map((logo, index) => (
                   <div
                     key={`${logo.name}-${index}`}
-                    className="inline-flex items-center justify-center mx-8 w-24 h-12 relative opacity-60 hover:opacity-100 transition-opacity duration-300 shrink-0 grayscale hover:grayscale-0"
+                    className="inline-flex items-center justify-center mx-10 w-32 h-14 relative opacity-75 hover:opacity-100 transition-all duration-300 shrink-0 grayscale-[50%] hover:grayscale-0 hover:scale-105"
                   >
                     <Image
                       src={logo.src}
@@ -76,13 +76,13 @@ export function TrustSignals() {
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-soft-ink mb-8">
               Security & Compliance
             </h4>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-6 flex-wrap">
               {securityBadges.map((badge) => (
-                <div key={badge.name} className="flex flex-col items-center gap-2">
-                  <div className="w-12 h-12 rounded-full border border-warm-gray flex items-center justify-center text-soft-ink hover:text-electric hover:border-electric transition-colors">
-                    <badge.icon size={20} strokeWidth={1.5} />
+                <div key={badge.name} className="flex flex-col items-center gap-2 group">
+                  <div className="w-11 h-11 rounded-full border border-warm-gray bg-white flex items-center justify-center text-soft-ink group-hover:text-electric group-hover:border-electric group-hover:shadow-sm transition-all duration-300">
+                    <badge.icon size={18} strokeWidth={1.5} />
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-soft-ink">
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-soft-ink group-hover:text-electric transition-colors">
                     {badge.name}
                   </span>
                 </div>

@@ -4,27 +4,36 @@ import { useState, useEffect, useCallback } from "react";
 import { Container } from "@/components/ui";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
     quote: "iobytes didn't just build our platform—they engineered the outcome we promised our board. That accountability is rare.",
     attribution: "Chairman",
-    company: "FactoryNext"
+    company: "FactoryNext",
+    image: null, // Add client photo path when available
+    initials: "FN"
   },
   {
     quote: "The supply chain visibility iobytes delivered transformed how we operate. Decisions that took weeks now take minutes.",
     attribution: "Executive Leadership",
-    company: "Agroshift"
+    company: "Agroshift",
+    image: null,
+    initials: "AS"
   },
   {
     quote: "iobytes didn't just build our platform—they engineered an ecosystem that scales with our ambition.",
     attribution: "Executive Leadership",
-    company: "Kaicom"
+    company: "Kaicom",
+    image: null,
+    initials: "KC"
   },
   {
     quote: "BotX shifted our social selling from a labor-intensive manual operation to a hands-off, highly profitable sales machine.",
     attribution: "Executive Leadership",
-    company: "BotX"
+    company: "BotX",
+    image: null,
+    initials: "BX"
   }
 ];
 
@@ -73,7 +82,23 @@ export function TestimonialSection() {
                 &ldquo;{testimonials[currentIndex].quote}&rdquo;
               </blockquote>
 
-              <div className="pt-10 border-t border-warm-gray max-w-[240px] mx-auto">
+              <div className="pt-10 border-t border-warm-gray max-w-[280px] mx-auto">
+                {/* Avatar */}
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-electric/10 border-2 border-electric/20 flex items-center justify-center">
+                  {testimonials[currentIndex].image ? (
+                    <Image
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].company}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-lg font-bold text-electric">
+                      {testimonials[currentIndex].initials}
+                    </span>
+                  )}
+                </div>
                 <span className="block text-xl font-bold text-ink mb-1">
                   {testimonials[currentIndex].attribution}
                 </span>
