@@ -1,4 +1,4 @@
-import { Container, SectionHeader, GlassCard, AnimatedButton } from "@/components/ui";
+import { Container, GlassCard, AnimatedButton } from "@/components/ui";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Workflow, Link as LinkIcon, Cloud, Code, Database, RefreshCw, ArrowRight } from "lucide-react";

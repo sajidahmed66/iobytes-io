@@ -65,7 +65,7 @@ export function ContactForm() {
             </div>
             <h3 className="text-2xl font-bold text-ink mb-4">Message Received</h3>
             <p className="text-soft-ink">
-              We'll review your requirements and respond within 24 hours.
+              We&apos;ll review your requirements and respond within 24 hours.
             </p>
             <Button 
               variant="ghost" 
@@ -166,7 +166,7 @@ export function ContactForm() {
             </Button>
 
             <p className="text-center text-xs text-soft-ink">
-              We don't share your data. Ever.
+              We don&apos;t share your data. Ever.
             </p>
           </motion.form>
         )}

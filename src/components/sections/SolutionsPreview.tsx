@@ -1,109 +1,96 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import { Container, SectionHeader } from "@/components/ui";
-import { Workflow, Link as LinkIcon, Cloud, Code, Database, RefreshCw, ShieldCheck, Zap } from "lucide-react";
+import { Container } from "@/components/ui";
+import { Workflow, Link as LinkIcon, Cloud, Code, Database, RefreshCw, ShieldCheck, Zap, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { staggerContainer, itemVariants } from "@/lib/animations";
-import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
-const solutions = [
+const capabilities = [
   {
-    title: "Workflow Automation",
-    description: "Reclaim 30% of your team's week.",
     icon: Workflow,
-    href: "/solutions#automation",
+    title: "Workflow Automation",
+    description: "Reclaim 30% of your team's week by eliminating manual bottlenecks."
   },
   {
-    title: "System Integration",
-    description: "Connect silos with zero data drift.",
     icon: LinkIcon,
-    href: "/solutions#integration",
+    title: "System Integration",
+    description: "Connect silos with zero data drift across ERP, CRM, and Legacy systems."
   },
   {
-    title: "Cloud Infrastructure",
-    description: "10x scale capacity, zero downtime.",
     icon: Cloud,
-    href: "/solutions#cloud",
+    title: "Cloud Infrastructure",
+    description: "10x scale capacity and zero downtime with resilient, automated architecture."
   },
   {
-    title: "Custom Software",
-    description: "Bespoke tools for bespoke problems.",
     icon: Code,
-    href: "/solutions#custom",
+    title: "Custom Software",
+    description: "Bespoke tools for bespoke problems. No workarounds, no compromises."
   },
   {
-    title: "Data Engineering",
-    description: "Turn raw data into board-ready insights.",
     icon: Database,
-    href: "/solutions#data",
+    title: "Data Engineering",
+    description: "Turn raw data into board-ready insights with real-time visibility."
   },
   {
-    title: "Legacy Modernization",
-    description: "Upgrade without the migration downtime.",
     icon: RefreshCw,
-    href: "/solutions#modernization",
+    title: "Legacy Modernization",
+    description: "Upgrade aging components without the downtime or risk of data loss."
   },
   {
-    title: "Security & Compliance",
-    description: "Hardened systems for enterprise risk.",
     icon: ShieldCheck,
-    href: "/solutions#security",
+    title: "Security & Compliance",
+    description: "Hardened systems for enterprise risk and regulatory requirements."
   },
   {
-    title: "Performance Tuning",
-    description: "Latency-critical architecture resets.",
     icon: Zap,
-    href: "/solutions#performance",
-  },
+    title: "Performance Tuning",
+    description: "Latency-critical resets for high-volume enterprise architectures."
+  }
 ];
 
 export function SolutionsPreview() {
   return (
-    <section className="bg-cream pt-24 pb-0">
-      <Container className="mb-16">
-        <SectionHeader
-          eyebrow="CAPABILITIES"
-          headline="Built to Move Your Numbers"
-        />
-      </Container>
-      
-      <Container className="px-0 sm:px-0 lg:px-0 max-w-full border-t border-warm-gray">
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
-        >
-          {solutions.map((solution, index) => (
-            <Link 
-              key={solution.title} 
-              href={solution.href}
-              className="group"
+    <section className="bg-cream py-24 border-b border-warm-gray">
+      <Container>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div className="max-w-xl">
+            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-soft-ink mb-6">
+              Capabilities
+            </h2>
+            <h3 className="text-4xl font-bold tracking-tight text-ink">
+              Engineered for Enterprise Scale.
+            </h3>
+          </div>
+          <Link 
+            href="/solutions" 
+            className="flex items-center text-sm font-bold text-electric hover:text-ink transition-colors group mt-8 md:mt-0"
+          >
+            EXPLORE ALL CAPABILITIES <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-warm-gray">
+          {capabilities.map((capability, i) => (
+            <motion.div
+              key={capability.title}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="bg-white border-r border-b border-warm-gray p-8 flex flex-col items-center text-center group hover:bg-electric/[0.02] transition-colors"
             >
-              <motion.div
-                variants={itemVariants}
-                className={cn(
-                  "p-8 border-b border-warm-gray transition-colors duration-300 hover:bg-electric/[0.03] h-full",
-                  // Right border logic
-                  "border-r-0 md:border-r lg:border-r",
-                  "md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(4n)]:border-r-0",
-                  // Bottom border logic for last row
-                  index >= solutions.length - 1 && "border-b-0",
-                  index >= solutions.length - 2 && "md:border-b-0",
-                  index >= solutions.length - 4 && "lg:border-b-0"
-                )}
-              >
-                <div className="mb-6">
-                  <solution.icon className="text-electric" size={24} strokeWidth={1.5} aria-hidden="true" />
-                </div>
-                <h3 className="text-lg font-bold text-ink mb-2">{solution.title}</h3>
-                <p className="text-sm text-soft-ink leading-relaxed">{solution.description}</p>
-              </motion.div>
-            </Link>
+              <div className="mb-6 p-3 rounded-full bg-electric/5 text-electric group-hover:bg-electric group-hover:text-white transition-colors">
+                <capability.icon size={24} strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm font-bold text-ink mb-4 leading-tight uppercase tracking-widest">
+                {capability.title}
+              </h3>
+              <p className="text-xs text-soft-ink leading-relaxed">
+                {capability.description}
+              </p>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </Container>
     </section>
   );
