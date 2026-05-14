@@ -21,8 +21,8 @@ export default function ContactPage() {
             <div className="space-y-12">
               <SectionHeader
                 eyebrow="GET IN TOUCH"
-                headline="Let's Engineer Your Next Outcome"
-                subheadline="Tell us what you're trying to move. We'll tell you how we'd move it."
+                headline="Let&apos;s Engineer Your Next Outcome"
+                subheadline="Tell us what you&apos;re trying to move. We&apos;ll tell you how we&apos;d move it."
               />
 
               <div className="space-y-8">
@@ -61,7 +61,7 @@ export default function ContactPage() {
 
               <GlassCard padding="comfortable" className="bg-ink text-cream border-ink">
                 <p className="text-lg font-medium leading-relaxed">
-                  "The fastest way to understand if we're the right partner is a direct engineering conversation. No sales decks, just problem-solving."
+                  &ldquo;The fastest way to understand if we&apos;re the right partner is a direct engineering conversation. No sales decks, just problem-solving.&rdquo;
                 </p>
               </GlassCard>
             </div>

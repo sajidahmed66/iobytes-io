@@ -1,51 +1,33 @@
 "use client";
 
 import { Container, AnimatedButton } from "@/components/ui";
-import { motion } from "framer-motion";
+import { Target, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export function CTABanner() {
   return (
-    <section className="py-24 bg-ink text-cream relative overflow-hidden">
-      {/* Subtle Background Accent */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-electric/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
-      
-      <Container className="relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
-          >
-            Let's Engineer Your <br /> Next <span className="text-electric">Outcome</span>
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-cream/60 mb-10 max-w-2xl mx-auto"
-          >
-            Tell us what you're trying to move. We'll tell you how we'd move it.
-          </motion.p>
+    <section className="bg-electric py-12">
+      <Container>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-8 text-white">
+            <div className="shrink-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+              <Target size={32} />
+            </div>
+            <div className="max-w-md">
+              <h2 className="text-2xl font-bold tracking-tight mb-2">
+                READY TO ENGINEER WHAT&apos;S NEXT?
+              </h2>
+              <p className="text-white/80 font-medium leading-tight">
+                Let&apos;s build the outcomes that move your business forward.
+              </p>
+            </div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-col items-center gap-6"
-          >
-            <AnimatedButton size="lg" asChild className="px-12">
-              <Link href="/contact">Start a Project</Link>
-            </AnimatedButton>
-            
-            <p className="text-sm font-medium text-cream/40 uppercase tracking-widest">
-              Response within 24 hours. No pitch decks, just engineering.
-            </p>
-          </motion.div>
+          <AnimatedButton size="lg" asChild className="rounded-sm px-12 bg-white text-electric hover:bg-white/90 shadow-none border-none">
+            <Link href="/contact" className="flex items-center gap-2 font-bold uppercase tracking-widest">
+              SCHEDULE A STRATEGY CALL <ArrowRight size={18} />
+            </Link>
+          </AnimatedButton>
         </div>
       </Container>
     </section>

@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { posts } from "@/lib/data/insights";
 import Link from "next/link";
-import { ArrowRight, Clock, Calendar } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { Metadata } from "next";
 

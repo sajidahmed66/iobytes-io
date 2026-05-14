@@ -1,49 +1,62 @@
 "use client";
 
-import { Container, SectionHeader } from "@/components/ui";
-import { ClientCard } from "@/components/shared/ClientCard";
+import { Container } from "@/components/ui";
+import { OutcomeCard } from "@/components/shared/OutcomeCard";
+import { BarChart3, Clock3, Wallet2, ArrowRight, ShieldCheck, Zap, Activity } from "lucide-react";
+import Link from "next/link";
+
+const outcomes = [
+  {
+    icon: Activity,
+    metric: "3×",
+    title: "Faster supply chain traceability",
+    description: "End-to-end agricultural logistics platform connecting farmers, distributors, and retailers for Agroshift.",
+    industry: "Agriculture",
+    delay: 0
+  },
+  {
+    icon: Zap,
+    metric: "35%",
+    title: "Increase in operational efficiency",
+    description: "Unified digital command center for industrial automation, eliminating hardware silos for FactoryNext.",
+    industry: "Industrial Automation",
+    delay: 0.1
+  },
+  {
+    icon: ShieldCheck,
+    metric: "24/7",
+    title: "Real-time sensor coverage",
+    description: "End-to-end sensor telemetry platform for environmental intelligence across industrial operations for BAT.",
+    industry: "Environmental Monitoring",
+    delay: 0.2
+  }
+];
 
 export function ClientWork() {
   return (
-    <section className="bg-ink py-24 md:py-[96px] overflow-hidden">
+    <section className="bg-cream py-24 border-b border-warm-gray">
       <Container>
-        <SectionHeader
-          eyebrow="OUR CLIENT'S WORK"
-          headline="The Numbers We Hit"
-          subheadline="Real outcomes for real enterprises. Every metric verified."
-          align="center"
-          theme="dark"
-          className="mb-16 md:mb-24"
-        />
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div className="max-w-xl">
+            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-soft-ink mb-6">
+              Outcomes That Matter
+            </h2>
+            <h3 className="text-4xl font-bold tracking-tight text-ink">
+              Real Metrics. Real Impact.
+            </h3>
+          </div>
+          <Link 
+            href="/portfolio" 
+            className="flex items-center text-sm font-bold text-electric hover:text-ink transition-colors group mt-8 md:mt-0"
+          >
+            VIEW ALL CASE STUDIES <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          <ClientCard
-            logo="/agroshift.avif"
-            industry="AGRICULTURE"
-            headline="Faster supply chain visibility from farm to shelf"
-            description="End-to-end agricultural logistics platform connecting farmers, distributors, and retailers with real-time inventory tracking."
-            metric="3× faster traceability"
-            href="/portfolio/agroshift"
-            delay={0}
-          />
-          <ClientCard
-            logo="/factorynext.png"
-            industry="INDUSTRIAL AUTOMATION"
-            headline="35% increase in operational efficiency"
-            description="Unified digital command center for industrial automation. Eliminated hardware silos and transitioned isolated systems into a fully integrated Industry 4.0 ecosystem."
-            metric="35% operational efficiency"
-            href="/portfolio/factorynext"
-            delay={0.15}
-          />
-          <ClientCard
-            logo="/bat-bangladesh-logo.png"
-            industry="ENVIRONMENTAL MONITORING"
-            headline="Real-time environmental intelligence across industrial operations"
-            description="End-to-end sensor telemetry platform that transforms raw environmental data into automated alerts, compliance-ready analytics, and 24/7 operational transparency."
-            metric="24/7 sensor coverage"
-            href="/portfolio/bat"
-            delay={0.3}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {outcomes.map((outcome) => (
+            <OutcomeCard key={outcome.title} {...outcome} />
+          ))}
         </div>
       </Container>
     </section>

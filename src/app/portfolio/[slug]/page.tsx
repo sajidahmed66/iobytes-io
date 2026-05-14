@@ -99,7 +99,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
               <section>
                 <GlassCard padding="comfortable" className="relative mt-12">
                   <blockquote className="text-xl font-medium text-ink leading-relaxed mb-6 italic">
-                    "{study.testimonial.quote}"
+                    &ldquo;{study.testimonial.quote}&rdquo;
                   </blockquote>
                   <cite className="not-italic block font-bold text-soft-ink">
                     — {study.testimonial.attribution}

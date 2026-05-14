@@ -37,69 +37,72 @@ export function HeroHome() {
     },
   };
 
-  const lines = [
-    "WE ENGINEER",
-    "THE OUTCOMES",
-    "THAT BUILD",
-    "ENTERPRISES.",
-  ];
-
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 bg-cream overflow-hidden">
+    <section className="relative pt-32 pb-20 bg-cream overflow-hidden border-b border-warm-gray">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-20 gap-12 items-center">
-          {/* Left Column: 55% */}
-          <div className="lg:col-span-11">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="space-y-8"
-            >
-              <h1 className="flex flex-col">
-                {lines.map((line, i) => (
-                  <motion.span
-                    key={i}
-                    variants={lineVariants}
-                    className="text-[42px] md:text-[64px] font-[800] leading-[1.05] tracking-tighter text-ink"
-                  >
-                    {line}
-                  </motion.span>
-                ))}
-              </h1>
-
-              <motion.p
-                variants={lineVariants}
-                className="text-xl md:text-[20px] text-soft-ink max-w-lg leading-relaxed"
-              >
-                Custom software for B2B. Accountable to your board.
-              </motion.p>
-
-              <motion.div
-                variants={lineVariants}
-                className="flex flex-row items-center gap-8"
-              >
-                <AnimatedButton size="lg" asChild className="rounded-full px-8">
-                  <Link href="/contact">Start a Project</Link>
-                </AnimatedButton>
-                <Link
-                  href="/portfolio"
-                  className="flex items-center text-sm font-bold text-ink hover:text-electric transition-colors group"
-                >
-                  See our work
-                  <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column: Content */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="space-y-8"
+          >
+            {/* Eyebrow */}
+            <motion.div variants={lineVariants} className="flex items-center gap-3">
+              <div className="w-3 h-3 bg-electric" />
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-electric">
+                Custom Software. Measurable Impact.
+              </span>
             </motion.div>
-          </div>
 
-          {/* Right Column: 45% */}
-          <div className="hidden lg:flex lg:col-span-9 justify-center items-center">
+            {/* Headline */}
+            <motion.h1 
+              variants={lineVariants}
+              className="text-5xl md:text-[64px] font-[900] leading-[1.05] tracking-tighter text-ink uppercase"
+            >
+              We Engineer<br />
+              the Outcomes<br />
+              that Build<br />
+              Enterprises
+            </motion.h1>
+
+            {/* Subheadline */}
+            <motion.p
+              variants={lineVariants}
+              className="text-lg md:text-[20px] text-soft-ink max-w-xl leading-relaxed"
+            >
+              iobytes builds custom B2B software solutions that solve critical business problems and are accountable to the metrics that matter most.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              variants={lineVariants}
+              className="flex flex-col sm:flex-row items-center gap-8 pt-4"
+            >
+              <AnimatedButton size="lg" asChild className="rounded-sm px-8 bg-electric text-white hover:bg-electric/90 shadow-none">
+                <Link href="/contact" className="flex items-center gap-2">
+                  SCHEDULE A STRATEGY CALL <ArrowRight size={18} />
+                </Link>
+              </AnimatedButton>
+              
+              <Link
+                href="/portfolio"
+                className="flex items-center text-sm font-bold text-ink hover:text-electric transition-colors group uppercase tracking-widest"
+              >
+                Explore our work
+                <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Column: Illustration */}
+          <div className="hidden lg:flex justify-center items-center">
             <motion.div
               variants={imageVariants}
               initial="hidden"
               animate="visible"
-              className="relative w-full aspect-square"
+              className="relative w-full aspect-square max-w-[540px]"
             >
               <Image
                 src="/illustration.png"
