@@ -28,20 +28,20 @@ export const teamData: TeamData = {
       bio: "PhD student in Computer Science specializing in high-performance systems, networking, and distributed infrastructure, with 9+ years of industry experience.",
       photo: "/team/plabon-dutta.jpeg",
       // linkedin: "https://www.linkedin.com/in/plabon-dutta-780895365/"
-    },
-    {
-      name: "Dr. Fahmida Chowdhury",
-      role: "Director",
-      bio: "Recruited 100+ engineers in 6 months while maintaining <1% defect rate.",
-      photo: "/team/elena-vasquez.jpg",
-      linkedin: ""
-    },
-    {
-      name: "Mossammat Mahmuda Khatun",
-      role: "Director",
-      bio: "Achieved 99.99% uptime while cutting infrastructure costs by 40%.",
-      photo: "/team/mossammat-mahmuda-khatun.jpg",
-    }
+     }
+    // {
+    //   name: "Dr. Fahmida Chowdhury",
+    //   role: "Director",
+    //   bio: "Recruited 100+ engineers in 6 months while maintaining <1% defect rate.",
+    //   photo: "/team/elena-vasquez.jpg",
+    //   linkedin: ""
+    // },
+    // {
+    //   name: "Mossammat Mahmuda Khatun",
+    //   role: "Director",
+    //   bio: "Achieved 99.99% uptime while cutting infrastructure costs by 40%.",
+    //   photo: "/team/mossammat-mahmuda-khatun.jpg",
+    // }
   ],
   consultants: [
     {
@@ -92,7 +92,7 @@ export const teamData: TeamData = {
     },
     {
       name: "Sajid Ahmed Siddiqui",
-      role: "Senior Software Engineer",
+      role: "Lead Software Engineer",
       bio: "Reduced time-to-value from 6 months to 8 weeks for new clients.",
       photo: "/team/sajid-ahmed.jpeg",
       // linkedin: "https://www.linkedin.com/in/sajidahmed66/"
