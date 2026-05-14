@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Container } from "@/components/ui";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -48,26 +48,26 @@ export function TestimonialSection() {
   }, [isPaused, nextSlide, shouldReduceMotion]);
 
   return (
-    <section className="bg-cream py-24 border-b border-warm-gray overflow-hidden">
+    <section className="bg-cream py-32 border-b border-warm-gray overflow-hidden">
       <Container>
         <div
           className="max-w-4xl mx-auto relative text-center"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Quote Icon */}
-          {/* <div className="flex justify-center mb-10 text-electric/20">
-            <Quote size={80} fill="currentColor" />
-          </div> */}
+          {/* Decorative quote mark */}
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-[180px] font-serif text-electric/[0.07] leading-none select-none pointer-events-none">
+            &ldquo;
+          </div>
 
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="space-y-12"
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-12 relative z-10"
             >
               <blockquote className="text-3xl md:text-4xl font-medium text-ink leading-tight tracking-tight min-h-[160px] md:min-h-[140px] flex items-center justify-center">
                 &ldquo;{testimonials[currentIndex].quote}&rdquo;

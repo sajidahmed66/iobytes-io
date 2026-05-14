@@ -8,17 +8,17 @@ import { motion, HTMLMotionProps } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-250 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         primary:
-          "bg-electric text-ink shadow-sm hover:shadow-glow rounded-pill",
+          "bg-electric text-white shadow-md hover:shadow-hover hover:-translate-y-0.5 rounded-pill",
         secondary:
-          "border border-ink bg-transparent hover:bg-ink hover:text-cream rounded-button",
+          "border border-ink bg-transparent hover:bg-ink hover:text-cream hover:-translate-y-0.5 rounded-button",
         ghost: "hover:bg-accent hover:text-accent-foreground rounded-button",
         link: "text-primary underline-offset-4 hover:underline",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground hover:-translate-y-0.5",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
       },
       size: {
@@ -70,8 +70,9 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
     return (
       <Comp
         ref={ref}
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.02, y: -2 }}
         whileTap={{ scale: 0.98 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
         className={cn(buttonVariants({ variant, size, className }))}
         {...props}
       />

@@ -26,7 +26,8 @@ export function OutcomeCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="bg-white border border-warm-gray p-8 flex flex-col h-full hover:shadow-md transition-shadow"
+      whileHover={{ y: -4 }}
+      className="bg-white border border-warm-gray rounded-lg p-8 flex flex-col h-full hover:shadow-lg transition-all duration-300"
     >
       <div className="mb-8">
         <div className="w-12 h-12 rounded-full bg-electric/5 flex items-center justify-center text-electric">

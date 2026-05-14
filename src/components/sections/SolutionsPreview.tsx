@@ -50,7 +50,7 @@ const capabilities = [
 
 export function SolutionsPreview() {
   return (
-    <section className="bg-cream py-24 border-b border-warm-gray">
+    <section className="bg-cream py-28 border-b border-warm-gray">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-xl">
@@ -69,17 +69,34 @@ export function SolutionsPreview() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-warm-gray">
-          {capabilities.map((capability, i) => (
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.08, delayChildren: 0.1 }
+            }
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-warm-gray"
+        >
+          {capabilities.map((capability) => (
             <motion.div
               key={capability.title}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="bg-white border-r border-b border-warm-gray p-8 flex flex-col items-center text-center group hover:bg-electric/[0.02] transition-colors"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+                }
+              }}
+              whileHover={{ backgroundColor: "rgba(85, 179, 232, 0.03)" }}
+              className="bg-white border-r border-b border-warm-gray p-8 flex flex-col items-center text-center group transition-colors"
             >
-              <div className="mb-6 p-3 rounded-full bg-electric/5 text-electric group-hover:bg-electric group-hover:text-white transition-colors">
+              <div className="mb-6 p-3 rounded-full bg-electric/5 text-electric group-hover:bg-electric group-hover:text-white transition-all duration-300">
                 <capability.icon size={24} strokeWidth={1.5} />
               </div>
               <h3 className="text-sm font-bold text-ink mb-4 leading-tight uppercase tracking-widest">
@@ -90,7 +107,7 @@ export function SolutionsPreview() {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

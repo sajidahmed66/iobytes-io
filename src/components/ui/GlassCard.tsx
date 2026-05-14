@@ -14,9 +14,10 @@ export const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
     return (
       <motion.div
         ref={ref}
-        whileHover={glow ? { scale: 1.01 } : {}}
+        whileHover={{ y: -4 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
         className={cn(
-          "bg-cream/85 backdrop-blur-glass border border-warm-gray/60 rounded-card transition-all duration-300",
+          "bg-cream/85 backdrop-blur-glass border border-warm-gray/60 rounded-card transition-all duration-300 hover:shadow-lg",
           glow && "hover:border-electric/40 hover:shadow-glow",
           padding === "default" && "p-4",
           padding === "comfortable" && "p-6",

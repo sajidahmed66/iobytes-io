@@ -34,7 +34,7 @@ const outcomes = [
 
 export function ClientWork() {
   return (
-    <section className="bg-cream py-24 border-b border-warm-gray">
+    <section className="bg-cream py-32 border-b border-warm-gray">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-xl">

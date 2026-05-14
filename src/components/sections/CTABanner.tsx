@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function CTABanner() {
   return (
-    <section className="bg-electric py-12">
+    <section className="bg-electric py-16">
       <Container>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-8 text-white">
