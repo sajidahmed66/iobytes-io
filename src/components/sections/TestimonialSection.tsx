@@ -50,15 +50,15 @@ export function TestimonialSection() {
   return (
     <section className="bg-cream py-24 border-b border-warm-gray overflow-hidden">
       <Container>
-        <div 
+        <div
           className="max-w-4xl mx-auto relative text-center"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Quote Icon */}
-          <div className="flex justify-center mb-10 text-electric/20">
+          {/* <div className="flex justify-center mb-10 text-electric/20">
             <Quote size={80} fill="currentColor" />
-          </div>
+          </div> */}
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -93,18 +93,17 @@ export function TestimonialSection() {
             >
               <ChevronLeft size={32} strokeWidth={1.5} />
             </button>
-            
+
             {/* Dots */}
             <div className="flex gap-3">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-1.5 transition-all duration-300 rounded-full ${
-                    index === currentIndex 
-                      ? "bg-electric w-8" 
+                  className={`h-1.5 transition-all duration-300 rounded-full ${index === currentIndex
+                      ? "bg-electric w-8"
                       : "bg-warm-gray w-4 hover:bg-soft-ink/20"
-                  }`}
+                    }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
