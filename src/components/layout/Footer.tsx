@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const footerLinks = {
   solutions: [
@@ -25,9 +28,18 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-cream pt-20 pb-10 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-ink text-cream pt-20 pb-10 px-4 md:px-8 relative overflow-hidden">
+      {/* Subtle gradient accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-electric/30 to-transparent" />
+
+      <div className="max-w-7xl mx-auto relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
@@ -47,7 +59,7 @@ export function Footer() {
             <ul className="space-y-4">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-cream/60 hover:text-cream transition-colors">
+                  <Link href={link.href} className="text-cream/60 hover:text-cream hover:translate-x-1 transition-all duration-200 inline-block">
                     {link.name}
                   </Link>
                 </li>
@@ -61,7 +73,7 @@ export function Footer() {
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-cream/60 hover:text-cream transition-colors">
+                  <Link href={link.href} className="text-cream/60 hover:text-cream hover:translate-x-1 transition-all duration-200 inline-block">
                     {link.name}
                   </Link>
                 </li>
@@ -78,7 +90,7 @@ export function Footer() {
                   <Link
                     href={link.href}
                     target="_blank"
-                    className="flex items-center space-x-2 text-cream/60 hover:text-cream transition-colors focus-visible:outline-2 focus-visible:outline-electric rounded-sm"
+                    className="flex items-center space-x-2 text-cream/60 hover:text-cream hover:translate-x-1 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-electric rounded-sm"
                     aria-label={link.icon ? `Follow us on ${link.name}` : link.name}
                   >
                     {link.icon && <link.icon size={16} aria-hidden="true" />}
@@ -88,7 +100,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-        </div>
+        </motion.div>
 
         <div className="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-cream/40">
           <p>© {new Date().getFullYear()} iobytes. All rights reserved.</p>

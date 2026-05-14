@@ -51,14 +51,17 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-soft-ink hover:text-electric transition-colors"
+              className="relative text-sm font-medium text-soft-ink hover:text-electric transition-colors duration-200 py-1 group"
             >
               {link.name}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-electric transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
-          <Button asChild className="rounded-full px-6">
-            <Link href="/contact">Start a Project</Link>
-          </Button>
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <Button asChild className="rounded-full px-6 shadow-md hover:shadow-lg transition-shadow">
+              <Link href="/contact">Start a Project</Link>
+            </Button>
+          </motion.div>
         </div>
 
         {/* Mobile Menu Toggle */}

@@ -18,19 +18,22 @@ export function OutcomeCard({
   title,
   description,
   industry,
-  delay = 0,
 }: OutcomeCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay }}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+        }
+      }}
       whileHover={{ y: -4 }}
-      className="bg-white border border-warm-gray rounded-lg p-8 flex flex-col h-full hover:shadow-lg transition-all duration-300"
+      className="bg-white border border-warm-gray rounded-lg p-8 flex flex-col h-full hover:shadow-lg transition-all duration-300 group"
     >
       <div className="mb-8">
-        <div className="w-12 h-12 rounded-full bg-electric/5 flex items-center justify-center text-electric">
+        <div className="w-12 h-12 rounded-full bg-electric/5 flex items-center justify-center text-electric group-hover:bg-electric group-hover:text-white transition-colors duration-300">
           <Icon size={24} strokeWidth={1.5} />
         </div>
       </div>
