@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/ui";
 import { OutcomeCard } from "@/components/shared/OutcomeCard";
-import { BarChart3, Clock3, Wallet2, ArrowRight, ShieldCheck, Zap, Activity } from "lucide-react";
+import { ArrowRight, ShieldCheck, Zap, Activity } from "lucide-react";
 import Link from "next/link";
 
 const outcomes = [
@@ -26,7 +26,7 @@ const outcomes = [
     icon: ShieldCheck,
     metric: "24/7",
     title: "Real-time sensor coverage",
-    description: "End-to-end sensor telemetry platform for environmental intelligence across industrial operations for BAT.",
+    description: "Comprehensive sensor telemetry platform for environmental intelligence across industrial operations for BAT.",
     industry: "Environmental Monitoring",
     delay: 0.2
   }
@@ -42,7 +42,7 @@ export function ClientWork() {
               Outcomes That Matter
             </h2>
             <h3 className="text-4xl font-bold tracking-tight text-ink">
-              Real Metrics. Real Impact.
+              Measured Results. Proven Impact.
             </h3>
           </div>
           <Link 

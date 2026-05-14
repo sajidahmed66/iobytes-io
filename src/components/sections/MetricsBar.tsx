@@ -5,9 +5,9 @@ import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const stats = [
-  "100+ enterprise engagements delivered",
+  "50+ enterprise engagements delivered",
   "98% client retention",
-  "20+ years of proven delivery"
+  "10+ years of proven delivery"
 ];
 
 export function MetricsBar() {

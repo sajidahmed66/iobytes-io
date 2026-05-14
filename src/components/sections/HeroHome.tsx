@@ -59,12 +59,10 @@ export function HeroHome() {
             {/* Headline */}
             <motion.h1 
               variants={lineVariants}
-              className="text-5xl md:text-[64px] font-[900] leading-[1.05] tracking-tighter text-ink uppercase"
+              className="text-xl md:text-4xl font-black leading-[1.05] tracking-tighter text-ink uppercase"
             >
-              We Engineer<br />
-              the Outcomes<br />
-              that Build<br />
-              Enterprises
+              We Engineer the Outcomes <br className="hidden md:block"/>
+              that Transform Enterprises
             </motion.h1>
 
             {/* Subheadline */}
@@ -72,7 +70,7 @@ export function HeroHome() {
               variants={lineVariants}
               className="text-lg md:text-[20px] text-soft-ink max-w-xl leading-relaxed"
             >
-              iobytes builds custom B2B software solutions that solve critical business problems and are accountable to the metrics that matter most.
+              We deliver B2B software solutions that solve critical business problems and prove it with the metrics that matter most.
             </motion.p>
 
             {/* CTAs */}
@@ -102,10 +100,10 @@ export function HeroHome() {
               variants={imageVariants}
               initial="hidden"
               animate="visible"
-              className="relative w-full aspect-square max-w-[540px]"
+              className="relative w-full aspect-square max-w-100 bg-cream"
             >
               <Image
-                src="/illustration.png"
+                src="/illustration5.png"
                 alt="iobytes Outcome Engineering Illustration"
                 fill
                 className="object-contain"

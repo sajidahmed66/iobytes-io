@@ -34,7 +34,7 @@
   --color-ring: var(--ring);
 
   /* Typography */
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Satoshi", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
   /* Geometry */
@@ -113,6 +113,9 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  html, body {
+    @apply overflow-x-hidden;
   }
   body {
     @apply bg-background text-foreground font-sans;
