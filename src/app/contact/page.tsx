@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
 import { Container, SectionHeader, GlassCard } from "@/components/ui";
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { ContactForm } from "@/components/shared/ContactForm";
 import { Mail, MapPin, Clock } from "lucide-react";
 import { Metadata } from "next";
+
+const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
 export const metadata: Metadata = {
   title: "Start a Project",

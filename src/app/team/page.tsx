@@ -1,11 +1,14 @@
+import dynamic from "next/dynamic";
 import { Container, SectionHeader } from "@/components/ui";
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { TeamBoard } from "@/components/sections/TeamBoard";
-import { TeamConsultants } from "@/components/sections/TeamConsultants";
-import { TeamLeadership } from "@/components/sections/TeamLeadership";
-import { TeamJoinCTA } from "@/components/sections/TeamJoinCTA";
 import { Metadata } from "next";
+
+// Lazy load below-fold sections
+const TeamConsultants = dynamic(() => import("@/components/sections/TeamConsultants").then(mod => mod.TeamConsultants));
+const TeamLeadership = dynamic(() => import("@/components/sections/TeamLeadership").then(mod => mod.TeamLeadership));
+const TeamJoinCTA = dynamic(() => import("@/components/sections/TeamJoinCTA").then(mod => mod.TeamJoinCTA));
+const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
 export const metadata: Metadata = {
   title: "Our Team | iobytes",

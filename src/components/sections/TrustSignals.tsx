@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui";
 import { ShieldCheck, Lock, CheckCircle2, Globe } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
+import { blurDataURL } from "@/lib/image-utils";
 
 const originalLogos = [
   { name: "BAT Bangladesh", src: "/bat-bangladesh-logo.png" },
@@ -64,6 +65,9 @@ export function TrustSignals() {
                       alt={logo.name}
                       fill
                       className="object-contain"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={blurDataURL}
                     />
                   </div>
                 ))}

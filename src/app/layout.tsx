@@ -49,11 +49,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jetbrainsMono.variable} scroll-smooth`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        {/* Preconnect to font origins for faster loading */}
+        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.fontshare.com" />
         <link
           href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
           rel="stylesheet"
         />
-        <title>iobytes</title>
       </head>
       <body className="antialiased min-h-screen">
         <PageTransition>

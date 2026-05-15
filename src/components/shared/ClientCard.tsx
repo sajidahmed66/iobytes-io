@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { blurDataURL } from "@/lib/image-utils";
 
 interface ClientCardProps {
   logo: string;
@@ -56,6 +57,9 @@ export function ClientCard({
             alt={`${headline} logo`}
             fill
             className="object-contain object-left"
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL={blurDataURL}
           />
         </div>
 

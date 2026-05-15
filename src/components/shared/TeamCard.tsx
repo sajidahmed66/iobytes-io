@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Linkedin } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
+import { avatarBlurDataURL } from "@/lib/image-utils";
 
 interface TeamCardProps {
   name: string;
@@ -75,12 +76,10 @@ export function TeamCard({
             src={photo}
             alt={name}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-0"
+            placeholder="blur"
+            blurDataURL={avatarBlurDataURL}
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             style={{ objectPosition: getPositionStyle() }}
-            onLoad={(e) => (e.target as HTMLImageElement).classList.remove("opacity-0")}
-            onError={() => {
-              // Keep showing initials on error
-            }}
           />
         </div>
 

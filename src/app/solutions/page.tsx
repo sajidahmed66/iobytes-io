@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
 import { Container, GlassCard, AnimatedButton } from "@/components/ui";
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Workflow, Link as LinkIcon, Cloud, Code, Database, RefreshCw, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+
+const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
 export const metadata: Metadata = {
   title: "Enterprise Solutions",

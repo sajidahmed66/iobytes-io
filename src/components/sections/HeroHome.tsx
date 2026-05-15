@@ -5,6 +5,7 @@ import { AnimatedButton, Container } from "@/components/ui";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { blurDataURL } from "@/lib/image-utils";
 
 export function HeroHome() {
   const shouldReduceMotion = useReducedMotion();
@@ -143,6 +144,8 @@ export function HeroHome() {
                   fill
                   className="object-contain"
                   priority
+                  placeholder="blur"
+                  blurDataURL={blurDataURL}
                 />
               </motion.div>
             </motion.div>
