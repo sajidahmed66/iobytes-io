@@ -27,6 +27,9 @@ export interface TeamMember {
   photo: string;
   stackoverflow?: string;
   linkedin?: string;
+  github?: string;
+  skills?: string[];
+  isAlsoBoard?: boolean;
   imagePosition?: string; // e.g., "top", "center", "bottom", or custom like "50% 30%"
 }
 

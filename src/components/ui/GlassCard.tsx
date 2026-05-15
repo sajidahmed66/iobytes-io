@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 interface GlassCardProps extends HTMLMotionProps<"div"> {
   glow?: boolean;
-  padding?: "default" | "comfortable" | "none";
+  padding?: "tight" | "default" | "comfortable" | "none";
 }
 
 export const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
@@ -19,7 +19,8 @@ export const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
         className={cn(
           "bg-cream/85 backdrop-blur-glass border border-warm-gray/60 rounded-card transition-all duration-300 hover:shadow-lg",
           glow && "hover:border-electric/40 hover:shadow-glow",
-          padding === "default" && "p-4",
+          padding === "tight" && "p-4",
+          padding === "default" && "p-5",
           padding === "comfortable" && "p-6",
           className
         )}
