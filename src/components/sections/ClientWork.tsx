@@ -35,14 +35,14 @@ const outcomes = [
 
 export function ClientWork() {
   return (
-    <section className="bg-cream py-32 border-b border-warm-gray">
+    <section className="bg-cream py-16 md:py-32 border-b border-warm-gray">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row justify-between items-end mb-16"
+          className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16"
         >
           <div className="max-w-xl">
             <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-electric mb-6">

@@ -8,13 +8,13 @@ import { motion } from "framer-motion";
 
 export function FeaturedCaseStudy() {
   return (
-    <section className="bg-cream py-32 border-b border-warm-gray">
+    <section className="bg-cream py-16 md:py-32 border-b border-warm-gray">
       <Container>
         <span className="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-electric mb-4">
           Featured Case Study
         </span>
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Column 1: Text Content */}
           <div className="lg:col-span-4 space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-ink leading-tight">

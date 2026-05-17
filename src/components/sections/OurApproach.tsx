@@ -26,9 +26,9 @@ const steps = [
 
 export function OurApproach() {
   return (
-    <section className="bg-cream py-28 border-b border-warm-gray">
+    <section className="bg-cream py-16 md:py-28 border-b border-warm-gray">
       <Container>
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16">
           <div className="max-w-xl">
             <span className="inline-block text-[12px] font-bold uppercase tracking-[0.2em] text-electric mb-6">
               Our Approach
@@ -50,7 +50,7 @@ export function OurApproach() {
               transition: { staggerChildren: 0.15, delayChildren: 0.2 }
             }
           }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12 relative"
         >
           {steps.map((step, i) => (
             <motion.div

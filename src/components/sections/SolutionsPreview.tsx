@@ -50,9 +50,9 @@ const capabilities = [
 
 export function SolutionsPreview() {
   return (
-    <section className="bg-cream py-28 border-b border-warm-gray">
+    <section className="bg-cream py-16 md:py-28 border-b border-warm-gray">
       <Container>
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16">
           <div className="max-w-xl">
             <span className="inline-block text-[12px] font-bold uppercase tracking-[0.2em] text-electric mb-6">
               Capabilities

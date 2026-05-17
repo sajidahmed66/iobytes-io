@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export function CTABanner() {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-12 md:py-16 overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-electric via-blue-400 to-electric animate-gradient" />
 
