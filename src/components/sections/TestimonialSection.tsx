@@ -8,32 +8,39 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    quote: "iobytes didn't just build our platform—they engineered the outcome we promised our board. That accountability is rare.",
-    attribution: "Chairman",
+    "quote": "iobytes transformed how we monitor our warehouse environments. By integrating precise temperature, humidity, and VOC sensors, they gave us realtime control over our tobacco curing and storage processes. A truly brilliant operational upgrade.",
+    "attribution": "Supply Chain & Logistics Director",
+    "company": "BAT",
+    "image": "/bat-bangladesh-logo.png",
+    "initials": "BT"
+  },
+  {
+    quote: "We've moved from reactive to proactive. We haven't had an unplanned outage in six months, and the ROI was clear within the first quarter. That level of accountability is rare.",
+    attribution: "Head of Operations",
     company: "FactoryNext",
-    image: null, // Add client photo path when available
+    image: "/factorynext.png",
     initials: "FN"
   },
   {
-    quote: "The supply chain visibility iobytes delivered transformed how we operate. Decisions that took weeks now take minutes.",
-    attribution: "Executive Leadership",
+    "quote": "We replaced scattered DMs with automated Messenger workflows. Now, customers order directly in chat, and everything flows into one admin panel. It's a 24/7 sales engine.",
+    "attribution": "Sajal Modumjar",
+    "company": "F-commerce page manager & User of BotX",
+    "image": null,
+    "initials": "BX"
+  },
+  {
+    quote: "Visibility is the foundation of our business. iobytes gave us a clear window into our entire operation, reducing spoilage and building immediate trust with our distributors.",
+    attribution: "CEO",
     company: "Agroshift",
-    image: null,
+    image: "/agroshift.avif",
     initials: "AS"
   },
   {
-    quote: "iobytes didn't just build our platform—they engineered an ecosystem that scales with our ambition.",
-    attribution: "Executive Leadership",
-    company: "Kaicom",
-    image: null,
-    initials: "KC"
-  },
-  {
-    quote: "BotX shifted our social selling from a labor-intensive manual operation to a hands-off, highly profitable sales machine.",
-    attribution: "Executive Leadership",
-    company: "BotX",
-    image: null,
-    initials: "BX"
+    quote: "iobytes bridges the gap between complex RF engineering and global data pipelines. Their coastal stations are some of the most resilient and reliable in our entire maritime network.",
+    attribution: "Partnership Team",
+    company: "AISHub",
+    image: "/ais.png",
+    initials: "AH"
   }
 ];
 
@@ -126,8 +133,8 @@ export function TestimonialSection() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`h-1.5 transition-all duration-300 rounded-full ${index === currentIndex
-                      ? "bg-electric w-8"
-                      : "bg-warm-gray w-4 hover:bg-soft-ink/20"
+                    ? "bg-electric w-8"
+                    : "bg-warm-gray w-4 hover:bg-soft-ink/20"
                     }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

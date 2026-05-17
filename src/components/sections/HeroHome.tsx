@@ -99,7 +99,7 @@ export function HeroHome() {
             {/* Subheadline */}
             <motion.p
               variants={lineVariants}
-              className="text-lg md:text-[20px] text-soft-ink max-w-xl leading-relaxed text-justify"
+              className="text-lg font-semibold md:text-[20px] text-soft-ink max-w-xl leading-relaxed text-justify"
             >
               We deliver B2B software solutions that solve critical business problems and prove it with the metrics that matter most.
             </motion.p>

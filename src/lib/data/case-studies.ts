@@ -24,7 +24,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "Go", "PostgreSQL", "Kafka"],
     testimonial: {
-      quote: "The speed of execution and the measurable impact on our bottom line was immediate. iobytes didn't just provide a tool; they solved a business problem.",
+      quote: "Most firms just build what you ask for. iobytes pushed back, optimized our logic, and saved us thousands of manual hours. They didn't just build a tool; they solved a business problem.",
       attribution: "Global Supply Chain Director, BAT"
     }
   },
@@ -50,7 +50,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["React", "Node.js", "AWS IoT", "TimescaleDB"],
     testimonial: {
-      quote: "Visibility is the foundation of our business. iobytes gave us a clear window into our entire operation.",
+      quote: "Visibility is the foundation of our business. iobytes gave us a clear window into our entire operation, reducing spoilage and building immediate trust with our distributors.",
       attribution: "CEO, Agroshift"
     }
   },
@@ -76,7 +76,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Python", "TensorFlow", "InfluxDB", "Grafana"],
     testimonial: {
-      quote: "We've moved from reactive to proactive. The ROI was clear within the first six months.",
+      quote: "We've moved from reactive to proactive. We haven't had an unplanned outage in six months, and the ROI was clear within the first quarter. That level of accountability is rare.",
       attribution: "Head of Operations, Factorynext"
     }
   },
@@ -104,7 +104,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["AIS Receivers", "VHF Radio", "NMEA Protocol", "RF Telemetry", "Edge Computing", "Python"],
     testimonial: {
-      quote: "Through Project Mr. Radio, iobytes bridges local RF engineering with global maritime intelligence. Their Chittagong station feeds real-time data into our global repository, directly improving search-and-rescue visibility.",
+      quote: "iobytes bridges the gap between complex RF engineering and global data pipelines. Their coastal stations are some of the most resilient and reliable in our entire maritime network.",
       attribution: "AISHub Partnership Team"
     }
   },
@@ -182,7 +182,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Node.js", "Go", "PostgreSQL", "MongoDB", "Redis", "React", "Next.js", "Flutter", "Docker", "Kubernetes"],
     testimonial: {
-      quote: "The architecture is robust, and the delivery was flawlessly on time. iobytes built exactly what we needed to scale our community.",
+      quote: "The architecture is robust, but it was the delivery speed that surprised us. iobytes built a social ecosystem that scales with our community, flawlessly on time.",
       attribution: "Executive Leadership, Kaicom"
     }
   },
@@ -209,7 +209,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["n8n", "Node.js", "Meta APIs", "CRM APIs", "Fulfillment APIs", "Accounting APIs", "Real-time DBs", "Encryption"],
     testimonial: {
-      quote: "BotX has completely transformed our social sales. We've gone from chasing DMs to watching automated revenue grow while we sleep.",
+      quote: "We used to chase DMs all night. Now, I wake up to a spreadsheet of confirmed, structured sales. It's a 24/7 automated engine that turns conversations into revenue while we sleep.",
       attribution: "Executive Leadership, BotX"
     }
   },
@@ -236,7 +236,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Node.js", "Python", "TensorFlow", "Facebook Graph API", "MongoDB", "Redis", "Docker", "Kubernetes", "AWS", "Stream Processing"],
     testimonial: {
-      quote: "Aivax provided the intelligence and defense we needed at a critical scale. The local language NLP accuracy was the differentiator.",
+      quote: "Aivax provided the intelligence and defense we needed at a critical scale. The local language NLP accuracy was the differentiator in protecting our digital presence during the surge.",
       attribution: "LogicBoom Leadership, Aivax Partner"
     }
   }
