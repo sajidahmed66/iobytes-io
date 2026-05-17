@@ -22,7 +22,7 @@ export const teamData: TeamData = {
     },
     {
       name: "Plabon Dutta",
-      role: "Acting CEO & Director",
+      role: "Chief Executive Officer",
       bio: "PhD student in Computer Science specializing in high-performance systems, networking, and distributed infrastructure, with 9+ years of industry experience.",
       photo: "/team/plabon-dutta.jpeg",
     }
