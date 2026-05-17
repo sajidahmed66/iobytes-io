@@ -101,7 +101,7 @@ export function HeroHome() {
               variants={lineVariants}
               className="text-lg px-4 lg:px-0 font-semibold md:text-[20px] text-soft-ink max-w-xl leading-relaxed text-center lg:text-justify"
             >
-              We deliver B2B software solutions that solve critical business problems and prove it with the metrics that matter most.
+              Critical business problems deserve more than off-the-shelf solutions. Ours come with the metrics to prove it.
             </motion.p>
 
             {/* CTAs */}

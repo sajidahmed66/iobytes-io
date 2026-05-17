@@ -9,18 +9,18 @@ import Image from "next/image";
 const testimonials = [
   {
     "quote": "iobytes transformed how we monitor our warehouse environments. By integrating precise temperature, humidity, and VOC sensors, they gave us realtime control over our tobacco curing and storage processes. A truly brilliant operational upgrade.",
-    "attribution": "Supply Chain & Logistics Director",
-    "company": "BAT",
-    "image": "/bat-bangladesh-logo.png",
-    "initials": "BT"
-  },
-  {
-    quote: "We've moved from reactive to proactive. We haven't had an unplanned outage in six months, and the ROI was clear within the first quarter. That level of accountability is rare.",
-    attribution: "Head of Operations",
+    attribution: "CEO",
     company: "FactoryNext",
     image: "/factorynext.png",
     initials: "FN"
   },
+  // {
+  //   quote: "We've moved from reactive to proactive. We haven't had an unplanned outage in six months, and the ROI was clear within the first quarter. That level of accountability is rare.",
+  //   attribution: "Head of Operations",
+  //   company: "FactoryNext",
+  //   image: "/factorynext.png",
+  //   initials: "FN"
+  // },
   {
     "quote": "We replaced scattered DMs with automated Messenger workflows. Now, customers order directly in chat, and everything flows into one admin panel. It's a 24/7 sales engine.",
     "attribution": "Sajal Modumjar",
@@ -91,7 +91,7 @@ export function TestimonialSection() {
 
               <div className="pt-10 border-t border-warm-gray max-w-[280px] mx-auto">
                 {/* Avatar */}
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-electric/10 border-2 border-electric/20 flex items-center justify-center">
+                {/* <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-electric/10 border-2 border-electric/20 flex items-center justify-center">
                   {testimonials[currentIndex].image ? (
                     <Image
                       src={testimonials[currentIndex].image}
@@ -105,7 +105,7 @@ export function TestimonialSection() {
                       {testimonials[currentIndex].initials}
                     </span>
                   )}
-                </div>
+                </div> */}
                 <span className="block text-xl font-bold text-ink mb-1">
                   {testimonials[currentIndex].attribution}
                 </span>
