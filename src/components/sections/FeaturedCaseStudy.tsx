@@ -52,7 +52,7 @@ export function FeaturedCaseStudy() {
 
             <Link 
               href="/portfolio/bat" 
-              className="inline-flex items-center text-sm font-bold text-electric hover:text-ink transition-colors group"
+              className="inline-flex items-center text-sm font-semibold text-electric hover:text-ink transition-colors group"
             >
               View full case study <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>

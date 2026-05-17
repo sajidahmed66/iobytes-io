@@ -117,7 +117,7 @@ export function HeroHome() {
 
               <Link
                 href="/portfolio"
-                className="flex items-center text-sm font-bold text-ink hover:text-electric transition-colors group tracking-wide"
+                className="flex items-center text-sm font-semibold text-ink hover:text-electric transition-colors group tracking-wide"
               >
                 Explore our work
                 <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />

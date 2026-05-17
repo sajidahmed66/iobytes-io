@@ -86,7 +86,7 @@ export function CaseStudiesPreview() {
                   <span className="text-cream/90">{study.outcome}</span>
                 </h3>
 
-                <div className="mt-auto pt-8 flex items-center text-sm font-bold group-hover:text-electric transition-colors">
+                <div className="mt-auto pt-8 flex items-center text-sm font-semibold group-hover:text-electric transition-colors">
                   Read story
                   <ArrowUpRight size={16} className="ml-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
