@@ -89,5 +89,19 @@ export const teamData: TeamData = {
       photo: "/team/sajid-ahmed.jpeg",
       skills: ["Full-Stack Development", "Fintech", "Enterprise Apps"]
     },
+    {
+      name: "Abdullah Al Mamun",
+      role: "Law Officer",
+      bio: "Law graduate with experience in company, civil, and financial litigation matters. Skilled in legal drafting, compliance support, legal research, and client consultation.",
+      photo: "/team/abdullah-al-mamun.png",
+      skills: [
+        "Legal Research",
+        "Legal Drafting",
+        "Compliance Support",
+        "Financial Law",
+        "Civil Litigation",
+        "MS Office"
+      ]
+    }
   ]
 };

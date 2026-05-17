@@ -54,7 +54,7 @@ export function ClientWork() {
           </div>
           <Link
             href="/portfolio"
-            className="flex items-center text-sm font-bold text-electric hover:text-ink transition-colors group mt-8 md:mt-0"
+            className="flex items-center text-sm font-semibold text-electric hover:text-ink transition-colors group mt-8 md:mt-0"
           >
             View all case studies <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
           </Link>

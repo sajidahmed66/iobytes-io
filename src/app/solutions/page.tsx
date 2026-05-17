@@ -22,7 +22,7 @@ const solutions = [
   },
   {
     title: "System Integration",
-    description: "Stop the data drift. We connect your siloed enterprise systems—ERP, CRM, Legacy—into a single, reliable source of truth.",
+    description: "Stop the data drift. We connect your siloed enterprise systems ERP, CRM, Legacy into a single, reliable source of truth.",
     icon: LinkIcon,
     metric: "Zero data drift",
     href: "/contact?subject=System%20Integration",
@@ -84,7 +84,7 @@ export default function SolutionsPage() {
         <Container className="pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solutions.map((solution) => (
-              <div 
+              <div
                 key={solution.title}
                 className={solution.featured ? "lg:col-span-2" : ""}
               >
@@ -111,8 +111,8 @@ export default function SolutionsPage() {
                     </div>
                   )}
 
-                  <Link 
-                    href={solution.href} 
+                  <Link
+                    href={solution.href}
                     className="inline-flex items-center text-sm font-bold text-ink hover:text-electric transition-colors group/link"
                   >
                     Discuss your solution

@@ -74,7 +74,7 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
                 {study.teaser}
               </p>
 
-              <div className="flex items-center text-sm font-bold text-ink group-hover:text-electric transition-colors">
+              <div className="flex items-center text-sm font-semibold text-ink group-hover:text-electric transition-colors">
                 Read story 
                 <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>

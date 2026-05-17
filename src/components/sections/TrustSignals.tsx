@@ -36,19 +36,19 @@ export function TrustSignals() {
       <Container className="py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Logos Column (Scrolling) */}
-          <div className="lg:col-span-8 lg:border-r border-warm-gray lg:pr-12">
+          <div className="lg:col-span-12  border-warm-gray lg:pr-12">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-soft-ink mb-8">
               Trusted by Enterprise Leaders
             </h4>
-            
-            <div 
+
+            <div
               className="relative w-full overflow-hidden"
               onMouseEnter={() => setIsMarqueePaused(true)}
               onMouseLeave={() => setIsMarqueePaused(false)}
             >
               <div
                 className="flex whitespace-nowrap"
-                style={{ 
+                style={{
                   display: "flex",
                   width: "fit-content",
                   animation: shouldReduceMotion ? "none" : "marquee 30s linear infinite reverse",
@@ -72,25 +72,6 @@ export function TrustSignals() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-
-          {/* Security Column (Static) */}
-          <div className="lg:col-span-4 pl-0 lg:pl-4">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-soft-ink mb-8">
-              Security & Compliance
-            </h4>
-            <div className="flex items-center gap-6 flex-wrap">
-              {securityBadges.map((badge) => (
-                <div key={badge.name} className="flex flex-col items-center gap-2 group">
-                  <div className="w-11 h-11 rounded-full border border-warm-gray bg-white flex items-center justify-center text-soft-ink group-hover:text-electric group-hover:border-electric group-hover:shadow-sm transition-all duration-300">
-                    <badge.icon size={18} strokeWidth={1.5} />
-                  </div>
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-soft-ink group-hover:text-electric transition-colors">
-                    {badge.name}
-                  </span>
-                </div>
-              ))}
             </div>
           </div>
         </div>

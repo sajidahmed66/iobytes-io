@@ -18,7 +18,7 @@ export function TeamJoinCTA() {
           </p>
           <Link 
             href="/contact?subject=careers"
-            className="inline-flex items-center gap-2 bg-electric text-ink px-8 py-4 rounded-full font-bold text-lg hover:bg-electric/90 transition-all hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 bg-electric text-ink px-8 py-4 rounded-full font-semibold text-lg hover:bg-electric/90 transition-all hover:scale-105 active:scale-95"
           >
             View Open Roles
             <ArrowRight size={20} />

@@ -43,7 +43,7 @@ export function CTABanner() {
           </div>
 
           <AnimatedButton size="lg" asChild className="rounded-sm px-12 bg-white text-electric hover:bg-white/90 shadow-lg border-none">
-            <Link href="/contact" className="flex items-center gap-2 font-bold tracking-wide">
+            <Link href="/contact" className="flex items-center gap-2 font-semibold tracking-wide">
               Schedule a strategy call <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </AnimatedButton>
