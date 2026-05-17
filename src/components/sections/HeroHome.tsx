@@ -109,7 +109,7 @@ export function HeroHome() {
               variants={lineVariants}
               className="flex flex-col sm:flex-row items-center gap-8 pt-4"
             >
-              <AnimatedButton size="lg" asChild className="rounded-sm px-8 bg-electric text-white hover:bg-electric/90 shadow-none">
+              <AnimatedButton size="lg" asChild className="rounded-sm px-8 bg-electric text-[#FAF9F9] hover:bg-electric/90 shadow-none">
                 <Link href="/contact" className="flex items-center gap-2">
                   Schedule a strategy call <ArrowRight size={18} />
                 </Link>
