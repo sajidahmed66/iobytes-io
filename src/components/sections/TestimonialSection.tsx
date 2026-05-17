@@ -99,7 +99,7 @@ export function TestimonialSection() {
 
               <div className="pt-10 border-t border-warm-gray max-w-[280px] mx-auto">
                 {/* Avatar */}
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-electric/10 border-2 border-electric/20 flex items-center justify-center">
+                {/* <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-electric/10 border-2 border-electric/20 flex items-center justify-center">
                   {testimonials[currentIndex].image ? (
                     <Image
                       src={testimonials[currentIndex].image}
@@ -113,7 +113,7 @@ export function TestimonialSection() {
                       {testimonials[currentIndex].initials}
                     </span>
                   )}
-                </div>
+                </div> */}
                 <span className="block text-xl font-bold text-ink mb-1">
                   {testimonials[currentIndex].attribution}
                 </span>

@@ -111,7 +111,7 @@ export function HeroHome() {
             >
               <AnimatedButton size="lg" asChild className="rounded-sm px-6 sm:px-8 bg-electric text-[#FAF9F9] hover:bg-electric/90 shadow-none">
                 <Link href="/contact" className="flex items-center gap-2">
-                  <span className="hidden sm:inline">Schedule a strategy call</span>
+                  <span className="hidden sm:inline font-bold">Schedule a strategy call</span>
                   <span className="sm:hidden text-sm">Schedule a call</span>
                   <ArrowRight size={18} />
                 </Link>
