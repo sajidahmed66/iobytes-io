@@ -34,7 +34,7 @@ export function OurApproach() {
               Our Approach
             </h2>
             <h3 className="text-4xl font-bold tracking-tight text-ink">
-              Outcome-First Methodology.
+              Outcome First Methodology
             </h3>
           </div>
         </div>

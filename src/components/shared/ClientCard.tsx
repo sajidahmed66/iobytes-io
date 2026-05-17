@@ -91,7 +91,7 @@ export function ClientCard({
         <div className="pt-4">
           <Link
             href={href}
-            className="inline-flex items-center gap-2 text-cream font-bold group-hover:text-electric transition-colors"
+            className="inline-flex items-center gap-2 text-cream font-semibold group-hover:text-electric transition-colors"
           >
             Read the story
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />

@@ -34,8 +34,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold uppercase tracking-widest text-soft-ink mb-1">Email</h4>
-                    <a href="mailto:hello@iobytes.io" className="text-xl font-bold text-ink hover:text-electric transition-colors">
-                      hello@iobytes.io
+                    <a href="mailto:contact@iobytes.io" className="text-xl font-bold text-ink hover:text-electric transition-colors">
+                      contact@iobytes.io
                     </a>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column */}
-            <GlassCard padding="comfortable" glow className="lg:mt-8">
+            <GlassCard padding="comfortable" glow hover={false} className="lg:mt-8">
               <ContactForm />
             </GlassCard>
           </div>

@@ -58,11 +58,11 @@ export function SolutionsPreview() {
               Capabilities
             </h2>
             <h3 className="text-4xl font-bold tracking-tight text-ink">
-              Engineered for Enterprise Scale.
+              Engineered for Enterprise Scale
             </h3>
           </div>
-          <Link 
-            href="/solutions" 
+          <Link
+            href="/solutions"
             className="flex items-center text-sm font-semibold text-electric hover:text-ink transition-colors group mt-8 md:mt-0"
           >
             Explore all capabilities <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
