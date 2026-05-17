@@ -3,28 +3,44 @@
 import { useState, useEffect, useCallback } from "react";
 import { Container } from "@/components/ui";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
-    quote: "iobytes didn't just build our platform—they engineered the outcome we promised our board. That accountability is rare.",
-    attribution: "Chairman",
-    company: "FactoryNext"
+    "quote": "iobytes transformed how we monitor our warehouse environments. By integrating precise temperature, humidity, and VOC sensors, they gave us realtime control over our tobacco curing and storage processes. A truly brilliant operational upgrade.",
+    "attribution": "Supply Chain & Logistics Director",
+    "company": "BAT",
+    "image": "/bat-bangladesh-logo.png",
+    "initials": "BT"
   },
   {
-    quote: "The supply chain visibility iobytes delivered transformed how we operate. Decisions that took weeks now take minutes.",
-    attribution: "Executive Leadership",
-    company: "Agroshift"
+    quote: "We've moved from reactive to proactive. We haven't had an unplanned outage in six months, and the ROI was clear within the first quarter. That level of accountability is rare.",
+    attribution: "Head of Operations",
+    company: "FactoryNext",
+    image: "/factorynext.png",
+    initials: "FN"
   },
   {
-    quote: "iobytes didn't just build our platform—they engineered an ecosystem that scales with our ambition.",
-    attribution: "Executive Leadership",
-    company: "Kaicom"
+    "quote": "We replaced scattered DMs with automated Messenger workflows. Now, customers order directly in chat, and everything flows into one admin panel. It's a 24/7 sales engine.",
+    "attribution": "Sajal Modumjar",
+    "company": "F-commerce page manager & User of BotX",
+    "image": null,
+    "initials": "BX"
   },
   {
-    quote: "BotX shifted our social selling from a labor-intensive manual operation to a hands-off, highly profitable sales machine.",
-    attribution: "Executive Leadership",
-    company: "BotX"
+    quote: "Visibility is the foundation of our business. iobytes gave us a clear window into our entire operation, reducing spoilage and building immediate trust with our distributors.",
+    attribution: "CEO",
+    company: "Agroshift",
+    image: "/agroshift.avif",
+    initials: "AS"
+  },
+  {
+    quote: "iobytes bridges the gap between complex RF engineering and global data pipelines. Their coastal stations are some of the most resilient and reliable in our entire maritime network.",
+    attribution: "Partnership Team",
+    company: "AISHub",
+    image: "/ais.png",
+    initials: "AH"
   }
 ];
 
@@ -48,32 +64,48 @@ export function TestimonialSection() {
   }, [isPaused, nextSlide, shouldReduceMotion]);
 
   return (
-    <section className="bg-cream py-24 border-b border-warm-gray overflow-hidden">
+    <section className="bg-cream py-32 border-b border-warm-gray overflow-hidden">
       <Container>
         <div
           className="max-w-4xl mx-auto relative text-center"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Quote Icon */}
-          {/* <div className="flex justify-center mb-10 text-electric/20">
-            <Quote size={80} fill="currentColor" />
-          </div> */}
+          {/* Decorative quote mark */}
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-[180px] font-serif text-electric/[0.07] leading-none select-none pointer-events-none">
+            &ldquo;
+          </div>
 
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="space-y-12"
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-12 relative z-10"
             >
               <blockquote className="text-3xl md:text-4xl font-medium text-ink leading-tight tracking-tight min-h-[160px] md:min-h-[140px] flex items-center justify-center">
                 &ldquo;{testimonials[currentIndex].quote}&rdquo;
               </blockquote>
 
-              <div className="pt-10 border-t border-warm-gray max-w-[240px] mx-auto">
+              <div className="pt-10 border-t border-warm-gray max-w-[280px] mx-auto">
+                {/* Avatar */}
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-electric/10 border-2 border-electric/20 flex items-center justify-center">
+                  {testimonials[currentIndex].image ? (
+                    <Image
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].company}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-lg font-bold text-electric">
+                      {testimonials[currentIndex].initials}
+                    </span>
+                  )}
+                </div>
                 <span className="block text-xl font-bold text-ink mb-1">
                   {testimonials[currentIndex].attribution}
                 </span>
@@ -101,8 +133,8 @@ export function TestimonialSection() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`h-1.5 transition-all duration-300 rounded-full ${index === currentIndex
-                      ? "bg-electric w-8"
-                      : "bg-warm-gray w-4 hover:bg-soft-ink/20"
+                    ? "bg-electric w-8"
+                    : "bg-warm-gray w-4 hover:bg-soft-ink/20"
                     }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

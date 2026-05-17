@@ -9,7 +9,7 @@ export function TeamBoard() {
     <section className="mb-24 md:mb-32">
       <SectionHeader
         eyebrow="BOARD OF DIRECTORS"
-        headline="Governance & Strategic Oversight"
+        headline="Strategic Leadership"
         align="left"
         className="mb-12"
       />
@@ -18,6 +18,7 @@ export function TeamBoard() {
           <TeamCard
             key={`board-${member.name}`}
             {...member}
+            size="compact"
             delay={i * 0.1}
           />
         ))}

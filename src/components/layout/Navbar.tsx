@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 
 const navLinks = [
   { name: "Solutions", href: "/solutions" },
@@ -19,6 +20,15 @@ const navLinks = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Scroll progress tracking
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,18 +57,32 @@ export function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-soft-ink hover:text-electric transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Button asChild className="rounded-full px-6">
-            <Link href="/contact">Start a Project</Link>
-          </Button>
+          {navLinks.map((link) => {
+            const isActive = pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "relative text-sm font-medium transition-colors duration-200 py-1 group",
+                  isActive ? "text-electric" : "text-soft-ink hover:text-electric"
+                )}
+              >
+                {link.name}
+                <span 
+                  className={cn(
+                    "absolute bottom-0 left-0 h-0.5 bg-electric transition-all duration-300",
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  )} 
+                />
+              </Link>
+            );
+          })}
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <Button asChild className="rounded-full px-6 shadow-md hover:shadow-lg transition-shadow">
+              <Link href="/contact">Start a Project</Link>
+            </Button>
+          </motion.div>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -82,16 +106,22 @@ export function Navbar() {
             className="absolute top-full left-0 right-0 bg-cream border-t border-warm-gray shadow-lg lg:hidden"
           >
             <div className="flex flex-col p-6 space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-lg font-medium text-ink hover:text-electric py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={cn(
+                      "text-lg font-medium py-2 transition-colors",
+                      isActive ? "text-electric" : "text-ink hover:text-electric"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
               <Button asChild className="rounded-full w-full py-6 text-lg">
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   Start a Project
@@ -101,6 +131,12 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Scroll Progress Indicator */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-electric origin-left"
+        style={{ scaleX }}
+      />
     </header>
   );
 }

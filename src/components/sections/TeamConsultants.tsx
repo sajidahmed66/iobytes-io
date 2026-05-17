@@ -9,7 +9,7 @@ export function TeamConsultants() {
     <section className="mb-24 md:mb-32">
       <SectionHeader
         eyebrow="CONSULTANTS"
-        headline="Specialist Expertise on Demand"
+        headline="Expert Network"
         align="left"
         className="mb-12"
       />
@@ -18,6 +18,7 @@ export function TeamConsultants() {
           <TeamCard
             key={`consultant-${member.name}`}
             {...member}
+            size="compact"
             showStackOverflow
             delay={i * 0.1}
           />

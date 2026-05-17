@@ -7,7 +7,7 @@ export const posts: Post[] = [
     excerpt: "Why the billable hour is the enemy of enterprise ROI and how we're changing the model.",
     content: `
       ## The Output Trap
-      Most consultancies sell you "output"—lines of code, story points, or hours worked. But for an enterprise, output is a cost, not a benefit.
+      Most consultancies sell you "output" lines of code, story points, or hours worked. But for an enterprise, output is a cost, not a benefit.
 
       ## The Outcome Philosophy
       We've aligned our engineering culture around business outcomes. This means we don't just ask "how do we build this?" but "why should this exist, and what metric will it move?"

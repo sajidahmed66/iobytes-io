@@ -1,12 +1,14 @@
 "use client";
 
 import { Container } from "@/components/ui";
-import { ArrowRight, ShieldCheck, Zap, Wallet2, Globe, Clock, BarChart3 } from "lucide-react";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
+import { ArrowRight, ShieldCheck, Zap, Clock, BarChart3 } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function FeaturedCaseStudy() {
   return (
-    <section className="bg-cream py-24 border-b border-warm-gray">
+    <section className="bg-cream py-32 border-b border-warm-gray">
       <Container>
         <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-electric mb-4">
           Featured Case Study
@@ -50,42 +52,46 @@ export function FeaturedCaseStudy() {
 
             <Link 
               href="/portfolio/bat" 
-              className="inline-flex items-center text-sm font-bold text-electric hover:text-ink transition-colors group"
+              className="inline-flex items-center text-sm font-semibold text-electric hover:text-ink transition-colors group"
             >
-              VIEW FULL CASE STUDY <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+              View full case study <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
           {/* Column 2: Chart/Visual */}
           <div className="lg:col-span-5 flex flex-col justify-center bg-white border border-warm-gray p-8 rounded-sm">
-            <div className="flex justify-between items-center mb-12">
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-12">
               <h4 className="text-xs font-bold uppercase tracking-widest text-ink">Efficiency Gains</h4>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-warm-gray" />
-                  <span className="text-[10px] font-bold text-soft-ink">Before iobytes</span>
+                  <span className="text-[10px] font-bold text-soft-ink">Before</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-electric" />
-                  <span className="text-[10px] font-bold text-soft-ink">After iobytes</span>
+                  <span className="text-[10px] font-bold text-soft-ink">Reduced</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-amber" />
+                  <span className="text-[10px] font-bold text-soft-ink">Increased</span>
                 </div>
               </div>
             </div>
 
             <div className="space-y-8">
               {[
-                { label: "Processing Latency", before: 100, after: 2, diff: "↓ 98%" },
-                { label: "Manual Error Rate", before: 80, after: 5, diff: "↓ 94%" },
-                { label: "Throughput Capacity", before: 25, after: 100, diff: "↑ 4x" }
+                { label: "Processing Latency", before: 100, after: 2, diff: "↓ 98%", isPositive: false },
+                { label: "Manual Error Rate", before: 80, after: 5, diff: "↓ 94%", isPositive: false },
+                { label: "Throughput Capacity", before: 25, after: 100, diff: "↑ 4x", isPositive: true }
               ].map((item) => (
                 <div key={item.label} className="space-y-3">
                   <div className="flex justify-between items-end">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-ink">{item.label}</span>
-                    <span className="text-xs font-bold text-electric">{item.diff}</span>
+                    <span className={`text-xs font-bold ${item.isPositive ? "text-amber" : "text-electric"}`}>{item.diff}</span>
                   </div>
                   <div className="flex items-end gap-1 h-8">
                     <div className="bg-warm-gray w-full" style={{ height: `${item.before}%` }} />
-                    <div className="bg-electric w-full" style={{ height: `${item.after}%` }} />
+                    <div className={`w-full ${item.isPositive ? "bg-amber" : "bg-electric"}`} style={{ height: `${item.after}%` }} />
                   </div>
                 </div>
               ))}
@@ -95,20 +101,33 @@ export function FeaturedCaseStudy() {
           {/* Column 3: Metrics Column */}
           <div className="lg:col-span-3 flex flex-col justify-center space-y-12 pl-0 lg:pl-8">
             {[
-              { label: "Original Latency", val: "12m", icon: Clock },
-              { label: "New Latency", val: "15s", icon: Zap },
-              { label: "Efficiency Increase", val: "40%", icon: BarChart3 },
-              { label: "Peak Surge Resilience", val: "4x", icon: ShieldCheck }
-            ].map((metric) => (
-              <div key={metric.label} className="flex items-center gap-6">
+              { label: "Original Latency", value: 12, suffix: "m", icon: Clock },
+              { label: "New Latency", value: 15, suffix: "s", icon: Zap },
+              { label: "Efficiency Increase", value: 40, suffix: "%", icon: BarChart3 },
+              { label: "Peak Surge Resilience", value: 4, suffix: "x", icon: ShieldCheck }
+            ].map((metric, i) => (
+              <motion.div
+                key={metric.label}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="flex items-center gap-6"
+              >
                 <div className="w-12 h-12 rounded-full border border-warm-gray flex items-center justify-center text-soft-ink">
-                  <metric.icon size={24} strokeWidth={1.5} /> 
+                  <metric.icon size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-ink tracking-tight">{metric.val}</div>
+                  <div className="text-2xl font-bold text-ink tracking-tight">
+                    <AnimatedCounter
+                      target={metric.value}
+                      suffix={metric.suffix}
+                      duration={1500}
+                    />
+                  </div>
                   <div className="text-[10px] font-bold uppercase tracking-widest text-soft-ink">{metric.label}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

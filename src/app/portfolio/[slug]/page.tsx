@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const { slug } = await params;
   const study = caseStudies.find((s) => s.slug === slug);
   if (!study) return { title: "Project Not Found" };
-  
+
   return {
     title: `${study.metric} ${study.outcome} | ${study.client} | iobytes`,
     description: study.summary,
@@ -42,7 +42,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
           <Container>
             <div className="max-w-4xl">
               <span className="text-xs font-bold uppercase tracking-widest text-electric mb-6 block">
-                {study.industry} — {study.client}
+                {study.industry}  {study.client}
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-ink mb-6">
                 <span className="text-electric">{study.metric}</span> {study.outcome}
@@ -102,7 +102,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                     &ldquo;{study.testimonial.quote}&rdquo;
                   </blockquote>
                   <cite className="not-italic block font-bold text-soft-ink">
-                    — {study.testimonial.attribution}
+                    {study.testimonial.attribution}
                   </cite>
                 </GlassCard>
               </section>
@@ -128,7 +128,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                       </span>
                     )}
                   </div>
-                  
+
                   <div className="space-y-6 mb-8">
                     <div>
                       <h4 className="text-[10px] font-bold uppercase tracking-widest text-soft-ink mb-2">Industry</h4>
@@ -154,7 +154,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
             </aside>
           </div>
         </Container>
-        
+
         <CTABanner />
       </main>
       <Footer />

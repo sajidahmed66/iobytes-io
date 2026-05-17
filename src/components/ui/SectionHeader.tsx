@@ -53,7 +53,8 @@ export const SectionHeader = ({
       </h2>
       {subheadline && (
         <p className={cn(
-          "text-lg md:text-[18px] leading-relaxed max-w-2xl mx-auto",
+          "text-lg md:text-[18px] leading-relaxed max-w-2xl",
+          align === "center" && "mx-auto",
           theme === "dark" ? "text-soft-ink" : "text-soft-ink"
         )}>
           {subheadline}

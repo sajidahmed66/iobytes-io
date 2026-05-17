@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui";
 import { ShieldCheck, Lock, CheckCircle2, Globe } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
+import { blurDataURL } from "@/lib/image-utils";
 
 const originalLogos = [
   { name: "BAT Bangladesh", src: "/bat-bangladesh-logo.png" },
@@ -35,19 +36,19 @@ export function TrustSignals() {
       <Container className="py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Logos Column (Scrolling) */}
-          <div className="lg:col-span-8 lg:border-r border-warm-gray lg:pr-12">
+          <div className="lg:col-span-12  border-warm-gray lg:pr-12">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-soft-ink mb-8">
               Trusted by Enterprise Leaders
             </h4>
-            
-            <div 
+
+            <div
               className="relative w-full overflow-hidden"
               onMouseEnter={() => setIsMarqueePaused(true)}
               onMouseLeave={() => setIsMarqueePaused(false)}
             >
               <div
                 className="flex whitespace-nowrap"
-                style={{ 
+                style={{
                   display: "flex",
                   width: "fit-content",
                   animation: shouldReduceMotion ? "none" : "marquee 30s linear infinite reverse",
@@ -57,36 +58,20 @@ export function TrustSignals() {
                 {marqueeLogos.map((logo, index) => (
                   <div
                     key={`${logo.name}-${index}`}
-                    className="inline-flex items-center justify-center mx-8 w-24 h-12 relative opacity-60 hover:opacity-100 transition-opacity duration-300 shrink-0 grayscale hover:grayscale-0"
+                    className="inline-flex items-center justify-center mx-10 w-32 h-14 relative opacity-75 hover:opacity-100 transition-all duration-300 shrink-0 grayscale-[50%] hover:grayscale-0 hover:scale-105"
                   >
                     <Image
                       src={logo.src}
                       alt={logo.name}
                       fill
                       className="object-contain"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={blurDataURL}
                     />
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-
-          {/* Security Column (Static) */}
-          <div className="lg:col-span-4 pl-0 lg:pl-4">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-soft-ink mb-8">
-              Security & Compliance
-            </h4>
-            <div className="flex items-center gap-8">
-              {securityBadges.map((badge) => (
-                <div key={badge.name} className="flex flex-col items-center gap-2">
-                  <div className="w-12 h-12 rounded-full border border-warm-gray flex items-center justify-center text-soft-ink hover:text-electric hover:border-electric transition-colors">
-                    <badge.icon size={20} strokeWidth={1.5} />
-                  </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-soft-ink">
-                    {badge.name}
-                  </span>
-                </div>
-              ))}
             </div>
           </div>
         </div>

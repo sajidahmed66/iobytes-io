@@ -6,6 +6,7 @@ import { CaseStudy } from "@/types";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { blurDataURL } from "@/lib/image-utils";
 
 const industries = ["All", "Manufacturing", "Agriculture", "Industrial", "Healthcare", "Retail", "IT COMPANY", "SOCIAL COMMERCE", "POLITICAL TECH", "MARITIME INTELLIGENCE"];
 
@@ -46,6 +47,9 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
                         alt={`${study.client} logo`}
                         fill
                         className="object-contain object-left"
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL={blurDataURL}
                       />
                     </div>
                   ) : (
@@ -70,7 +74,7 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
                 {study.teaser}
               </p>
 
-              <div className="flex items-center text-sm font-bold text-ink group-hover:text-electric transition-colors">
+              <div className="flex items-center text-sm font-semibold text-ink group-hover:text-electric transition-colors">
                 Read story 
                 <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>

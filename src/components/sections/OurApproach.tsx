@@ -26,7 +26,7 @@ const steps = [
 
 export function OurApproach() {
   return (
-    <section className="bg-cream py-24 border-b border-warm-gray">
+    <section className="bg-cream py-28 border-b border-warm-gray">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-xl">
@@ -34,25 +34,45 @@ export function OurApproach() {
               Our Approach
             </h2>
             <h3 className="text-4xl font-bold tracking-tight text-ink">
-              Outcome-First Methodology.
+              Outcome First Methodology
             </h3>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+            }
+          }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative"
+        >
           {steps.map((step, i) => (
-            <motion.div 
+            <motion.div
               key={step.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+                }
+              }}
               className="relative group"
             >
               <div className="flex items-center gap-6 mb-8">
-                <div className="w-14 h-14 rounded-full border border-warm-gray flex items-center justify-center text-xl font-bold text-soft-ink group-hover:border-electric group-hover:text-electric transition-colors bg-white">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="w-14 h-14 rounded-full border border-warm-gray flex items-center justify-center text-xl font-bold text-soft-ink group-hover:border-electric group-hover:text-electric transition-colors bg-white"
+                >
                   {step.number}
-                </div>
+                </motion.div>
                 {i < steps.length - 1 && (
                   <div className="hidden lg:block absolute left-[60px] top-[28px] w-full h-[1px] bg-warm-gray -z-10" />
                 )}
@@ -70,7 +90,7 @@ export function OurApproach() {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

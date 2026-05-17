@@ -9,7 +9,7 @@ export function TeamLeadership() {
     <section className="mb-24 md:mb-32">
       <SectionHeader
         eyebrow="LEADERSHIP TEAM"
-        headline="The Engineers Behind Your Outcomes"
+        headline="Building What Matters"
         align="left"
         className="mb-12"
       />
@@ -18,6 +18,7 @@ export function TeamLeadership() {
           <TeamCard
             key={`leadership-${member.name}`}
             {...member}
+            size="large"
             showStackOverflow
             delay={i * 0.05}
           />

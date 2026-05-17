@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
 import { Container, SectionHeader, GlassCard } from "@/components/ui";
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { ContactForm } from "@/components/shared/ContactForm";
 import { Mail, MapPin, Clock } from "lucide-react";
 import { Metadata } from "next";
+
+const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
 export const metadata: Metadata = {
   title: "Start a Project",
@@ -32,8 +34,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold uppercase tracking-widest text-soft-ink mb-1">Email</h4>
-                    <a href="mailto:hello@iobytes.io" className="text-xl font-bold text-ink hover:text-electric transition-colors">
-                      hello@iobytes.io
+                    <a href="mailto:contact@iobytes.io" className="text-xl font-bold text-ink hover:text-electric transition-colors">
+                      contact@iobytes.io
                     </a>
                   </div>
                 </div>
@@ -67,7 +69,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column */}
-            <GlassCard padding="comfortable" glow className="lg:mt-8">
+            <GlassCard padding="comfortable" glow hover={false} className="lg:mt-8">
               <ContactForm />
             </GlassCard>
           </div>
