@@ -13,29 +13,29 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://iobytes.io"),
   title: {
-    default: "iobytes — The Outcome Engineering Firm",
+    default: "iobytes The Outcome Engineering Firm",
     template: "%s | iobytes",
   },
-  description: "We design, build, and ship custom software for B2B enterprises—then stay accountable to the metrics that move your business.",
+  description: "We design, build, and ship custom software for B2B enterprises then stay accountable to the metrics that move your business.",
   keywords: ["enterprise software", "B2B technology", "custom software development", "ROI engineering"],
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "iobytes",
-    title: "iobytes — The Outcome Engineering Firm",
+    title: "iobytes The Outcome Engineering Firm",
     description: "We design, build, and ship custom software for B2B enterprises.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "iobytes — The Outcome Engineering Firm",
+        alt: "iobytes The Outcome Engineering Firm",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "iobytes — The Outcome Engineering Firm",
+    title: "iobytes The Outcome Engineering Firm",
     description: "We design, build, and ship custom software for B2B enterprises.",
     images: ["/og-image.png"],
   },

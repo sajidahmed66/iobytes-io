@@ -26,9 +26,8 @@ export default function TeamPage() {
           <SectionHeader
             eyebrow="THE TEAM"
             headline="Engineers Who Ship Results"
-            subheadline="Our team doesn't just write code—we obsess over the numbers that matter to your business. Revenue increased. Costs reduced. Time-to-market compressed. Every person here has a track record of turning technical work into measurable wins."
+            subheadline="Our team doesn't just write code we obsess over the numbers that matter to your business. Revenue increased. Costs reduced. Time-to-market compressed. Every person here has a track record of turning technical work into measurable wins."
             align="left"
-            subheadlineJustify
             className="mb-12"
           />
 

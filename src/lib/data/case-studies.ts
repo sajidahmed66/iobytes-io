@@ -89,7 +89,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "MARITIME INTELLIGENCE",
     teaser: "Terrestrial AIS base station network capturing real-time vessel data from the Bay of Bengal. Engineering RF telemetry pipelines for global maritime transparency.",
     summary: "Engineering terrestrial AIS stations to capture and broadcast real-time vessel data from the high-density shipping lanes of the Bay of Bengal.",
-    challenge: "Global maritime transparency depends on accurate, real-time vessel tracking — yet vast coastal regions remain data black zones. The Bay of Bengal, one of the world's busiest shipping corridors, lacked sufficient terrestrial AIS coverage to support international search-and-rescue operations, logistics optimization, and maritime compliance.",
+    challenge: "Global maritime transparency depends on accurate, real-time vessel tracking  yet vast coastal regions remain data black zones. The Bay of Bengal, one of the world's busiest shipping corridors, lacked sufficient terrestrial AIS coverage to support international search-and-rescue operations, logistics optimization, and maritime compliance.",
     approach: "iobytes partnered with AISHub under the strategic initiative Project Mr. Radio to engineer, deploy, and maintain open-source terrestrial AIS stations across the Bangladesh coastline.",
     results: [
       "Sub-second data ingestion with zero packet loss from coastal AIS stations",

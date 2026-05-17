@@ -9,7 +9,6 @@ interface SectionHeaderProps {
   headline: string;
   subheadline?: string;
   align?: "left" | "center";
-  subheadlineJustify?: boolean;
   eyebrowColor?: "electric" | "soft-ink";
   theme?: "light" | "dark";
   className?: string;
@@ -20,7 +19,6 @@ export const SectionHeader = ({
   headline,
   subheadline,
   align = "left",
-  subheadlineJustify = false,
   eyebrowColor = "electric",
   theme = "light",
   className,
@@ -57,7 +55,6 @@ export const SectionHeader = ({
         <p className={cn(
           "text-lg md:text-[18px] leading-relaxed max-w-2xl",
           align === "center" && "mx-auto",
-          subheadlineJustify && "text-justify",
           theme === "dark" ? "text-soft-ink" : "text-soft-ink"
         )}>
           {subheadline}
