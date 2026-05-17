@@ -1,0 +1,24 @@
+# cPanel / Apache rules for a Next.js static export
+# Upload this file to the same directory as the exported site content.
+
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Serve existing files directly.
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Next.js static export here produces flat files like /team.html.
+  # Rewrite pretty URLs such as /team/ to the matching HTML file.
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|mjs|json|xml|svg|png|jpe?g|gif|webp|avif|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
