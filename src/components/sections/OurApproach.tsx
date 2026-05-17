@@ -30,12 +30,12 @@ export function OurApproach() {
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-xl">
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-soft-ink mb-6">
+            <span className="inline-block text-[12px] font-bold uppercase tracking-[0.2em] text-electric mb-6">
               Our Approach
-            </h2>
-            <h3 className="text-4xl font-bold tracking-tight text-ink">
+            </span>
+            <h2 className="text-4xl font-bold tracking-tight text-ink">
               Outcome First Methodology
-            </h3>
+            </h2>
           </div>
         </div>
 

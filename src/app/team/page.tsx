@@ -12,8 +12,11 @@ const TeamJoinCTA = dynamic(() => import("@/components/sections/TeamJoinCTA").th
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
 export const metadata: Metadata = {
-  title: "Our Team | iobytes",
-  description: "Meet the team behind your outcomes. Engineers who ship results with measurable track records.",
+  title: "Our Engineering Team | iobytes",
+  description: "Meet the outcome engineers behind your software. A team obsessed with business metrics, not just lines of code.",
+  alternates: {
+    canonical: "https://iobytes.io/team/",
+  },
 };
 
 export default function TeamPage() {

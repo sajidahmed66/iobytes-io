@@ -66,6 +66,14 @@ export function TestimonialSection() {
   return (
     <section className="bg-cream py-32 border-b border-warm-gray overflow-hidden">
       <Container>
+        <div className="text-center mb-16">
+          <span className="inline-block text-[12px] font-bold uppercase tracking-[0.2em] text-electric mb-6">
+            Trusted Voice
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-ink">
+            Client Perspectives
+          </h2>
+        </div>
         <div
           className="max-w-4xl mx-auto relative text-center"
           onMouseEnter={() => setIsPaused(true)}
