@@ -1,8 +1,30 @@
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroHome } from "@/components/sections/HeroHome";
 import { TrustSignals } from "@/components/sections/TrustSignals";
 import { MetricsBar } from "@/components/sections/MetricsBar";
+import { JsonLd } from "@/components/shared/JsonLd";
+
+export const metadata: Metadata = {
+  title: "iobytes | The Outcome Engineering Firm",
+  description: "We design, build, and ship custom software for B2B enterprises then stay accountable to the metrics that move your business.",
+  alternates: {
+    canonical: "https://iobytes.io/",
+  },
+};
+
+const websiteData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "iobytes",
+  "url": "https://iobytes.io",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://iobytes.io/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
 
 // Lazy load below-fold sections for better initial page load
 const ClientWork = dynamic(() => import("@/components/sections/ClientWork").then(mod => mod.ClientWork));
@@ -16,6 +38,7 @@ const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mo
 export default function Home() {
   return (
     <>
+      <JsonLd data={websiteData} />
       <Navbar />
       <main>
         <HeroHome />

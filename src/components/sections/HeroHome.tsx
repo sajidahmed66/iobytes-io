@@ -99,7 +99,7 @@ export function HeroHome() {
             {/* Subheadline */}
             <motion.p
               variants={lineVariants}
-              className="text-lg px-4 lg:px-0 font-semibold md:text-[20px] text-soft-ink max-w-xl leading-relaxed text-center lg:text-justify"
+              className="text-lg px-4 justify-center   lg:px-0 font-semibold md:text-[20px] text-soft-ink leading-relaxed text-center lg:text-justify"
             >
               Critical business problems deserve more than off-the-shelf solutions. Ours come with the metrics to prove it.
             </motion.p>
@@ -111,7 +111,7 @@ export function HeroHome() {
             >
               <AnimatedButton size="lg" asChild className="rounded-sm px-6 sm:px-8 bg-electric text-[#FAF9F9] hover:bg-electric/90 shadow-none">
                 <Link href="/contact" className="flex items-center gap-2">
-                  <span className="hidden sm:inline">Schedule a strategy call</span>
+                  <span className="hidden sm:inline font-bold">Schedule a strategy call</span>
                   <span className="sm:hidden text-sm">Schedule a call</span>
                   <ArrowRight size={18} />
                 </Link>

@@ -8,8 +8,11 @@ import { Metadata } from "next";
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
 export const metadata: Metadata = {
-  title: "Enterprise Solutions",
-  description: "B2B enterprise software solutions engineered for specific business outcomes.",
+  title: "Enterprise B2B Software Solutions | iobytes",
+  description: "Six core capabilities engineered for measurable enterprise outcomes. From workflow automation to legacy modernization.",
+  alternates: {
+    canonical: "https://iobytes.io/solutions/",
+  },
 };
 
 const solutions = [

@@ -50,16 +50,16 @@ const capabilities = [
 
 export function SolutionsPreview() {
   return (
-    <section className="bg-cream py-28 border-b border-warm-gray">
+    <section className="bg-cream py-16 md:py-28 border-b border-warm-gray">
       <Container>
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16">
           <div className="max-w-xl">
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-soft-ink mb-6">
+            <span className="inline-block text-[12px] font-bold uppercase tracking-[0.2em] text-electric mb-6">
               Capabilities
-            </h2>
-            <h3 className="text-4xl font-bold tracking-tight text-ink">
+            </span>
+            <h2 className="text-4xl font-bold tracking-tight text-ink">
               Engineered for Enterprise Scale
-            </h3>
+            </h2>
           </div>
           <Link
             href="/solutions"
@@ -99,9 +99,9 @@ export function SolutionsPreview() {
               <div className="mb-6 p-3 rounded-full bg-electric/5 text-electric group-hover:bg-electric group-hover:text-white transition-all duration-300">
                 <capability.icon size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="text-sm font-bold text-ink mb-4 leading-tight uppercase tracking-widest">
+              <h4 className="text-sm font-bold text-ink mb-4 leading-tight uppercase tracking-widest">
                 {capability.title}
-              </h3>
+              </h4>
               <p className="text-xs text-soft-ink leading-relaxed">
                 {capability.description}
               </p>

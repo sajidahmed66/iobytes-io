@@ -64,8 +64,16 @@ export function TestimonialSection() {
   }, [isPaused, nextSlide, shouldReduceMotion]);
 
   return (
-    <section className="bg-cream py-32 border-b border-warm-gray overflow-hidden">
+    <section className="bg-cream py-16 md:py-32 border-b border-warm-gray overflow-hidden">
       <Container>
+        <div className="text-center mb-10 md:mb-16">
+          <span className="inline-block text-[12px] font-bold uppercase tracking-[0.2em] text-electric mb-6">
+            Trusted Voice
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-ink">
+            Client Perspectives
+          </h2>
+        </div>
         <div
           className="max-w-4xl mx-auto relative text-center"
           onMouseEnter={() => setIsPaused(true)}
@@ -117,7 +125,7 @@ export function TestimonialSection() {
           </AnimatePresence>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-12 mt-16">
+          <div className="flex items-center justify-center gap-8 md:gap-12 mt-10 md:mt-16">
             <button
               onClick={prevSlide}
               className="p-2 text-soft-ink/40 hover:text-electric transition-colors"

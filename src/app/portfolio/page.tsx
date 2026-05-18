@@ -10,6 +10,9 @@ const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mo
 export const metadata: Metadata = {
   title: "Portfolio & ROI Proof | iobytes",
   description: "Real outcomes for real enterprises. Verified metrics and attributable results.",
+  alternates: {
+    canonical: "https://iobytes.io/portfolio/",
+  },
 };
 
 export default function PortfolioIndex() {
