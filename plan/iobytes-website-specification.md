@@ -1,5 +1,5 @@
 # iobytes Website Technical Specification
-## "The Outcome Engineering Firm" — Premium Enterprise Redesign
+## "Every byte engineered for impact" — Premium Enterprise Redesign
 
 ---
 
@@ -9,7 +9,7 @@
 Build a high-conversion, ROI-driven sales and recruitment tool for iobytes — a high-velocity tech consultancy focused on B2B enterprise solutions (90%) and custom applications. Move beyond a standard portfolio to a consultative, high-trust digital presence.
 
 ### 1.2 Core Positioning
-**"The Outcome Engineering Firm"**
+**"Every byte engineered for impact"**
 - We design, build, and ship custom software for B2B enterprises
 - We stay accountable to the metrics that move your business
 - Every line of code serves a business outcome
@@ -206,7 +206,7 @@ Build a high-conversion, ROI-driven sales and recruitment tool for iobytes — a
 
 #### Hero Section (`<HeroHome />`)
 - Full viewport height (100vh), Cream background
-- H1: "The Outcome Engineering Firm"
+- H1: "Every byte engineered for impact"
 - Subheadline: "We design, build, and ship custom software for B2B enterprises—then stay accountable to the metrics that move your business."
 - Primary CTA: "See the Numbers" → scrolls to case studies section
 - Secondary CTA: "Start a Project" → /contact
@@ -640,7 +640,7 @@ export const heroSequence = {
 // app/layout.tsx
 export const metadata = {
   title: {
-    default: "iobytes — The Outcome Engineering Firm",
+    default: "iobytes — Every byte engineered for impact",
     template: "%s | iobytes",
   },
   description: "We design, build, and ship custom software for B2B enterprises—then stay accountable to the metrics that move your business.",
@@ -659,7 +659,7 @@ export const metadata = {
 ### 12.2 Page-Specific Titles
 | Page | Title |
 |---|---|
-| Home | `iobytes — The Outcome Engineering Firm` |
+| Home | `iobytes — Every byte engineered for impact` |
 | Solutions | `Enterprise Solutions | iobytes` |
 | Case Studies | `Case Studies & ROI Proof | iobytes` |
 | Brain Trust | `The Brain Trust | iobytes` |
@@ -706,7 +706,7 @@ export const metadata = {
 ### 14.2 Section Copy Skeletons
 
 #### Home Page
-- **Hero**: "The Outcome Engineering Firm" + subheadline + CTAs
+- **Hero**: "Every byte engineered for impact" + subheadline + CTAs
 - **ROI Section**: 3-6 floating pills with real metrics
 - **Solutions Preview**: 4-6 bento cards with outcome-focused headlines
 - **Case Studies Preview**: 3 featured case studies with metrics

@@ -14,8 +14,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://iobytes.io"),
   title: {
-    default: "iobytes | The Outcome Engineering Firm",
-    template: "%s | iobytes",
+    default: "iobytes — Every byte engineered for impact",
+    template: "%s — iobytes",
   },
   description: "We design, build, and ship custom software for B2B enterprises then stay accountable to the metrics that move your business.",
   keywords: ["enterprise software", "B2B technology", "custom software development", "ROI engineering", "software engineering firm"],
@@ -26,20 +26,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "iobytes",
-    title: "iobytes | The Outcome Engineering Firm",
+    title: "iobytes | Every byte engineered for impact",
     description: "We design, build, and ship custom software for B2B enterprises.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "iobytes The Outcome Engineering Firm",
+        alt: "iobytes Every byte engineered for impact",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "iobytes | The Outcome Engineering Firm",
+    title: "iobytes | Every byte engineered for impact",
     description: "We design, build, and ship custom software for B2B enterprises.",
     images: ["/og-image.png"],
   },
@@ -62,7 +62,7 @@ const organizationData = {
   "name": "iobytes",
   "url": "https://iobytes.io",
   "logo": "https://iobytes.io/iobytes-logo.png",
-  "description": "The Outcome Engineering Firm. We design, build, and ship custom software for B2B enterprises.",
+  "description": "Every byte engineered for impact. We design, build, and ship custom software for B2B enterprises.",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "BD"
