@@ -35,7 +35,7 @@ export default function TeamPage() {
           />
 
           {/* Stats Bar */}
-          <TeamStats />
+          {/* <TeamStats /> */}
 
           {/* Sections: Board → Leadership → Consultants → CTA */}
           <TeamBoard />
