@@ -49,7 +49,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-cream/60 max-w-xs leading-relaxed">
-              The Outcome Engineering Firm. We design, build, and ship custom software for B2B enterprises.
+              Every byte engineered for impact. We design, build, and ship custom software for B2B enterprises.
             </p>
           </div>
 

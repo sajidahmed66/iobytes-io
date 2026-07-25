@@ -7,7 +7,7 @@ import { MetricsBar } from "@/components/sections/MetricsBar";
 import { JsonLd } from "@/components/shared/JsonLd";
 
 export const metadata: Metadata = {
-  title: "iobytes | The Outcome Engineering Firm",
+  title: "iobytes — Every byte engineered for impact",
   description: "We design, build, and ship custom software for B2B enterprises then stay accountable to the metrics that move your business.",
   alternates: {
     canonical: "https://iobytes.io/",

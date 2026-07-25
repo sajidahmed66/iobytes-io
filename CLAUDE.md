@@ -1,6 +1,6 @@
 # iobytes Website
 
-Premium B2B website for iobytes engineering firm ("The Outcome Engineering Firm").
+Premium B2B website for iobytes engineering firm ("Every byte engineered for impact").
 
 ## Tech Stack
 

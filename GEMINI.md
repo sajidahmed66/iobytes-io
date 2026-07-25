@@ -3,7 +3,7 @@
 Project to build high-conversion, premium website for iobytes engineering firm.
 
 ## Project Overview
-- **Positioning**: "The Outcome Engineering Firm"
+- **Positioning**: "Every byte engineered for impact"
 - **Tech Stack**: Next.js 16+ (App Router), React 19+, TypeScript 5+, Tailwind CSS 4+, shadcn/ui, Framer Motion, Lucide React.
 - **Goal**: ROI-driven sales/recruitment tool for B2B enterprise solutions.
 
