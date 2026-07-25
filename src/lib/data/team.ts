@@ -3,6 +3,7 @@ import { TeamMember } from "@/types";
 export interface TeamData {
   board: TeamMember[];
   consultants: TeamMember[];
+  honorary_consultants: TeamMember[];
   leadership: TeamMember[];
 }
 
@@ -51,6 +52,30 @@ export const teamData: TeamData = {
       imagePosition: "50% 10%",
       skills: ["Embedded Systems", "IoT", "Real-time Systems"]
     }
+  ],
+  honorary_consultants: [
+    {
+      "name": "Kaniz Fatema",
+      "role": "United Nations Peacekeeping Officer",
+      "bio": "A seasoned law enforcement professional with extensive experience in the Bangladesh Police and international peacekeeping. Currently serving as an Operation Planning Officer at MHQ, Juba, and as a Focal Point for Climate Peace & Security for the United Nations.",
+      "photo": "/team/kaniz-fatema-profile.jpg",
+      "skills": ["Operations Planning", "Peacekeeping", "Climate Security", "Law Enforcement", "Public Administration"]
+    },
+    {
+      "name": "Dr. Syed Mithun Ali",
+      "role": "Professor, Department of Industrial & Production Engineering, Sustainability Development Consultant",
+      "bio": "Specializes in supply chain management and risk management, with a research focus on supply chain sustainability. Applies artificial intelligence, operational research, and multi-criteria decision-making tools to optimize supply chains.",
+      "photo": "/team/dr-syed-mithun-ali.jpg",
+      "skills": ["Supply Chain Management", "Artificial Intelligence", "Operations Research", "Risk Management", "Sustainability Modeling"]
+    },
+    {
+      "name": "Suborno Debnath",
+      "role": "Civil & Structural Engineeing Consultant",
+      "bio": "Experienced researcher and engineer specializing in pipeline integrity, pipe-soil interaction modeling, and flow assurance. Contributes to technical advancements in corrosion inhibitor optimization and structural mechanical engineering.",
+      "photo": "/team/suborno-debnath.jpg",
+      "skills": ["Pipeline Engineering", "Flow Assurance", "Corrosion Analysis", "Structural Mechanics", "Technical Research"]
+    }
+
   ],
   leadership: [
     {
