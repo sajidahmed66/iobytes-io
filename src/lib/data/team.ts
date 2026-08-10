@@ -127,6 +127,27 @@ export const teamData: TeamData = {
         "Civil Litigation",
         "MS Office"
       ]
+    },
+    {
+      name: "Rubayeat Jamil Joy",
+      role: "Junior Software Engineer (Intern)",
+      bio: "Full-stack engineer passionate about building clean, scalable web applications and constantly learning new technologies.",
+      photo: "/team/joy.webp",
+      skills: ["Full-Stack Development", "React", "Node.js", "Express", "MySQL", "MongoDB"]
+    },
+    {
+      name: "Takrim Uddin Ahmed Jengi",
+      role: "Junior Software Engineer (Intern)",
+      bio: "Full-stack engineer with a growing passion for building practical, user-focused web applications.",
+      photo: "/team/takrim.PNG",
+      skills: ["Full-Stack Development", "JavaScript", "React", "Node.js"]
+    },
+    {
+      name: "Asfia Tabassum",
+      role: "Junior Software Engineer (Intern)",
+      bio: "Full-stack engineer driven by curiosity and a strong enthusiasm for learning new technologies.",
+      photo: "/team/anchal.jpeg",
+      skills: ["Full-Stack Development", "JavaScript", "React", "Node.js"]
     }
   ]
 };
