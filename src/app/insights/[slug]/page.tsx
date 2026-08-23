@@ -8,6 +8,7 @@ import { Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = await params;
@@ -17,6 +18,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: withTrailingSlash(`/insights/${post.slug}`),
+    },
   };
 }
 
@@ -38,7 +42,7 @@ export default async function InsightArticlePage({ params }: { params: { slug: s
       <main className="pt-32 pb-24 bg-cream min-h-screen">
         <Container>
           <Link 
-            href="/insights" 
+            href="/insights/" 
             className="inline-flex items-center text-sm font-bold text-soft-ink hover:text-ink mb-12 transition-colors group"
           >
             <ArrowLeft size={16} className="mr-2 transition-transform group-hover:-translate-x-1" />

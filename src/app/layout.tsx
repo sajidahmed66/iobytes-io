@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 import { PageTransition } from "@/components/layout/PageTransition";
 import { JsonLd } from "@/components/shared/JsonLd";
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iobytes.io"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "iobytes — Every byte engineered for impact",
-    template: "%s — iobytes",
+    default: "iobytes | Every byte engineered for impact",
+    template: "%s | iobytes",
   },
-  description: "We design, build, and ship custom software for B2B enterprises then stay accountable to the metrics that move your business.",
-  keywords: ["enterprise software", "B2B technology", "custom software development", "ROI engineering", "software engineering firm"],
+  description:
+    "We design, build, and ship custom software for B2B enterprises then stay accountable to the metrics that move your business.",
+  keywords: [
+    "enterprise software",
+    "B2B technology",
+    "custom software development",
+    "ROI engineering",
+    "software engineering firm",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -49,9 +50,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -59,17 +60,16 @@ export const metadata: Metadata = {
 const organizationData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "iobytes",
-  "url": "https://iobytes.io",
-  "logo": "https://iobytes.io/iobytes-logo.png",
-  "description": "Every byte engineered for impact. We design, build, and ship custom software for B2B enterprises.",
-  "address": {
+  name: "iobytes",
+  url: siteUrl,
+  logo: `${siteUrl}/iobytes-logo.png`,
+  description:
+    "Every byte engineered for impact. We design, build, and ship custom software for B2B enterprises.",
+  address: {
     "@type": "PostalAddress",
-    "addressCountry": "BD"
+    addressCountry: "BD",
   },
-  "sameAs": [
-    "https://www.linkedin.com/company/io-bytes"
-  ]
+  sameAs: ["https://www.linkedin.com/company/io-bytes"],
 };
 
 export default function RootLayout({
@@ -78,7 +78,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} scroll-smooth`} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="scroll-smooth"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         {/* Preconnect to font origins for faster loading */}
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
@@ -89,10 +94,8 @@ export default function RootLayout({
         />
         <JsonLd data={organizationData} />
       </head>
-      <body className="antialiased min-h-screen">
-        <PageTransition>
-          {children}
-        </PageTransition>
+      <body className="antialiased min-h-screen" suppressHydrationWarning>
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

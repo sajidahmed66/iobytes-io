@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = await params;
@@ -18,6 +19,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: `${study.metric} ${study.outcome} | ${study.client} | iobytes`,
     description: study.summary,
+    alternates: {
+      canonical: withTrailingSlash(`/portfolio/${study.slug}`),
+    },
   };
 }
 
@@ -147,7 +151,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                   </div>
 
                   <AnimatedButton className="w-full" asChild>
-                    <Link href="/contact">Start a similar project</Link>
+                    <Link href="/contact/">Start a similar project</Link>
                   </AnimatedButton>
                 </GlassCard>
               </div>

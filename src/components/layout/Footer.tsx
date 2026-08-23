@@ -7,29 +7,26 @@ import { motion } from "framer-motion";
 
 const footerLinks = {
   solutions: [
-    { name: "Enterprise B2B", href: "/solutions#b2b" },
-    { name: "Custom Applications", href: "/solutions#custom" },
-    { name: "Metrics & Data", href: "/solutions#data" },
-    { name: "Scalable Architecture", href: "/solutions#architecture" },
+    { name: "Enterprise B2B", href: "/solutions/#b2b" },
+    { name: "Custom Applications", href: "/solutions/#custom" },
+    { name: "Metrics & Data", href: "/solutions/#data" },
+    { name: "Scalable Architecture", href: "/solutions/#architecture" },
   ],
   company: [
-    { name: "Team", href: "/team" },
-    { name: "Insights", href: "/insights" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Careers", href: "/careers" },
+    { name: "Team", href: "/team/" },
+    { name: "Insights", href: "/insights/" },
+    { name: "Portfolio", href: "/portfolio/" },
+    { name: "Careers", href: "/careers/" },
   ],
   connect: [
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact/" },
     { name: "LinkedIn", href: "https://www.linkedin.com/company/io-bytes", icon: Linkedin },
-    // { name: "GitHub", href: "https://github.com", icon: Github },
-    // { name: "Twitter", href: "https://twitter.com", icon: Twitter },
   ],
 };
 
 export function Footer() {
   return (
     <footer className="bg-ink text-cream pt-20 pb-10 px-4 md:px-8 relative overflow-hidden">
-      {/* Subtle gradient accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-electric/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative">
@@ -40,7 +37,6 @@ export function Footer() {
           transition={{ duration: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
         >
-          {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
               <Image src="/iobytes-logo.png" alt="iobytes logo" width={32} height={32} className="object-contain h-8 w-auto invert brightness-0" />
@@ -53,7 +49,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Solutions Column */}
           <div className="space-y-6">
             <h4 className="text-sm font-bold uppercase tracking-wider text-electric">Solutions</h4>
             <ul className="space-y-4">
@@ -67,7 +62,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company Column */}
           <div className="space-y-6">
             <h4 className="text-sm font-bold uppercase tracking-wider text-electric">Company</h4>
             <ul className="space-y-4">
@@ -81,7 +75,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Connect Column */}
           <div className="space-y-6">
             <h4 className="text-sm font-bold uppercase tracking-wider text-electric">Connect</h4>
             <ul className="space-y-4">
@@ -103,10 +96,10 @@ export function Footer() {
         </motion.div>
 
         <div className="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-cream/40">
-          <p>© {new Date().getFullYear()} iobytes. All rights reserved.</p>
+          <p>(c) {new Date().getFullYear()} iobytes. All rights reserved.</p>
           <div className="flex space-x-6">
-            <Link href="/privacy" className="hover:text-cream transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-cream transition-colors">Terms of Service</Link>
+            <Link href="/privacy/" className="hover:text-cream transition-colors">Privacy Policy</Link>
+            <Link href="/terms/" className="hover:text-cream transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

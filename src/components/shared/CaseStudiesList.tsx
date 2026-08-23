@@ -36,7 +36,7 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {filteredStudies.map((study) => (
-          <Link key={study.slug} href={`/portfolio/${study.slug}`} className="block group">
+          <Link key={study.slug} href={`/portfolio/${study.slug}/`} className="block group">
             <GlassCard glow padding="comfortable" className="h-full flex flex-col hover:shadow-lg">
               <div className="flex justify-between items-start mb-6">
                 <div className="space-y-4">

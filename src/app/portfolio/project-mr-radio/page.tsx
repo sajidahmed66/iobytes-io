@@ -5,10 +5,14 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { CheckCircle2, Radio, Ship, Globe, Zap, Network } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Project Mr. Radio | Maritime Surveillance Case Study | iobytes",
   description: "Advancing maritime surveillance via open-source AIS network engineering in the Bay of Bengal.",
+  alternates: {
+    canonical: withTrailingSlash("/portfolio/project-mr-radio"),
+  },
 };
 
 export default function ProjectMrRadioPage() {
@@ -212,7 +216,7 @@ export default function ProjectMrRadioPage() {
                 Let&apos;s build infrastructure that connects local data to global intelligence.
               </p>
               <AnimatedButton size="lg" asChild>
-                <Link href="/contact">Start a Project</Link>
+                <Link href="/contact/">Start a Project</Link>
               </AnimatedButton>
             </div>
           </Container>

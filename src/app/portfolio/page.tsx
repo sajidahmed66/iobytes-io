@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { caseStudies } from "@/lib/data/case-studies";
 import { CaseStudiesList } from "@/components/shared/CaseStudiesList";
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Portfolio & ROI Proof | iobytes",
   description: "Real outcomes for real enterprises. Verified metrics and attributable results.",
   alternates: {
-    canonical: "https://iobytes.io/portfolio/",
+    canonical: withTrailingSlash("/portfolio"),
   },
 };
 

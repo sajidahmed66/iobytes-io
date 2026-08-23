@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { ContactForm } from "@/components/shared/ContactForm";
 import { Mail, MapPin, Clock } from "lucide-react";
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Start a Project | iobytes",
   description: "Ready to move your metrics? Contact our engineering team to discuss your B2B enterprise software needs.",
   alternates: {
-    canonical: "https://iobytes.io/contact/",
+    canonical: withTrailingSlash("/contact"),
   },
 };
 

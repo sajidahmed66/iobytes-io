@@ -10,11 +10,11 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 
 const navLinks = [
-  { name: "Solutions", href: "/solutions" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Team", href: "/team" },
+  { name: "Solutions", href: "/solutions/" },
+  { name: "Portfolio", href: "/portfolio/" },
+  { name: "Team", href: "/team/" },
   // { name: "Insights", href: "/insights" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/contact/" },
 ];
 
 export function Navbar() {
@@ -80,7 +80,7 @@ export function Navbar() {
           })}
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Button asChild className="rounded-full px-6 shadow-md hover:shadow-lg transition-shadow">
-              <Link href="/contact">Start a Project</Link>
+              <Link href="/contact/">Start a Project</Link>
             </Button>
           </motion.div>
         </div>
@@ -123,7 +123,7 @@ export function Navbar() {
                 );
               })}
               <Button asChild className="rounded-full w-full py-6 text-lg">
-                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href="/contact/" onClick={() => setIsMobileMenuOpen(false)}>
                   Start a Project
                 </Link>
               </Button>

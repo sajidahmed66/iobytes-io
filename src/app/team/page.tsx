@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { TeamBoard } from "@/components/sections/TeamBoard";
 import { TeamStats } from "@/components/sections/TeamStats";
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 // Lazy load below-fold sections
 const TeamLeadership = dynamic(() => import("@/components/sections/TeamLeadership").then(mod => mod.TeamLeadership));
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: "Our Engineering Team | iobytes",
   description: "Meet the outcome engineers behind your software. A team obsessed with business metrics, not just lines of code.",
   alternates: {
-    canonical: "https://iobytes.io/team/",
+    canonical: withTrailingSlash("/team"),
   },
 };
 

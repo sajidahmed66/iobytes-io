@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/data/case-studies";
 import { posts } from "@/lib/data/insights";
+import { withTrailingSlash } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -14,22 +15,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/team",
     "/insights",
     "/contact",
+    "/careers",
+    "/privacy",
+    "/terms",
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${withTrailingSlash(route)}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: route === "" ? 1 : 0.8,
+    priority: route === "" ? 1 : route === "/portfolio" ? 0.8 : 0.5,
   }));
 
   const caseStudyPages = caseStudies.map((study) => ({
-    url: `${baseUrl}/portfolio/${study.slug}`,
+    url: `${baseUrl}${withTrailingSlash(`/portfolio/${study.slug}`)}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
   const insightPages = posts.map((post) => ({
-    url: `${baseUrl}/insights/${post.slug}`,
+    url: `${baseUrl}${withTrailingSlash(`/insights/${post.slug}`)}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,

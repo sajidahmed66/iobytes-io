@@ -6,10 +6,14 @@ import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Insights & Engineering Perspectives",
   description: "How we think about building software that moves numbers.",
+  alternates: {
+    canonical: withTrailingSlash("/insights"),
+  },
 };
 
 export default function InsightsPage() {
@@ -30,7 +34,7 @@ export default function InsightsPage() {
 
           {/* Featured Post */}
           {featuredPost && (
-            <Link href={`/insights/${featuredPost.slug}`} className="block mb-16 group">
+            <Link href={withTrailingSlash(`/insights/${featuredPost.slug}`)} className="block mb-16 group">
               <GlassCard padding="none" glow className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   <div className="aspect-[16/10] bg-ink/5 relative overflow-hidden">
@@ -62,7 +66,7 @@ export default function InsightsPage() {
           {/* Post Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherPosts.map((post) => (
-              <Link key={post.slug} href={`/insights/${post.slug}`} className="group">
+              <Link key={post.slug} href={withTrailingSlash(`/insights/${post.slug}`)} className="group">
                 <GlassCard padding="none" glow className="h-full flex flex-col overflow-hidden">
                   <div className="aspect-[16/10] bg-ink/5 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center text-ink/5 font-bold text-xl uppercase tracking-widest">

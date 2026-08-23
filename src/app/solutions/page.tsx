@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Workflow, Link as LinkIcon, Cloud, Code, Database, RefreshCw, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { withTrailingSlash } from "@/lib/seo";
 
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Enterprise B2B Software Solutions | iobytes",
   description: "Six core capabilities engineered for measurable enterprise outcomes. From workflow automation to legacy modernization.",
   alternates: {
-    canonical: "https://iobytes.io/solutions/",
+    canonical: withTrailingSlash("/solutions"),
   },
 };
 
@@ -21,28 +22,28 @@ const solutions = [
     description: "Eliminate manual bottlenecks. We map your complex internal processes and engineer automated flows that reclaim 30% of your team's week.",
     icon: Workflow,
     metric: "30% time reclaimed",
-    href: "/contact?subject=Workflow%20Automation",
+    href: "/contact/?subject=Workflow%20Automation",
   },
   {
     title: "System Integration",
     description: "Stop the data drift. We connect your siloed enterprise systems ERP, CRM, Legacy into a single, reliable source of truth.",
     icon: LinkIcon,
     metric: "Zero data drift",
-    href: "/contact?subject=System%20Integration",
+    href: "/contact/?subject=System%20Integration",
   },
   {
     title: "Cloud Infrastructure",
     description: "Architecture that scales with your growth. We build resilient, automated infrastructure that maintains performance at 10x current volume.",
     icon: Cloud,
     metric: "10x scale capacity",
-    href: "/contact?subject=Cloud%20Infrastructure",
+    href: "/contact/?subject=Cloud%20Infrastructure",
   },
   {
     title: "Custom Software",
     description: "Bespoke tools for bespoke problems. No workarounds, no compromises. We build the exact bridge between your current state and your target outcome.",
     icon: Code,
     metric: "100% fit-to-purpose",
-    href: "/contact?subject=Custom%20Software",
+    href: "/contact/?subject=Custom%20Software",
     featured: true,
     code: `// Outcome-first logic
 if (metric < target) {
@@ -55,14 +56,14 @@ if (metric < target) {
     description: "Turn raw data into board-ready insights. We build the pipelines that transform fragmented metrics into strategic decision-making assets.",
     icon: Database,
     metric: "Real-time visibility",
-    href: "/contact?subject=Data%20Engineering",
+    href: "/contact/?subject=Data%20Engineering",
   },
   {
     title: "Legacy Modernization",
     description: "Upgrade without the downtime. We surgically replace aging components with modern alternatives while preserving your critical business logic.",
     icon: RefreshCw,
     metric: "99.9% migration uptime",
-    href: "/contact?subject=Legacy%20Modernization",
+    href: "/contact/?subject=Legacy%20Modernization",
   },
 ];
 
@@ -128,7 +129,7 @@ export default function SolutionsPage() {
 
           <div className="mt-24 text-center">
             <AnimatedButton size="lg" asChild>
-              <Link href="/contact">Discuss Your Solution</Link>
+              <Link href="/contact/">Discuss Your Solution</Link>
             </AnimatedButton>
           </div>
         </Container>
