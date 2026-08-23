@@ -168,7 +168,7 @@ export function TeamCard({
         )}
 
         {/* Social Icons */}
-        <div className={cn(
+        {/* <div className={cn(
           "flex items-center gap-4 pt-4 border-t border-warm-gray/20",
           size === "compact" && "pt-3"
         )}>
@@ -215,7 +215,7 @@ export function TeamCard({
               </div>
             )
           )}
-        </div>
+        </div> */}
       </GlassCard>
     </motion.div>
   );

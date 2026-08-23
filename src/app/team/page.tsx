@@ -9,6 +9,7 @@ import { withTrailingSlash } from "@/lib/seo";
 // Lazy load below-fold sections
 const TeamLeadership = dynamic(() => import("@/components/sections/TeamLeadership").then(mod => mod.TeamLeadership));
 const TeamConsultants = dynamic(() => import("@/components/sections/TeamConsultants").then(mod => mod.TeamConsultants));
+const TeamHonorary = dynamic(() => import("@/components/sections/TeamHonorary").then(mod => mod.TeamHonorary));
 const TeamJoinCTA = dynamic(() => import("@/components/sections/TeamJoinCTA").then(mod => mod.TeamJoinCTA));
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 
@@ -36,12 +37,13 @@ export default function TeamPage() {
           />
 
           {/* Stats Bar */}
-          <TeamStats />
+          {/* <TeamStats /> */}
 
-          {/* Sections: Board → Leadership → Consultants → CTA */}
+          {/* Sections: Board → Leadership → Consultants → Honorary → CTA */}
           <TeamBoard />
           <TeamLeadership />
           <TeamConsultants />
+          <TeamHonorary />
           <TeamJoinCTA />
         </Container>
       </main>
