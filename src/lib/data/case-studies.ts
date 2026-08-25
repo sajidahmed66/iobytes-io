@@ -188,7 +188,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "botx",
-    client: "BotX",
+    client: "AmarBot", 
     logo: "/botx-logo.png",
     metric: "Zero manual grind",
     outcome: "24/7 automated sales engine turning DMs into revenue",
@@ -216,7 +216,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "aivax",
     client: "Aivax",
-    logo: "/aivax-logo.png",
+    logo: "/AIVAX.png",
     metric: "Millions of data points processed",
     outcome: "real-time political intelligence and automated digital defense",
     industry: "POLITICAL TECH",

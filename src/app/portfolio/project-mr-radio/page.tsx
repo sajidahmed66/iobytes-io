@@ -197,7 +197,7 @@ export default function ProjectMrRadioPage() {
             <section>
               <GlassCard padding="comfortable" className="relative">
                 <blockquote className="text-xl font-medium text-ink leading-relaxed mb-6 italic">
-                  &ldquo;Through Project Mr. Radio, iobytes bridges local RF engineering with global maritime intelligence. Their Chittagong station feeds real-time data into our global repository, directly improving search-and-rescue visibility and international vessel tracking accuracy.&rdquo;
+                  &ldquo;Through Project, iobytes bridges local RF engineering with global maritime intelligence. Their Chittagong station feeds real-time data into our global repository, directly improving search-and-rescue visibility and international vessel tracking accuracy.&rdquo;
                 </blockquote>
                 <cite className="not-italic block font-bold text-soft-ink">
                   &mdash; AISHub Partnership Team

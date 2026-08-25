@@ -17,7 +17,7 @@ import { CheckCircle2, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
-  email: z.string().email("Invalid email address"),
+  email: z.string().pipe(z.email("Invalid email address")),
   company: z.string().min(2, "Company is required"),
   projectType: z.string().min(1, "Please select a project type"),
   message: z.string().min(10, "Message must be at least 10 characters"),
@@ -26,7 +26,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const {
     register,
@@ -40,10 +40,26 @@ export function ContactForm() {
 
   const onSubmit = async (data: FormValues) => {
     setStatus("loading");
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setStatus("success");
-    reset();
+
+    try {
+      const response = await fetch("https://formspree.io/f/mdenewwz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   return (
@@ -104,7 +120,7 @@ export function ContactForm() {
 
             <div className="space-y-2">
               <Label>Project Type</Label>
-              <Select onValueChange={(v) => setValue("projectType", v)} >
+              <Select onValueChange={(v) => setValue("projectType", v, { shouldValidate: true })}>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select type" />
                 </SelectTrigger>
@@ -131,6 +147,12 @@ export function ContactForm() {
               />
               {errors.message && <p className="text-xs text-destructive">{errors.message.message}</p>}
             </div>
+
+            {status === "error" && (
+              <p className="text-sm text-destructive text-center">
+                Something went wrong. Please try again later.
+              </p>
+            )}
 
             <Button
               type="submit"
