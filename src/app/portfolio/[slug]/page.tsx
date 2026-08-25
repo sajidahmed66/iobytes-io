@@ -114,7 +114,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                 <GlassCard padding="comfortable" glow>
                   <div className="mb-8 p-8 bg-ink/5 rounded-xl flex items-center justify-center">
                     {study.logo ? (
-                      <div className="h-12 relative w-full invert brightness-0">
+                      <div className="h-36 relative w-full">
                         <Image
                           src={study.logo}
                           alt={`${study.client} logo`}

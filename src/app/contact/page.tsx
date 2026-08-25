@@ -37,8 +37,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold uppercase tracking-widest text-soft-ink mb-1">Email</h4>
-                    <a href="mailto:contact@iobytes.io" className="text-xl font-bold text-ink hover:text-electric transition-colors">
-                      contact@iobytes.io
+                    <a href="mailto:rubayeat.jamil.joy3@gmail.com" className="text-xl font-bold text-ink hover:text-electric transition-colors">
+                      rubayeat.jamil.joy3@gmail.com
                     </a>
                   </div>
                 </div>

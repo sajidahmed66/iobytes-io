@@ -41,7 +41,7 @@ export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
               <div className="flex justify-between items-start mb-6">
                 <div className="space-y-4">
                   {study.logo ? (
-                    <div className="h-8 relative w-24 invert brightness-[200%] contrast-[150%] grayscale">
+                    <div className="h-8 relative w-24">
                       <Image
                         src={study.logo}
                         alt={`${study.client} logo`}
