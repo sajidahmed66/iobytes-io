@@ -7,9 +7,20 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Canonical host: keep one version of every URL in Google's index.
+  RewriteCond %{HTTP_HOST} ^www\.iobytes\.io$ [NC]
+  RewriteRule ^ https://iobytes.io%{REQUEST_URI} [R=301,L]
+
   # Serve existing files directly.
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
+
+  # Static content pages do not need query strings. Strip accidental crawl
+  # variants such as ?MA and ?SA before serving the canonical page.
+  RewriteCond %{QUERY_STRING} .+
+  RewriteCond %{REQUEST_URI} !^/_next/ [NC]
+  RewriteCond %{REQUEST_URI} !\.(css|js|mjs|json|xml|svg|png|jpe?g|gif|webp|avif|ico|woff2?)$ [NC]
+  RewriteRule ^ %{REQUEST_URI}? [R=301,L]
 
   # Next.js static export here produces flat files like /team.html.
   # Rewrite pretty URLs such as /team/ to the matching HTML file.
@@ -21,4 +32,14 @@ DirectoryIndex index.html
   <FilesMatch "\.(css|js|mjs|json|xml|svg|png|jpe?g|gif|webp|avif|ico|woff2?)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+
+  # Next.js static export emits React payload .txt files. They may be needed for
+  # client navigation, but they are not indexable pages.
+  <FilesMatch "\.txt$">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+
+  <Files "robots.txt">
+    Header unset X-Robots-Tag
+  </Files>
 </IfModule>
