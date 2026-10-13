@@ -76,3 +76,28 @@ export interface ResearchGroup {
   intro: string;
   tracks: ResearchTrack[];
 }
+
+export interface AppliedResearchItem {
+  slug: string;
+  title: string;
+  outcome: string;
+  detail: string;
+  icon: LucideIcon;
+}
+
+export interface AppliedResearchStat {
+  value: string;
+  label: string;
+}
+
+export interface AppliedResearch {
+  id: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  nextUp: string;
+  stats: AppliedResearchStat[];
+  items: AppliedResearchItem[];
+  stack: string[];
+  caseStudy: { label: string; href: string };
+}

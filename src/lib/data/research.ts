@@ -1,5 +1,15 @@
-import { Anchor, Radar, ShieldAlert, Ship, Wrench } from "lucide-react";
-import { ResearchGroup } from "@/types";
+import {
+  Anchor,
+  Handshake,
+  MapPin,
+  MessageSquare,
+  Radar,
+  ShieldAlert,
+  Ship,
+  Workflow,
+  Wrench,
+} from "lucide-react";
+import { AppliedResearch, ResearchGroup } from "@/types";
 
 export const researchGroups: ResearchGroup[] = [
   {
@@ -66,6 +76,60 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
 ];
+
+// Applied R&D that has already shipped: the n8n workflow automation built for Amar Bot.
+// Facts are taken from the Amar Bot admin codebase and its design docs.
+export const appliedResearch: AppliedResearch = {
+  id: "conversational-commerce",
+  eyebrow: "Applied R&D · Amar Bot",
+  title: "Order-taking that runs in n8n",
+  intro:
+    "Small merchants in Bangladesh sell through Messenger DMs, and every order used to mean typing out prices and re-keying names, phones, and addresses by hand. For Amar Bot we moved the whole order conversation into n8n, one workflow per merchant, and shipped it. The automation work below is in production and taking orders.",
+  nextUp:
+    "Next up: booking the Pathao or RedX parcel the moment an order is confirmed, with no click in the admin panel.",
+  stats: [
+    { value: "170+", label: "Nodes in the Messenger workflow" },
+    { value: "1", label: "n8n workflow per merchant" },
+    { value: "3", label: "Delivery fee models" },
+    { value: "24h", label: "Handover idle window" },
+  ],
+  items: [
+    {
+      slug: "workflow-per-merchant",
+      title: "One Workflow per Merchant",
+      outcome: "A merchant goes live by connecting a page. Nobody builds a workflow by hand.",
+      detail:
+        "The admin panel hydrates a master Messenger template with the page's credentials and a fresh webhook, then creates the workflow through the n8n Public API. A redeploy script pushes template changes to every live bot while keeping each webhook URL stable.",
+      icon: Workflow,
+    },
+    {
+      slug: "order-capture-in-chat",
+      title: "Order Capture in Chat",
+      outcome: "A buyer browses, picks, and confirms an order without leaving the DM.",
+      detail:
+        "A 170+ node n8n workflow runs the whole conversation: product cards, cart, name and phone capture, delivery area, and order confirmation. Redis holds the conversation state and PostgreSQL holds the orders.",
+      icon: MessageSquare,
+    },
+    {
+      slug: "zone-based-delivery",
+      title: "Zone-Based Delivery Pricing",
+      outcome: "The right delivery fee, resolved from the buyer's answer in chat.",
+      detail:
+        "Each product carries a flat, free, or zoned delivery charge. A zoned product shows its fee range on the card, the workflow asks the buyer which area they are in, and the fee is fixed before the order is confirmed.",
+      icon: MapPin,
+    },
+    {
+      slug: "human-handover",
+      title: "Human Handover",
+      outcome: "A merchant can step into any chat. The bot steps back out on its own.",
+      detail:
+        "A persistent-menu item or quick reply hands the thread to the merchant's Page Inbox and silences the bot. A return-to-bot button or a 24-hour idle sweep hands it back, so no conversation is stranded on either side.",
+      icon: Handshake,
+    },
+  ],
+  stack: ["n8n", "PostgreSQL", "Redis", "Meta Graph API", "Next.js", "Hono"],
+  caseStudy: { label: "Read the Amar Bot case study", href: "/portfolio/botx/" },
+};
 
 // Team members whose expertise backs the research tracks, matched by name in teamData
 export const researchContributors = ["Syed Tanvir Faisal", "Dr. Syed Mithun Ali"];
