@@ -12,6 +12,7 @@ import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 const navLinks = [
   { name: "Solutions", href: "/solutions/" },
   { name: "Portfolio", href: "/portfolio/" },
+  { name: "Research", href: "/research/" },
   { name: "Team", href: "/team/" },
   // { name: "Insights", href: "/insights" },
   { name: "Contact", href: "/contact/" },

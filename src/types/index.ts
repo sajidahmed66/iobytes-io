@@ -58,3 +58,21 @@ export interface Solution {
   href: string;
   featured?: boolean;
 }
+
+export interface ResearchTrack {
+  slug: string;
+  title: string;
+  outcome: string;
+  problem: string;
+  approach: string;
+  stage: "research" | "prototype" | "pilot";
+  icon: LucideIcon;
+}
+
+export interface ResearchGroup {
+  id: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  tracks: ResearchTrack[];
+}
