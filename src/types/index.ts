@@ -67,6 +67,7 @@ export interface ResearchTrack {
   approach: string;
   stage: "research" | "prototype" | "pilot";
   icon: LucideIcon;
+  link?: { label: string; href: string };
 }
 
 export interface ResearchGroup {

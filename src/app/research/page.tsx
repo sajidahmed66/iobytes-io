@@ -10,6 +10,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { ResearchHeroDiagram } from "@/components/sections/ResearchHeroDiagram";
 import { withTrailingSlash } from "@/lib/seo";
 import { researchGroups, appliedResearch, researchContributors } from "@/lib/data/research";
+import type { ResearchTrack } from "@/types";
 import { teamData } from "@/lib/data/team";
 import { cn } from "@/lib/utils";
 
@@ -18,7 +19,7 @@ const Footer = dynamic(() => import("@/components/layout/Footer").then((mod) => 
 export const metadata: Metadata = {
   title: "Maritime AI Research & Development",
   description:
-    "iobytes R&D is researching AI for maritime traffic and port operations: arrival forecasting, congestion control, and encounter risk detection. Plus the n8n workflow automation we shipped for Amar Bot.",
+    "iobytes R&D runs coastal AIS stations that feed AISHub, and is researching AI for maritime traffic and port operations on top of that data. Smaller research threads on office automation, B2B automation, computer vision and Bangla NLP, plus the n8n workflow automation we shipped for Amar Bot.",
   alternates: {
     canonical: withTrailingSlash("/research"),
   },
@@ -27,8 +28,18 @@ export const metadata: Metadata = {
 const stageLabels = {
   research: "Research stage",
   prototype: "Prototype",
-  pilot: "Pilot",
+  pilot: "In pilot",
 } as const;
+
+// Plain-language count of where a group's tracks stand, e.g. "3 tracks. One is in pilot, the rest are still at research stage."
+const stageNote = (tracks: ResearchTrack[]) => {
+  const live = tracks.filter((track) => track.stage !== "research").length;
+  const count = `${tracks.length} tracks`;
+  if (live === 0) return `${count}. All of them are still at research stage, no pilot on this side yet.`;
+  if (live === tracks.length) return `${count}, all of them in pilot or beyond.`;
+  const liveWord = live === 1 ? "One is" : `${live} are`;
+  return `${count}. ${liveWord} already in pilot, the rest are still at research stage.`;
+};
 
 const contributors = Object.values(teamData)
   .flat()
@@ -55,8 +66,8 @@ const pageNav = [
     label: group.title,
     note: `${group.tracks.length} tracks`,
   })),
-  { href: `#${appliedResearch.id}`, label: "Amar Bot automation", note: "In production" },
-  { href: "#people", label: "People", note: `${contributors.length} experts` },
+  { href: `#${appliedResearch.id}`, label: "Amar Bot automation", note: "Live" },
+  { href: "#people", label: "People", note: `${contributors.length} from the team` },
 ];
 
 const linkClass =
@@ -73,20 +84,23 @@ export default function ResearchPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
               <div className="lg:col-span-7">
                 <h1 className="text-[44px] leading-[0.98] sm:text-6xl md:text-7xl lg:text-[80px] font-black tracking-[-0.03em] text-ink text-balance">
-                  Fewer ships waiting at <span className="text-electric">anchor</span>.
+                  Why are ships still waiting at <span className="text-electric">anchor</span>?
                 </h1>
                 <p className="mt-8 max-w-[58ch] text-lg md:text-xl text-soft-ink leading-relaxed">
-                  We are applying the data and automation engineering we ship for enterprises to
-                  congested ports, crowded waterways, and the chat inboxes where small merchants
-                  sell. The maritime tracks are at research stage. The automation work is in
-                  production with Amar Bot.
+                  Most of what we do at iobytes is data and automation work for enterprise
+                  clients. Some time back we started putting the same engineering into problems
+                  closer to home. Our own AIS stations are already up on the Bangladesh coast and
+                  feeding AISHub, and the models on top of that data are still at research stage.
+                  The Amar Bot automation is in production. Alongside that we have a few smaller
+                  research threads going on office automation, B2B automation, computer vision and
+                  Bangla NLP.
                 </p>
                 <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
                   <AnimatedButton size="lg" asChild>
-                    <Link href="/contact/?subject=Research%20Partnership">Partner with the lab</Link>
+                    <Link href="/contact/?subject=Research%20Partnership">Talk to us about a partnership</Link>
                   </AnimatedButton>
                   <a href={`#${appliedResearch.id}`} className={cn(linkClass, "text-ink hover:text-electric")}>
-                    See what already shipped
+                    See what is already live
                     <ArrowRight
                       size={16}
                       strokeWidth={1.5}
@@ -139,9 +153,7 @@ export default function ResearchPage() {
                     <p className="mt-5 max-w-[44ch] text-lg text-soft-ink leading-relaxed">
                       {group.intro}
                     </p>
-                    <p className="mt-6 text-sm font-medium text-soft-ink">
-                      {group.tracks.length} tracks, all at research stage.
-                    </p>
+                    <p className="mt-6 text-sm font-medium text-soft-ink">{stageNote(group.tracks)}</p>
                   </div>
                 </div>
 
@@ -177,6 +189,20 @@ export default function ResearchPage() {
                           <dd className="mt-1.5 text-soft-ink leading-relaxed">{track.approach}</dd>
                         </div>
                       </dl>
+                      {track.link && (
+                        <Link
+                          href={track.link.href}
+                          className={cn(linkClass, "mt-6 text-ink hover:text-electric")}
+                        >
+                          {track.link.label}
+                          <ArrowUpRight
+                            size={16}
+                            strokeWidth={1.5}
+                            className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                            aria-hidden="true"
+                          />
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ol>
@@ -198,7 +224,7 @@ export default function ResearchPage() {
                 </h2>
                 <p className="mt-5 inline-flex items-center gap-2.5 text-sm font-semibold">
                   <span className="size-2.5 rounded-full bg-electric" aria-hidden="true" />
-                  In production for Amar Bot
+                  Running in production for Amar Bot
                 </p>
                 <p className="mt-6 max-w-[52ch] text-lg text-cream/70 leading-relaxed">
                   {appliedResearch.intro}
@@ -258,7 +284,7 @@ export default function ResearchPage() {
                         className="size-5 shrink-0 rounded-full border border-dashed border-electric"
                         aria-hidden="true"
                       />
-                      <h3 className="text-xl font-bold tracking-[-0.01em]">Still in the lab</h3>
+                      <h3 className="text-xl font-bold tracking-[-0.01em]">Next on the list</h3>
                     </div>
                     <p className="mt-3 max-w-[65ch] text-cream/65 leading-relaxed">{appliedResearch.nextUp}</p>
                   </li>
@@ -287,10 +313,12 @@ export default function ResearchPage() {
                 <div className="lg:col-span-4">
                   <div className="lg:sticky lg:top-28">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-ink text-balance">
-                      Domain depth, not just models
+                      Who is working on this
                     </h2>
                     <p className="mt-5 max-w-[44ch] text-lg text-soft-ink leading-relaxed">
-                      Maritime operations and operations research expertise from the iobytes team.
+                      The maritime and operations research side is led by two people from our team
+                      who have spent years in shipping and supply chain work. In this domain the
+                      models alone don&apos;t get very far without that kind of experience.
                     </p>
                     <Link href="/team/" className={cn(linkClass, "mt-6 text-ink hover:text-electric")}>
                       Meet the full team
@@ -346,17 +374,19 @@ export default function ResearchPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:items-end">
               <div className="lg:col-span-8">
                 <h2 className="text-4xl md:text-6xl font-black leading-[1] tracking-[-0.03em] text-balance">
-                  Safer, faster, <span className="text-electric">smarter</span> waterways.
+                  Help us test this in a real <span className="text-electric">port</span>.
                 </h2>
                 <p className="mt-6 max-w-[58ch] text-lg md:text-xl text-cream/65 leading-relaxed">
-                  Shipping is heading toward waterways where every vessel is visible and every
-                  port entry is planned. We are building toward that one research question at a
-                  time. Port operators, fleet managers, and research partners: help us test it.
+                  Our AIS stations give us the vessel side of the picture. What we don&apos;t have
+                  is the port side, berth plans, arrival logs, pilot boarding times, and honestly
+                  the forecasting work can only go so far without it. If you run a port or a fleet,
+                  or you&apos;re doing research on similar problems, we&apos;d like to talk. Even a
+                  small dataset or a short pilot slot would help us a lot.
                 </p>
               </div>
               <div className="lg:col-span-4 lg:justify-self-end">
                 <AnimatedButton size="lg" asChild>
-                  <Link href="/contact/?subject=Research%20Partnership">Explore a Research Partnership</Link>
+                  <Link href="/contact/?subject=Research%20Partnership">Get in touch about a partnership</Link>
                 </AnimatedButton>
               </div>
             </div>
