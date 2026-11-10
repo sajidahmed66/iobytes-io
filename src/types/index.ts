@@ -58,3 +58,47 @@ export interface Solution {
   href: string;
   featured?: boolean;
 }
+
+export interface ResearchTrack {
+  slug: string;
+  title: string;
+  outcome: string;
+  problem: string;
+  approach: string;
+  stage: "research" | "prototype" | "pilot";
+  icon: LucideIcon;
+  link?: { label: string; href: string };
+}
+
+export interface ResearchGroup {
+  id: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  tracks: ResearchTrack[];
+}
+
+export interface AppliedResearchItem {
+  slug: string;
+  title: string;
+  outcome: string;
+  detail: string;
+  icon: LucideIcon;
+}
+
+export interface AppliedResearchStat {
+  value: string;
+  label: string;
+}
+
+export interface AppliedResearch {
+  id: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  nextUp: string;
+  stats: AppliedResearchStat[];
+  items: AppliedResearchItem[];
+  stack: string[];
+  caseStudy: { label: string; href: string };
+}

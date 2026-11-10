@@ -16,6 +16,7 @@ const footerLinks = {
     { name: "Team", href: "/team/" },
     { name: "Insights", href: "/insights/" },
     { name: "Portfolio", href: "/portfolio/" },
+    { name: "Research & Development", href: "/research/" },
     { name: "Careers", href: "/careers/" },
   ],
   connect: [

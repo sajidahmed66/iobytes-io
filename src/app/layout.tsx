@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { MotionProvider } from "@/components/layout/MotionProvider";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { siteUrl } from "@/lib/seo";
@@ -95,7 +96,9 @@ export default function RootLayout({
         <JsonLd data={organizationData} />
       </head>
       <body className="antialiased min-h-screen" suppressHydrationWarning>
-        <PageTransition>{children}</PageTransition>
+        <MotionProvider>
+          <PageTransition>{children}</PageTransition>
+        </MotionProvider>
       </body>
     </html>
   );
