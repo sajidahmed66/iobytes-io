@@ -31,26 +31,33 @@ export const teamData: TeamData = {
   consultants: [
     {
       name: "Syed Tanvir Faisal",
-      role: "Marine & Shipping Procurement Specialist",
-      bio: "Deep expertise in maritime logistics, vessel procurement, and international shipping operations. Optimizes fleet management and supply chain for global clients.",
+      role: "Branding and Investment Adviser",
+      bio: "Advises on brand positioning, identity, and investment strategy to help businesses strengthen their market presence and pursue sustainable growth.",
       photo: "/team/syed-tanvir-faisal.jpg",
-      skills: ["Maritime Logistics", "Fleet Management", "Supply Chain"]
+      skills: ["Brand Strategy", "Brand Positioning", "Investment Strategy", "Market Analysis"]
     },
     {
       name: "Abdulla Al Mamun",
-      role: "Technical Consultant and Architect",
-      bio: "Unified 8 legacy systems into a single API gateway.",
+      role: "Compliance and Sustainability Adviser",
+      bio: "Advises organizations on regulatory compliance and sustainability practices, helping them manage risk and align operations with responsible business standards.",
       photo: "/team/abdulla-al-mamun.jpg",
-      skills: ["System Integration", "API Design", "Cloud Architecture"]
+      skills: ["Regulatory Compliance", "Sustainability Strategy", "Risk Management", "ESG Practices"]
     },
     {
       name: "Insan Arafat Jamil",
-      role: "Embedded System and IoT Consultant",
+      role: "Embedded Systems and IoT Adviser",
       bio: "Specializes in embedded firmware, IoT sensor networks, and real-time systems. Delivered connected device solutions across industrial and consumer domains.",
       photo: "/team/insan-arafat-jamil.jpg",
       linkedin: "https://www.linkedin.com/in/insan-arafat-jamil/",
       imagePosition: "50% 10%",
       skills: ["Embedded Systems", "IoT", "Real-time Systems"]
+    },
+    {
+      name: "Ashraf Un Nayeem Kuntal",
+      role: "Business Development Adviser",
+      bio: "Focused on identifying business opportunities, building client relationships, and developing strategic partnerships. Connects client needs with practical solutions to support sustainable business growth.",
+      photo: "/team/niyeem.jpeg",
+      skills: ["Business Development", "Client Relationship Management", "Strategic Partnerships", "Market Research", "Sales Strategy"]
     }
   ],
   honorary_consultants: [
@@ -127,27 +134,6 @@ export const teamData: TeamData = {
         "Civil Litigation",
         "MS Office"
       ]
-    },
-    {
-      name: "Rubayeat Jamil Joy",
-      role: "Junior Software Engineer (Intern)",
-      bio: "Full-stack engineer passionate about building clean, scalable web applications and constantly learning new technologies.",
-      photo: "/team/joy.webp",
-      skills: ["Full-Stack Development", "React", "Node.js", "Express", "MySQL", "MongoDB"]
-    },
-    {
-      name: "Takrim Uddin Ahmed Jengi",
-      role: "Junior Software Engineer (Intern)",
-      bio: "Full-stack engineer with a growing passion for building practical, user-focused web applications.",
-      photo: "/team/takrim.PNG",
-      skills: ["Full-Stack Development", "JavaScript", "React", "Node.js"]
-    },
-    {
-      name: "Asfia Tabassum",
-      role: "Junior Software Engineer (Intern)",
-      bio: "Full-stack engineer driven by curiosity and a strong enthusiasm for learning new technologies.",
-      photo: "/team/anchal.jpeg",
-      skills: ["Full-Stack Development", "JavaScript", "React", "Node.js"]
     }
   ]
 };
