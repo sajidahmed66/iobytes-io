@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { blurDataURL } from "@/lib/image-utils";
 
-const industries = ["All", "Manufacturing", "Agriculture", "Industrial", "Healthcare", "Retail", "IT COMPANY", "SOCIAL COMMERCE", "POLITICAL TECH", "MARITIME INTELLIGENCE"];
+const industries = ["All", "Manufacturing", "Agriculture", "Industrial", "Healthcare", "Retail", "IT COMPANY", "SOCIAL COMMERCE", "POLITICAL TECH", "MARITIME INTELLIGENCE", "TRAVEL TECH"];
 
 export function CaseStudiesList({ studies }: { studies: CaseStudy[] }) {
   const [activeFilter, setActiveFilter] = useState("All");

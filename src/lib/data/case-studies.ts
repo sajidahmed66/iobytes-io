@@ -80,6 +80,31 @@ export const caseStudies: CaseStudy[] = [
       attribution: "Head of Operations, Factorynext"
     }
   },
+  {
+    slug: "musaafir",
+    client: "Musaafir",
+    logo: "/musaafir.png",
+    metric: "Verified stays",
+    outcome: "a purpose-built stays marketplace for Bangladesh",
+    industry: "TRAVEL TECH",
+    teaser: "Verified short stays near hospitals, exam centres and landmarks, booked and paid end to end.",
+    summary: "A live stays marketplace for Bangladesh, built around why people travel: medical, exam, tourism, business and student stays, with verified hosts and in-app payments.",
+    challenge: "People travelling to Dhaka for treatment, exams or work often end up exhausted, with no trusted place to rest near where they need to be. Informal stays mean unverified hosts, unreliable availability and no safety net.",
+    approach: "We engineered a purpose-first marketplace: guests search by landmark, purpose and listing type, including voice search in Bangla and Banglish. Hosts are verified with NID plus a live selfie and an in-person address check, and availability is enforced server-side so double bookings are blocked.",
+    results: [
+      "Live end to end today: search, booking, payment and host payout. Not a prototype.",
+      "Payments via bKash, Nagad and cards, or cash on arrival.",
+      "Host identity verification with NID plus a live selfie, reviewed by a person.",
+      "Built-in 999 SOS safety centre with stay-sharing to a trusted contact.",
+      "Host earnings dashboard with payouts to bKash, Nagad, Rocket or bank."
+    ],
+    metrics: [
+      { target: 5, label: "Stay Purposes" },
+      { target: 0, suffix: "%", label: "Host Commission" },
+      { target: 24, suffix: "h", label: "Host Response Window" }
+    ],
+    techStack: ["Node.js", "Flutter", "Supabase"]
+  },
   // {
   //   slug: "project-mr-radio",
   //   client: "Project Mr. Radio",

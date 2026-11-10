@@ -100,6 +100,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                 </div>
               </section>
 
+              {study.testimonial && (
               <section>
                 <GlassCard padding="comfortable" className="relative mt-12">
                   <blockquote className="text-xl font-medium text-ink leading-relaxed mb-6 italic">
@@ -110,6 +111,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                   </cite>
                 </GlassCard>
               </section>
+              )}
             </div>
 
             {/* Sidebar */}

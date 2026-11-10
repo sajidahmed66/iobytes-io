@@ -14,7 +14,7 @@ export interface CaseStudy {
   results: string[];
   metrics: { target: number; prefix?: string; suffix?: string; label: string }[];
   techStack: string[];
-  testimonial: {
+  testimonial?: {
     quote: string;
     attribution: string;
   };
