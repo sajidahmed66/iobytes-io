@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/ui";
 import { OutcomeCard } from "@/components/shared/OutcomeCard";
-import { ArrowRight, ShieldCheck, Zap, Activity } from "lucide-react";
+import { ArrowRight, Zap, Activity } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -23,14 +23,15 @@ const outcomes = [
     industry: "Industrial Automation",
     delay: 0.1
   },
-  {
-    icon: ShieldCheck,
-    metric: "24/7",
-    title: "Real-time sensor coverage",
-    description: "Comprehensive sensor telemetry platform for environmental intelligence across industrial operations for BAT.",
-    industry: "Environmental Monitoring",
-    delay: 0.2
-  }
+  // Hidden: BAT
+  // {
+  //   icon: ShieldCheck,
+  //   metric: "24/7",
+  //   title: "Real-time sensor coverage",
+  //   description: "Comprehensive sensor telemetry platform for environmental intelligence across industrial operations for BAT.",
+  //   industry: "Environmental Monitoring",
+  //   delay: 0.2
+  // }
 ];
 
 export function ClientWork() {

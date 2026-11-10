@@ -35,9 +35,10 @@ const ClientWork = dynamic(() =>
 const SolutionsPreview = dynamic(() =>
   import("@/components/sections/SolutionsPreview").then((mod) => mod.SolutionsPreview)
 );
-const FeaturedCaseStudy = dynamic(() =>
-  import("@/components/sections/FeaturedCaseStudy").then((mod) => mod.FeaturedCaseStudy)
-);
+// Hidden: BAT featured case study
+// const FeaturedCaseStudy = dynamic(() =>
+//   import("@/components/sections/FeaturedCaseStudy").then((mod) => mod.FeaturedCaseStudy)
+// );
 const OurApproach = dynamic(() =>
   import("@/components/sections/OurApproach").then((mod) => mod.OurApproach)
 );
@@ -60,7 +61,7 @@ export default function Home() {
         <MetricsBar />
         <ClientWork />
         <SolutionsPreview />
-        <FeaturedCaseStudy />
+        {/* <FeaturedCaseStudy /> */}
         <OurApproach />
         <TestimonialSection />
         <CTABanner />

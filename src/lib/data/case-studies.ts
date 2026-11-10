@@ -1,33 +1,33 @@
 import { CaseStudy } from "@/types";
 
 export const caseStudies: CaseStudy[] = [
-  {
-    slug: "bat",
-    client: "BAT",
-    logo: "/bat-bangladesh-logo.png",
-    metric: "40% efficiency increase",
-    outcome: "in order processing",
-    industry: "Manufacturing",
-    teaser: "Optimizing global order flow through automated validation and routing.",
-    summary: "Implementing a custom middleware to handle complex order validation rules across 40+ markets.",
-    challenge: "BAT faced significant delays in order processing due to manual validation steps and inconsistent data formats from regional distributors. The average processing time per order was 12 minutes, leading to bottlenecks during peak demand.",
-    approach: "We engineered a high-throughput validation engine using a rules-as-code philosophy. The system normalizes incoming data and applies business logic in parallel, drastically reducing latency.",
-    results: [
-      "Reduced per-order processing time from 12 minutes to 15 seconds.",
-      "Eliminated 98% of manual validation errors.",
-      "Successfully scaled to handle 4x holiday peak volume without downtime."
-    ],
-    metrics: [
-      { target: 40, suffix: "%", label: "Efficiency Increase" },
-      { target: 12, suffix: "m", label: "Original Latency" },
-      { target: 15, suffix: "s", label: "New Latency" }
-    ],
-    techStack: ["Next.js", "Go", "PostgreSQL", "Kafka"],
-    testimonial: {
-      quote: "Most firms just build what you ask for. iobytes pushed back, optimized our logic, and saved us thousands of manual hours. They didn't just build a tool; they solved a business problem.",
-      attribution: "Global Supply Chain Director, BAT"
-    }
-  },
+  // {
+  //   slug: "bat",
+  //   client: "BAT",
+  //   logo: "/bat-bangladesh-logo.png",
+  //   metric: "40% efficiency increase",
+  //   outcome: "in order processing",
+  //   industry: "Manufacturing",
+  //   teaser: "Optimizing global order flow through automated validation and routing.",
+  //   summary: "Implementing a custom middleware to handle complex order validation rules across 40+ markets.",
+  //   challenge: "BAT faced significant delays in order processing due to manual validation steps and inconsistent data formats from regional distributors. The average processing time per order was 12 minutes, leading to bottlenecks during peak demand.",
+  //   approach: "We engineered a high-throughput validation engine using a rules-as-code philosophy. The system normalizes incoming data and applies business logic in parallel, drastically reducing latency.",
+  //   results: [
+  //     "Reduced per-order processing time from 12 minutes to 15 seconds.",
+  //     "Eliminated 98% of manual validation errors.",
+  //     "Successfully scaled to handle 4x holiday peak volume without downtime."
+  //   ],
+  //   metrics: [
+  //     { target: 40, suffix: "%", label: "Efficiency Increase" },
+  //     { target: 12, suffix: "m", label: "Original Latency" },
+  //     { target: 15, suffix: "s", label: "New Latency" }
+  //   ],
+  //   techStack: ["Next.js", "Go", "PostgreSQL", "Kafka"],
+  //   testimonial: {
+  //     quote: "Most firms just build what you ask for. iobytes pushed back, optimized our logic, and saved us thousands of manual hours. They didn't just build a tool; they solved a business problem.",
+  //     attribution: "Global Supply Chain Director, BAT"
+  //   }
+  // },
   {
     slug: "agroshift",
     client: "Agroshift",
@@ -80,34 +80,34 @@ export const caseStudies: CaseStudy[] = [
       attribution: "Head of Operations, Factorynext"
     }
   },
-  {
-    slug: "project-mr-radio",
-    client: "Project Mr. Radio",
-    logo: "/ais.png",
-    metric: "Sub-second data ingestion",
-    outcome: "Advancing maritime surveillance via open-source AIS network engineering",
-    industry: "MARITIME INTELLIGENCE",
-    teaser: "Terrestrial AIS base station network capturing real-time vessel data from the Bay of Bengal. Engineering RF telemetry pipelines for global maritime transparency.",
-    summary: "Engineering terrestrial AIS stations to capture and broadcast real-time vessel data from the high-density shipping lanes of the Bay of Bengal.",
-    challenge: "Global maritime transparency depends on accurate, real-time vessel tracking  yet vast coastal regions remain data black zones. The Bay of Bengal, one of the world's busiest shipping corridors, lacked sufficient terrestrial AIS coverage to support international search-and-rescue operations, logistics optimization, and maritime compliance.",
-    approach: "iobytes partnered with AISHub under the strategic initiative Project Mr. Radio to engineer, deploy, and maintain open-source terrestrial AIS stations across the Bangladesh coastline.",
-    results: [
-      "Sub-second data ingestion with zero packet loss from coastal AIS stations",
-      "Continuous VHF signal decoding from high-density commercial shipping lanes",
-      "Global data contribution to AISHub international vessel tracking",
-      "Edge resilience maintaining data integrity through power fluctuations",
-      "Scalable open-source architecture ready for 5-10 station national expansion"
-    ],
-    metrics: [
-      { target: 1, prefix: "<", suffix: "s", label: "Data Ingestion" },
-      { target: 100, suffix: "%", label: "Packet Integrity" }
-    ],
-    techStack: ["AIS Receivers", "VHF Radio", "NMEA Protocol", "RF Telemetry", "Edge Computing", "Python"],
-    testimonial: {
-      quote: "iobytes bridges the gap between complex RF engineering and global data pipelines. Their coastal stations are some of the most resilient and reliable in our entire maritime network.",
-      attribution: "AISHub Partnership Team"
-    }
-  },
+  // {
+  //   slug: "project-mr-radio",
+  //   client: "Project Mr. Radio",
+  //   logo: "/ais.png",
+  //   metric: "Sub-second data ingestion",
+  //   outcome: "Advancing maritime surveillance via open-source AIS network engineering",
+  //   industry: "MARITIME INTELLIGENCE",
+  //   teaser: "Terrestrial AIS base station network capturing real-time vessel data from the Bay of Bengal. Engineering RF telemetry pipelines for global maritime transparency.",
+  //   summary: "Engineering terrestrial AIS stations to capture and broadcast real-time vessel data from the high-density shipping lanes of the Bay of Bengal.",
+  //   challenge: "Global maritime transparency depends on accurate, real-time vessel tracking  yet vast coastal regions remain data black zones. The Bay of Bengal, one of the world's busiest shipping corridors, lacked sufficient terrestrial AIS coverage to support international search-and-rescue operations, logistics optimization, and maritime compliance.",
+  //   approach: "iobytes partnered with AISHub under the strategic initiative Project Mr. Radio to engineer, deploy, and maintain open-source terrestrial AIS stations across the Bangladesh coastline.",
+  //   results: [
+  //     "Sub-second data ingestion with zero packet loss from coastal AIS stations",
+  //     "Continuous VHF signal decoding from high-density commercial shipping lanes",
+  //     "Global data contribution to AISHub international vessel tracking",
+  //     "Edge resilience maintaining data integrity through power fluctuations",
+  //     "Scalable open-source architecture ready for 5-10 station national expansion"
+  //   ],
+  //   metrics: [
+  //     { target: 1, prefix: "<", suffix: "s", label: "Data Ingestion" },
+  //     { target: 100, suffix: "%", label: "Packet Integrity" }
+  //   ],
+  //   techStack: ["AIS Receivers", "VHF Radio", "NMEA Protocol", "RF Telemetry", "Edge Computing", "Python"],
+  //   testimonial: {
+  //     quote: "iobytes bridges the gap between complex RF engineering and global data pipelines. Their coastal stations are some of the most resilient and reliable in our entire maritime network.",
+  //     attribution: "AISHub Partnership Team"
+  //   }
+  // },
   // {
   //   slug: "rr-erp-pos",
   //   client: "RR",
