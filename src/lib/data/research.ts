@@ -127,7 +127,7 @@ export const researchGroups: ResearchGroup[] = [
         problem:
           "Between a distributor and its retailers, or a factory and its suppliers, most orders still arrive as a phone call or a WhatsApp message, or as a PDF that somebody then types into the system again. Mistakes creep in at every step.",
         approach:
-          "A lot of this comes out of the Amar Bot work. We're researching how to capture these orders from chat and from documents and push them straight into the other side's system, so a person only looks at the exceptions. Getting the two sides to agree on a format is the hard part, more than the tech.",
+          "A lot of this comes out of the Toge AI work. We're researching how to capture these orders from chat and from documents and push them straight into the other side's system, so a person only looks at the exceptions. Getting the two sides to agree on a format is the hard part, more than the tech.",
         stage: "research",
         icon: ArrowLeftRight,
       },
@@ -158,14 +158,14 @@ export const researchGroups: ResearchGroup[] = [
   },
 ];
 
-// Applied R&D that has already shipped: the n8n workflow automation built for Amar Bot.
-// Facts are taken from the Amar Bot admin codebase and its design docs.
+// Applied R&D that has already shipped: the n8n workflow automation built for Toge AI.
+// Facts are taken from the Toge AI admin codebase and its design docs.
 export const appliedResearch: AppliedResearch = {
   id: "conversational-commerce",
-  eyebrow: "Applied R&D · Amar Bot",
+  eyebrow: "Applied R&D · Toge AI",
   title: "Order-taking that runs in n8n",
   intro:
-    "Small merchants in Bangladesh mostly sell through Facebook pages and Messenger DMs. Every order used to mean typing out the price, then asking for name, phone and address, and then re-keying all of that somewhere else by hand. For Amar Bot we moved the whole order conversation into n8n, one workflow per merchant, and it's been running in production since. Everything listed below is live and taking real orders.",
+    "Small merchants in Bangladesh mostly sell through Facebook pages and Messenger DMs. Every order used to mean typing out the price, then asking for name, phone and address, and then re-keying all of that somewhere else by hand. For Toge AI we moved the whole order conversation into n8n, one workflow per merchant, and it's been running in production since. Everything listed below is live and taking real orders.",
   nextUp:
     "What we're doing next is parcel booking. The idea is that once an order is confirmed, the Pathao or RedX pickup gets booked on its own, without anyone having to click anything in the admin panel.",
   stats: [
@@ -209,7 +209,7 @@ export const appliedResearch: AppliedResearch = {
     },
   ],
   stack: ["n8n", "PostgreSQL", "Redis", "Meta Graph API", "Next.js", "Hono"],
-  caseStudy: { label: "Read the Amar Bot case study", href: "/portfolio/botx/" },
+  caseStudy: { label: "Read the Toge AI case study", href: "/portfolio/botx/" },
 };
 
 // Team members whose expertise backs the research tracks, matched by name in teamData
