@@ -202,15 +202,15 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "botx",
-    client: "AmarBot", 
-    logo: "/botx-logo.png",
-    metric: "Zero manual grind",
-    outcome: "24/7 automated sales engine turning DMs into revenue",
+    client: "Toge AI",
+    logo: "/toge-mark.svg",
+    metric: "AI-powered commerce automation",
+    outcome: "a platform that automates customer replies, order processing and bookings around the clock",
     industry: "SOCIAL COMMERCE",
-    teaser: "24/7 automated sales engine turning DMs into revenue.",
-    summary: "Social commerce automation ecosystem. Eliminates manual social selling by converting direct messages into frictionless, structured sales pipelines.",
-    challenge: "Traditional social commerce relied on manual responses, leading to slow turnaround times and significant lost revenue from high-intent shoppers who dropped off before checkout.",
-    approach: "We engineered an n8n-powered workflow automation system with a dual-interface approach (Meta DMs + custom admin panel). The solution ensures full Meta API compliance while providing elastic scalability for viral sales events.",
+    teaser: "Software for businesses selling through social channels, built to automate conversations, orders and operational workflows.",
+    summary: "We built Toge AI to automate the journey from customer enquiry to confirmed order. The platform answers product questions, captures order details, tracks deliveries and manages booking requests through connected workflows, with a central dashboard for configuring and monitoring business operations.",
+    challenge: "Traditional social commerce relied on manual responses, leading to slow turnaround times and significant lost revenue from high-intent shoppers who dropped off before checkout. Product questions, order updates and repeated data entry added to the workload as message volumes grew.",
+    approach: "We engineered an n8n-powered workflow automation system with a dual-interface approach (Meta DMs + custom admin panel). The solution ensures full Meta API compliance while providing elastic scalability for viral sales events. Toge AI connects product information, configurable replies, order capture and tracking in automated workflows, with a central dashboard for managing business operations.",
     results: [
       "Achieved 24/7 fully automated social selling with zero manual grind.",
       "Successfully handled thousands of concurrent customer conversations.",
@@ -223,8 +223,8 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["n8n", "Node.js", "Meta APIs", "CRM APIs", "Fulfillment APIs", "Accounting APIs", "Real-time DBs", "Encryption"],
     testimonial: {
-      quote: "We used to chase DMs all night. Now, I wake up to a spreadsheet of confirmed, structured sales. It's a 24/7 automated engine that turns conversations into revenue while we sleep.",
-      attribution: "Executive Leadership, BotX"
+      quote: "Toge AI keeps customer conversations, orders and business workflows moving automatically, so businesses can keep selling around the clock.",
+      attribution: "Toge AI automation platform"
     }
   },
   {

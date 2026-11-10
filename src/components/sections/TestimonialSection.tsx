@@ -24,9 +24,9 @@ const testimonials = [
   {
     "quote": "We replaced scattered DMs with automated Messenger workflows. Now, customers order directly in chat, and everything flows into one admin panel. It's a 24/7 sales engine.",
     "attribution": "Sajal Modumjar",
-    "company": "F-commerce page manager & User of BotX",
+    "company": "F-commerce page manager & User of Toge AI",
     "image": null,
-    "initials": "BX"
+    "initials": "TA"
   },
   {
     quote: "Visibility is the foundation of our business. iobytes gave us a clear window into our entire operation, reducing spoilage and building immediate trust with our distributors.",
