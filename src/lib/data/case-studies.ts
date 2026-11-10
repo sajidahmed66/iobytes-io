@@ -71,11 +71,7 @@ export const caseStudies: CaseStudy[] = [
       "Environmental and carbon footprint tracking for compliance reporting",
       "Foundation for AI-driven optimization of energy use and asset health"
     ],
-    techStack: ["Python", "TensorFlow", "InfluxDB", "Grafana"],
-    testimonial: {
-      quote: "We've moved from reactive to proactive. We haven't had an unplanned outage in six months, and the ROI was clear within the first quarter. That level of accountability is rare.",
-      attribution: "Head of Operations, Factorynext"
-    }
+    techStack: ["Python", "TensorFlow", "InfluxDB", "Grafana"]
   },
   {
     slug: "musaafir",
