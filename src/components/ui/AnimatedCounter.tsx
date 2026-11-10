@@ -22,6 +22,8 @@ export const AnimatedCounter = ({
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  // Keep the target's decimal places, e.g. 2.3 -> 1 decimal
+  const decimals = (String(target).split(".")[1] ?? "").length;
 
   useEffect(() => {
     if (!isInView) return;
@@ -34,7 +36,7 @@ export const AnimatedCounter = ({
       // Power-out easing
       const easedProgress = 1 - Math.pow(1 - progress, 3);
       
-      setCount(Math.floor(easedProgress * target));
+      setCount(Number((easedProgress * target).toFixed(decimals)));
 
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -42,7 +44,7 @@ export const AnimatedCounter = ({
     };
 
     requestAnimationFrame(animate);
-  }, [isInView, target, duration]);
+  }, [isInView, target, duration, decimals]);
 
   return (
     <span
@@ -50,7 +52,7 @@ export const AnimatedCounter = ({
       className={cn("font-mono tabular-nums", className)}
     >
       {prefix}
-      {count.toLocaleString()}
+      {count.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}
       {suffix}
     </span>
   );
