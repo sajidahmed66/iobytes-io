@@ -32,27 +32,24 @@ export const caseStudies: CaseStudy[] = [
     slug: "agroshift",
     client: "Agroshift",
     logo: "/agroshift.avif",
-    metric: "3x faster visibility",
-    outcome: "in supply chain",
+    metric: "Agri-commerce",
+    outcome: "a technology platform connecting farmers, processors and consumers across Bangladesh's food supply chain",
     industry: "Agriculture",
-    teaser: "Real-time tracking of perishables from farm to table.",
-    summary: "Building an IoT-integrated dashboard for real-time perishables tracking.",
-    challenge: "Agroshift struggled with high spoilage rates due to lack of visibility into the cold chain. Information about temperature excursions often arrived too late to save the cargo.",
-    approach: "We deployed a real-time IoT monitoring platform that integrates with existing hardware. The dashboard uses predictive modeling to alert handlers before temperature thresholds are breached.",
+    teaser: "Software for a Singapore and Dhaka agritech company building the digital backbone of agri-commerce.",
+    summary: "We built software for Agroshift, an agritech company based in Singapore and Dhaka that runs digital retail, processing and private label, and cross-border trade for essential food commodities like grains, pulses, wheat, edible oil and rice.",
+    challenge: "Agroshift is building the digital backbone of agri-commerce, linking smallholder farmers to businesses and consumers through a mix of physical micro-fulfillment and digital ordering. Running that model means handling high order volumes, sourcing from thousands of farmers, and coordinating retail, processing and trade flows on one reliable system.",
+    approach: "We designed and built the ordering platform, internal operations tools and farmer and reseller apps for Agroshift. The system supports their structured sourcing and demand-driven distribution model across digital retail, private label and cross-border trade.",
     results: [
-      "Reduced spoilage rate by 65% in the first quarter.",
-      "Achieved 3x faster response times to supply chain disruptions.",
-      "Automated compliance reporting for food safety regulations."
+      "Digital ordering across workplace hubs and a reseller network",
+      "Structured sourcing from farmers into one platform",
+      "Support for private label and processor supply workflows"
     ],
     metrics: [
-      { target: 3, suffix: "x", label: "Faster Visibility" },
-      { target: 65, suffix: "%", label: "Spoilage Reduction" }
+      { target: 450949, label: "Total Orders on the Platform" },
+      { target: 6000, suffix: "+", label: "Farmers Worked With" },
+      { target: 6, label: "Private Label Products" }
     ],
-    techStack: ["React", "Node.js", "AWS IoT", "TimescaleDB"],
-    testimonial: {
-      quote: "Visibility is the foundation of our business. iobytes gave us a clear window into our entire operation, reducing spoilage and building immediate trust with our distributors.",
-      attribution: "CEO, Agroshift"
-    }
+    techStack: ["React", "Node.js", "AWS IoT", "TimescaleDB"]
   },
   {
     slug: "factorynext",
