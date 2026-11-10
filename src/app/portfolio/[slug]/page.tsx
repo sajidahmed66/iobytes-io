@@ -84,6 +84,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                 </ul>
               </section>
 
+              {study.metrics && study.metrics.length > 0 && (
               <section>
                 <h3 className="text-2xl font-bold mb-8">Results</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
@@ -99,6 +100,7 @@ export default async function PortfolioItemPage({ params }: { params: { slug: st
                   ))}
                 </div>
               </section>
+              )}
 
               {study.testimonial && (
               <section>

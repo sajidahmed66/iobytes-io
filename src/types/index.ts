@@ -12,7 +12,7 @@ export interface CaseStudy {
   challenge: string;
   approach: string;
   results: string[];
-  metrics: { target: number; prefix?: string; suffix?: string; label: string }[];
+  metrics?: { target: number; prefix?: string; suffix?: string; label: string }[];
   techStack: string[];
   testimonial?: {
     quote: string;

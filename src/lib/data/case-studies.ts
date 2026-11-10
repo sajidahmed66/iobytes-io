@@ -56,23 +56,20 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "factorynext",
-    client: "Factorynext",
+    client: "Factory Next",
     logo: "/factorynext.png",
-    metric: "$2.3M cost avoidance",
-    outcome: "per annum",
+    metric: "Real-time factory monitoring",
+    outcome: "an IoT and AI platform that tracks energy, water, gas, ETP and carbon data across manufacturing sites",
     industry: "Industrial IoT",
-    teaser: "Predictive maintenance for large-scale manufacturing plants.",
-    summary: "AI-driven maintenance scheduling to prevent costly equipment failures.",
-    challenge: "Unplanned downtime was costing Factorynext millions annually. Traditional scheduled maintenance was either too frequent (wasting parts) or too late (causing failures).",
-    approach: "We implemented a predictive maintenance system using vibration and thermal sensor data. The system identifies early signatures of wear and schedules maintenance precisely when needed.",
+    teaser: "Monitoring software for an industrial IoT and AI company serving RMG, textile and other manufacturers in Bangladesh.",
+    summary: "We built the monitoring software behind Factory Next, a Dhaka-based Industrial IoT and AI company that helps manufacturers cut costs and carbon emissions while improving uptime, quality and compliance.",
+    challenge: "Factory Next helps manufacturers, especially in textile and RMG, reduce costs and carbon emissions while improving uptime, quality and compliance. To do that, their customers needed one place to see critical factory data that was scattered across production, inventory, utilities, effluent treatment and environmental readings. Factory Next needed a reliable software layer to turn live sensor data into something factory teams could act on.",
+    approach: "We designed and built the monitoring software that sits on top of Factory Next's IoT devices. It brings production processes, inventory, energy, water and gas consumption, ETP plant operations, environmental metrics and carbon footprint into a single platform, so real-time operations data becomes insight into energy use, asset health and process performance.",
     results: [
-      "Saved $2.3M in the first year by avoiding unplanned equipment failure.",
-      "Increased overall equipment effectiveness (OEE) by 14%.",
-      "Extended machine life cycles by an average of 22%."
-    ],
-    metrics: [
-      { target: 2.3, prefix: "$", suffix: "M", label: "Annual Cost Avoidance" },
-      { target: 14, suffix: "%", label: "OEE Increase" }
+      "One platform for production, inventory, utilities and ETP monitoring",
+      "Real-time visibility into energy, water and gas consumption",
+      "Environmental and carbon footprint tracking for compliance reporting",
+      "Foundation for AI-driven optimization of energy use and asset health"
     ],
     techStack: ["Python", "TensorFlow", "InfluxDB", "Grafana"],
     testimonial: {
@@ -99,7 +96,6 @@ export const caseStudies: CaseStudy[] = [
       "Host earnings dashboard with payouts to bKash, Nagad, Rocket or bank."
     ],
     metrics: [
-      { target: 5, label: "Stay Purposes" },
       { target: 0, suffix: "%", label: "Host Commission" },
       { target: 24, suffix: "h", label: "Host Response Window" }
     ],
